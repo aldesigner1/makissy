@@ -21,8 +21,8 @@ const Navigation = ({ authUser }) => (
 
 const googleSignIn = () => {
     let base_provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(base_provider).then((result) => {
-        //    firebase.auth().signInWithRedirect(base_provider).then((result) => {
+    // firebase.auth().signInWithPopup(base_provider).then((result) => {
+    firebase.auth().signInWithRedirect(base_provider).then((result) => {
 
         console.log(result);
         console.log("Success Google account Linked");
