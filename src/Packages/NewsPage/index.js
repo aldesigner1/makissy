@@ -44,7 +44,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/bananas-1119790_1920.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/bananas-1119790_1920.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -95,7 +95,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/pc-1571963.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/pc-1571963.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -146,7 +146,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/cake-1971552.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/cake-1971552.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -197,7 +197,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/cake-2856551.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/cake-2856551.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -248,7 +248,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/cake-486874.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/cake-486874.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -299,7 +299,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/eat-2834549.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/eat-2834549.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -350,7 +350,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/iphone-3501507_1920.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/iphone-3501507_1920.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -401,7 +401,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/lime-907124.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/lime-907124.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -452,7 +452,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/lime-998903.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/lime-998903.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -503,7 +503,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/london-3748742.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/london-3748742.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -554,7 +554,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/macbook-1999633.png" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/macbook-1999633.png" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -605,7 +605,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/mockup-654585.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/mockup-654585.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
@@ -656,7 +656,7 @@ export class News extends Component {
                                     </div>
                                     <div id="media">
                                         <Link to="articles.html">
-                                            <img className="multimed" src="Assets/images/Article/pc-1571963.jpg" alt="image" />
+                                            <img className="multimed" src="Assets/images/Article/pc-1571963.jpg" alt="imageur" />
                                         </Link>
                                     </div>
                                     <div id="description">
