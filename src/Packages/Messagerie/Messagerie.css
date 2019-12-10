@@ -1,4 +1,30 @@
+/** ////////// CORPUS //////////**/
+
+.corpus_messagerie {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0 2px 0 90px;
+}
+
+.corpus_messagerie .section_gauche {
+  background: transparent;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.corpus_messagerie .section_droite {
+  width: 60%;
+  height: 100%;
+}
+
 /** ///////// SECTION GAUCHE ///////// **/
+
+.section_gauche {
+}
 
 .section_gauche .entete {
   height: 100px;
@@ -259,7 +285,7 @@
     display: none;
   }
   .section_gauche {
-    width: 100vw !important;
+    width: 100vw;
     left: 0;
   }
 
