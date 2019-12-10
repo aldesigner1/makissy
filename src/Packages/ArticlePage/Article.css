@@ -306,13 +306,13 @@
 
 /** TABLETTE **/
 @media only screen and (max-width: 768px) {
-  .section_droite {
+  .section_droite_article {
     display: none;
   }
-  .section_gauche {
+  .section_gauche_article {
     width: 100% !important;
   }
-  .corpus {
+  .corpus_article {
     margin: 0;
   }
 
