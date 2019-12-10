@@ -9,6 +9,19 @@
   --colorier-dark-gray: #0e1823;
   --colorier-light-gray: #e6e6e6;
   --colorier-light: #fafafa;
+
+  --col-noir: #000;
+  --col-blanc: #fff;
+  --night-fond: #0e1823;
+  --col-orange: #f38806;
+  --col-rouge: #ff0000;
+  --col-jaune: #d5d710;
+  --col-gris: #aaa;
+  --col-green: #32dabe;
+  --col-light-org: #fece8c;
+  --col-light-gray: #eee;
+  --night-text: #7f8d9c;
+  --night-sombre: #252e38;
 }
 
 nav {
@@ -136,14 +149,17 @@ header nav .navbar-header button .glyphicon:hover {
 
   nav a.navbar-brand {
     position: absolute !important;
-    left: 45%;
+    left: 50% !important;
     transform: translateX(-50%) !important;
     top: 0;
     padding: 10px 0 0 0 !important;
+    width: 150px;
   }
 
   nav a.navbar-brand img {
-    width: 200px;
+    width: 150px;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   nav .navbar-toggle {

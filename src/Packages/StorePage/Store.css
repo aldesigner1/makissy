@@ -1,0 +1,137 @@
+/** ////////// CORPUS //////////**/
+
+.corpus_store {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0 2px 0 90px;
+}
+
+.corpus_store .section_gauche {
+  background: transparent;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.corpus_store .section_droite {
+  width: 60%;
+  height: 100%;
+}
+
+/** ///////// SECTION GAUCHE ///////// **/
+
+.section_gauche .entete {
+  height: 100px;
+  position: relative;
+  padding: 0px 10px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section_gauche .entete .titre {
+  display: flex;
+  /*    position: absolute;*/
+  bottom: 0;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.section_gauche .entete .titre h1 {
+  font-size: 22px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  color: var(--night-text);
+  margin: 0;
+}
+
+.section_gauche .entete .titre .notification {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 10px;
+  font-style: italic;
+  color: #ccc;
+}
+
+/** STORES **/
+
+.store {
+  width: 95%;
+  margin: 0 auto;
+  flex: 1;
+  padding: 10px 0;
+}
+
+.store .liste {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.store .liste::-webkit-scrollbar {
+  display: none;
+}
+
+.store .liste li .messagerie img {
+  width: 100%;
+  height: auto;
+}
+
+.store .liste li .messagerie {
+  margin: 10px 0;
+  position: relative;
+  transform: scale(1);
+  transition: ease-in 0.5s;
+}
+
+.messagerie .calque {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  color: var(--col-blanc);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #ccc;
+
+  transition: ease-in 0.5s;
+}
+
+.messagerie .calque a {
+  text-decoration: none;
+  color: var(--col-blanc) !important;
+}
+
+.messagerie .calque p:hover {
+  color: var(--col-orange);
+  text-shadow: none;
+}
+
+.store .liste li .messagerie:hover {
+  transform: scale(1.1);
+}
+
+.store .liste li .messagerie:hover .calque {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.store .liste li:last-child .messagerie img,
+.store .liste li:last-child .messagerie .calque {
+  border-radius: 0 0 15px 15px !important;
+}
+
+.store .liste li:nth-child(1) .messagerie img,
+.store .liste li:nth-child(1) .messagerie .calque {
+  border-radius: 15px 15px 0 0 !important;
+}

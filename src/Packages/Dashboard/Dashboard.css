@@ -1,0 +1,320 @@
+/** ////////// CORPUS //////////**/
+
+.corpus_dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0 2px 0 90px;
+  width: 100vw;
+}
+
+.corpus_dashboard .section_gauche_dashboard {
+  background: transparent;
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.corpus_dashboard .section_droite_dashboard {
+  width: 60%;
+  height: 100%;
+}
+
+/** ///////// SECTION GAUCHE ///////// **/
+
+.section_gauche_dashboard .entete {
+  height: 100px;
+  position: relative;
+  padding: 0px 10px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section_gauche_dashboard .entete .titre {
+  display: flex;
+  /* position: absolute */
+  bottom: 0;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.section_gauche_dashboard .entete .titre h1 {
+  font-size: 22px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  color: var(--night-text);
+  margin: 0;
+}
+
+.section_gauche_dashboard .entete .titre .notification {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 10px;
+  font-style: italic;
+  color: #ccc;
+}
+
+/** ARTICLES **/
+
+.article_dashboard {
+  width: 99%;
+  margin: 0 auto;
+  flex: 1;
+  padding: 30px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.article_dashboard .store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  background: var(--col-blanc);
+  box-shadow: 0px 2px 2px #ccc;
+  border: none;
+  padding: 0px 0;
+}
+
+.article_dashboard .store img {
+  width: 100%;
+  max-height: 250px;
+}
+
+.article_dashboard .liste {
+  list-style: none;
+  margin: 0 auto;
+  padding: 10px 0;
+  height: 95vh;
+  overflow-y: scroll;
+  flex: 1;
+  z-index: 1;
+}
+
+.article_dashboard .liste::-webkit-scrollbar {
+  display: none;
+}
+
+.article_dashboard .liste .canvas {
+  width: 90%;
+  height: auto;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.article_dashboard .liste .canvas img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  transition: ease-in 0.5s;
+}
+.article_dashboard .liste .canvas img:hover {
+  transform: scale(1.05);
+}
+
+.article_dashboard .liste li:last-child .messagerie img,
+.article_dashboard .liste li:last-child .messagerie .calque {
+  border-radius: 0 0 15px 15px !important;
+}
+
+.article_dashboard .liste li:nth-child(1) .messagerie img,
+.article_dashboard .liste li:nth-child(1) .messagerie .calque {
+  border-radius: 15px 15px 0 0 !important;
+}
+
+/** ////////// SECTION DROITE ////////// **/
+
+.section_droite_dashboard {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  position: relative;
+  flex-direction: column;
+  color: var(--night-text) !important;
+}
+
+.section_droite_dashboard .dessus {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.section_droite_dashboard .dessus .storeProp {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.section_droite_dashboard .flatInput {
+  border-radius: 20px;
+  border: none;
+  padding: 2px 15px;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 2px 5px;
+  background: var(--col-light-gray) !important;
+  color: var(--night-text);
+}
+
+.section_droite_dashboard .flatText {
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 2px 5px;
+  background: var(--col-light-gray) !important;
+  color: var(--night-text);
+  border-left: 2px solid #ddd;
+}
+.section_droite_dashboard .dessus .storeProp textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.section_droite_dashboard .dessus .storeProp label {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--night-text);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section_droite_dashboard .dessus .storeProp .btn {
+  width: 50%;
+  min-width: 100px;
+  margin: 5px auto;
+  height: 25px;
+  text-align: center;
+  padding: 0;
+  background: var(--col-green);
+  color: var(--col-blanc);
+  border: none;
+}
+.section_droite_dashboard .dessus .storeProp .btn:hover {
+  background: var(--col-blanc);
+  color: var(--col-green);
+}
+
+.section_droite_dashboard .dessus .profileProp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.section_droite_dashboard .dessus .profileProp .formProfile {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  position: relative;
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  min-height: 100px;
+}
+
+.section_droite_dashboard .formProfile #picProfile {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  background: var(--col-blanc);
+  border-radius: 50%;
+  border: 2px solid var(--col-green);
+  padding: 5px;
+}
+
+.section_droite_dashboard .formProfile .btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  bottom: -15px;
+  padding: 5px 15px;
+}
+
+.section_droite_dashboard .formProfile #identite {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.section_droite_dashboard .formProfile #identite > .flatInput {
+  width: 80%;
+  margin: 15px auto 10px;
+}
+
+.section_droite_dashboard .formProfile #identite > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.section_droite_dashboard .formProfile #identite > div input {
+  margin: 3px 0;
+}
+
+.section_droite_dashboard .formProfile #identite .btn {
+  color: var(--col-blanc);
+  background: var(--col-green);
+  border: none;
+}
+.section_droite_dashboard .formProfile #identite .btn:hover {
+  background: var(--col-blanc);
+  color: var(--col-green);
+  border: 1px solid #999;
+}
+
+.section_droite_dashboard .dessous {
+  display: flex;
+  height: 70%;
+  align-items: center;
+}
+
+.section_droite_dashboard .dessous img {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: 400px;
+  max-height: 70%;
+}
+
+/** TABLETTE **/
+@media only screen and (max-width: 768px) {
+  .section_droite_dashboard {
+    display: none;
+  }
+  .section_gauche_dashboard {
+    width: 100% !important;
+  }
+  .corpus_dashboard {
+    margin: 0;
+  }
+
+  nav {
+    height: 50px !important;
+  }
+}
