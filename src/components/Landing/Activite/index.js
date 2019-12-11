@@ -4,19 +4,19 @@ import { ACTUALITE } from '../../../constants/routes';
 import { Link } from 'react-router-dom';
 
 
-const Activite = ({ nom, description }) => {
+const Activite = ({ nom, description, icone }) => {
     return (
-        <li class="domain card">
-            <Link to={ACTUALITE} class="face face1">
-                <div class="content">
-                    <span class="glyphicon glyphicon-option-horizontal"></span>
+        <li className="domain card">
+            <Link to={ACTUALITE} className="face face1">
+                <div className="content">
+                    <i className={`${icone} icon`}></i>
                     <h3> {nom} </h3>
                 </div>
             </Link>
-            <div class="face face2">
-                <div class="content">
+            <div className="face face2">
+                <div className="content">
                     <p>{description}</p>
-                    <Link to={ACTUALITE}> Lire Plus</Link>
+                    <Link to={ACTUALITE}> Voir Plus</Link>
                 </div>
             </div>
         </li>

@@ -132,6 +132,10 @@ input[type="text"]:focus {
 }
 */
 
+.face .content .icon {
+  font-size: 70px;
+}
+
 .sectors {
   display: flex;
   flex-direction: row;
