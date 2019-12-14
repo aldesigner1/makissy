@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { withAuthorization } from '../../components/Session';
+import Post from './Post';
 import { Link } from 'react-router-dom';
 import './Actualite.css';
 
@@ -9,7 +10,50 @@ const NewsPage = () => (
 )
 
 export class News extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            post: [
+                {
+                    nomUser: "Personne",
+                    imageProfil: "Assets/icones/profile.svg",
+                    prix: "45",
+                    montant_Devise: "45 000",
+                    image: "Assets/images/Article/pc-1571963.jpg",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita at, dolores labore quidem iusto quas, aut dicta assumenda sunt non a pariatur earum, itaque nihil unde sed consectetur ea nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita at, dolores labore quidem iusto quas, aut dicta assumenda sunt non a pariatur earum, itaque nihil unde sed consectetur ea nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita at, dolores labore quidem iusto quas, aut dicta assumenda sunt non a pariatur earum, itaque nihil unde sed consectetur ea nostrum.",
+                    like: "15",
+                    delai: "02",
+                },
+                {
+                    nomUser: "Posteur",
+                    imageProfil: "Assets/icones/profile.svg",
+                    prix: "45",
+                    montant_Devise: "45 000",
+                    image: "Assets/images/Article/bananas-1119790_1920.jpg",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita at, dolores labore quidem iusto quas, aut dicta assumenda sunt non a pariatur earum, itaque nihil unde sed consectetur ea nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita at, dolores labore quidem iusto quas, aut dicta assumenda sunt non a pariatur earum, itaque nihil unde sed consectetur ea nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita at, dolores labore quidem iusto quas, aut dicta assumenda sunt non a pariatur earum, itaque nihil unde sed consectetur ea nostrum.",
+                    like: "15",
+                    delai: "02",
+                },
+            ]
+        }
+    }
+
     render() {
+
+        const Posts = this.state.post.map((element, index) => (
+            <Post key={index}
+                nomUser={element.nomUser}
+                imageProfil={element.imageProfil}
+                prix={element.prix}
+                montant_Devise={element.montant_Devise}
+                image={element.image}
+                description={element.description}
+                like={element.like}
+                delai={element.delai}
+            />
+        ))
+
         return (
             <section className="corpus_actualite">
                 <section className="section_gauche_actualite">
@@ -24,12 +68,14 @@ export class News extends Component {
                     </div>
                     <div className="actualite">
                         <ul className="liste">
-
+                            {Posts}
                             <li>
                                 <div className="article">
                                     <div id="tete">
                                         <div id="imageProfil">
-                                            <Link to="#" title="Profil" data-toggle="tooltip" data-placement="right"><img src="Assets/icones/profile.svg" width="25px" alt="pic" /></Link>
+                                            <Link to="#" title="Profil" data-toggle="tooltip" data-placement="right">
+                                                <img src="Assets/icones/profile.svg" width="25px" alt="pic" />
+                                            </Link>
 
                                         </div>
                                         <h4> John Doe
@@ -37,7 +83,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label title="145000 XAF" data-toggle="tooltip" data-placement="bottom"> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -88,7 +134,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -139,7 +185,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -190,7 +236,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -241,7 +287,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -292,7 +338,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -343,7 +389,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -394,7 +440,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -445,7 +491,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -496,7 +542,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -547,7 +593,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -598,7 +644,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -649,7 +695,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>
@@ -700,7 +746,7 @@ export class News extends Component {
                                         </h4>
                                         <div id="price">
                                             <Link to="#"><label> 145
-                                      <span title="Roonies" className="rounais"> R </span>
+                                      <span title="Roonies" className="rounais">R</span>
                                             </label></Link>
                                             <Link to="#"><span className="glyphicon glyphicon-option-vertical"></span></Link>
                                         </div>

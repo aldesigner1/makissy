@@ -187,7 +187,7 @@ export class Atterissage extends Component {
 
                 </div>
                 <p id="copyright">
-                    <a href="al.cm">Propulsé par copyright©2019 ALDesigners  </a>
+                    <a href="al.cm"> Copyright©2019 ALDesigners  </a>
                 </p>
             </div>
         )
