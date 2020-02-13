@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import './App.css';
 import App from './components/App';
+// import Demo from './Packages/IntroPage';
 // import * as serviceWorker from './serviceWorker';
 
 import Firebase, { FirebaseContext } from './components/Firebase';

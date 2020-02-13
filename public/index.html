@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -30,21 +30,68 @@
     <!-- BOOTSTRAP -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <!-- MapBox -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
     <!-- FONTAWESOME -->
 
-    <script src="/Assets/Awesome/js/brands.js"></script>
+    <!-- <script src="/Assets/Awesome/js/brands.js"></script>
     <script src="/Assets/Awesome/js/fontawesome.js"></script>
-    <script src="/Assets/Awesome/js/solid.js"></script>
+    <script src="/Assets/Awesome/js/solid.js"></script> -->
     <script src="/Assets/Awesome/js/all.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
       $(function() {
         $('[data-toggle="tooltip"]').tooltip();
       });
+
+      var scrolledDiv = document.getElementById("principal");
+      scrolledDiv.onscroll = function() {
+        document.getElementById("head").style.display = "none";
+      };
     </script>
     <title>Makissy</title>
   </head>
   <body>
     <div id="root"></div>
   </body>
+
+  <script>
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiYWx5bXgiLCJhIjoiY2s1czJjN3RmMDV3OTNsbzE3cHl2aGRpeSJ9.Tqh2wRgX4VKL5PF0vhDupg";
+    var map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/streets-v11"
+      // zoom: 12
+    });
+  </script>
+  <script>
+    function previewProfileImage(uploader) {
+      //ensure a file was selected
+      if (uploader.files && uploader.files[0]) {
+        var imageFile = uploader.files[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          //set the image data as source
+          $("#profileImage").attr("src", e.target.result);
+        };
+        reader.readAsDataURL(imageFile);
+      }
+    }
+
+    $("#imageUpload").change(function() {
+      previewProfileImage(this);
+    });
+  </script>
+  <script src="js/main.js"></script>
 </html>

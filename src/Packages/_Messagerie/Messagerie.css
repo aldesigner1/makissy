@@ -1,0 +1,308 @@
+/** ////////// CORPUS //////////**/
+
+.corpus_messagerie {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0 2px 0 90px;
+}
+
+.corpus_messagerie .section_gauche {
+  background: transparent;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.corpus_messagerie .section_droite {
+  width: 60%;
+  height: 100%;
+}
+
+/** ///////// SECTION GAUCHE ///////// **/
+
+.section_gauche .entete {
+  height: 100px;
+  position: relative;
+  padding: 0px 10px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section_gauche .entete .titre {
+  display: flex;
+  /*    position: absolute;*/
+  bottom: 0;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.section_gauche .entete .titre h1 {
+  font-size: 22px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  color: var(--night-text);
+  margin: 0;
+}
+
+.section_gauche .entete .titre .notification {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 10px;
+  font-style: italic;
+  color: #ccc;
+}
+
+/** STORES **/
+
+.message {
+  width: 95%;
+  margin: 0 auto;
+  flex: 1;
+  padding: 10px 0;
+}
+
+.message .liste {
+  list-style: none;
+  margin: 0;
+  padding: 10px 5px;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.message .liste::-webkit-scrollbar {
+  display: none;
+}
+
+.message .liste .contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 25px 0;
+}
+
+.message .liste .contact #icone {
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 5px 10px 5px 0;
+}
+
+.message .liste .contact #identite {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.message .liste .contact #identite #nom {
+  margin: 5px 0;
+  background: #ddd;
+  padding: 0 10px;
+  cursor: pointer;
+  width: 60%;
+}
+.message .liste .contact #identite #nom:hover {
+  background: var(--col-green);
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+
+.message .liste .contact #identite #message {
+  margin: 5px 0;
+  background: #eee;
+  font-size: 12px;
+  color: var(--night-text);
+  padding: 0 10px;
+}
+
+.message .liste li:last-child .messagerie img,
+.message .liste li:last-child .messagerie .calque {
+  border-radius: 0 0 15px 15px !important;
+}
+
+.message .liste li:nth-child(1) .messagerie img,
+.message .liste li:nth-child(1) .messagerie .calque {
+  border-radius: 15px 15px 0 0 !important;
+}
+
+/** ////////// SECTION DROITE ////////// **/
+
+.section_droite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.section_droite .messages {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section_droite .messages .echanges {
+  height: 95%;
+  padding: 20px 10px;
+  max-height: 400px;
+  min-height: 400px;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.section_droite .messages .echanges #msg {
+  margin: 10px 5px 15px 0;
+  padding: 5px 0;
+  position: relative;
+}
+
+.section_droite .messages .echanges #msg img {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  background: var(--col-blanc);
+  border-radius: 50%;
+  padding: 2px;
+  border: 1px solid #eee;
+
+  box-shadow: 2px 2px 4px #e1e1e1;
+}
+.section_droite .messages .echanges #msg img:hover {
+  background: var(--col-green);
+  border: none;
+}
+
+.section_droite .messages .echanges #msg p {
+  background: #fff;
+  width: 70%;
+  padding: 10px 8px;
+  border-radius: 20px 5px 5px 0;
+  box-shadow: 2px 2px 4px #e1e1e1;
+  border: 1px solid #f5f5f5;
+  font-size: 12px;
+  font-family: "raleway";
+}
+
+.section_droite .messages .echanges #reply {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.section_droite .messages .echanges #reply img {
+  position: absolute;
+  top: -20px;
+  right: -2px;
+  background: var(--night-sombre);
+  border-radius: 50%;
+  padding: 2px;
+  border: 1px solid #999;
+
+  box-shadow: 2px 2px 4px #999;
+}
+.section_droite .messages .echanges #reply img:hover {
+  background: var(--col-rouge);
+  border: none;
+}
+
+.section_droite .messages .echanges #reply p {
+  background: var(--night-sombre);
+  width: 70%;
+  padding: 10px 8px;
+  border-radius: 5px 20px 0px 5px;
+  box-shadow: 2px 2px 4px #999;
+  border: 1px solid #999;
+  font-size: 12px;
+  font-family: "raleway";
+  margin: 5px 5px;
+  color: var(--night-text);
+}
+
+.section_droite .messages .xender {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section_droite .messages .xender textarea {
+  width: 90%;
+  background: #f5f5f5;
+  margin: 5px;
+  border: none;
+  padding: 5px 0;
+  border-radius: 10px;
+  padding: 10px;
+  height: 59px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--night-sombre);
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.section_droite .messages .xender textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.section_droite .messages .xender button {
+  position: absolute;
+  right: 6%;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0;
+  padding: 5px 10px 5px 5px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--col-green);
+  text-shadow: 1px 1px 2px #ddd;
+  border: 2px solid;
+}
+
+.section_droite .messages .xender button:hover {
+  background: var(--col-green);
+  border-color: #fff;
+  color: #fff;
+}
+
+/** TABLETTE **/
+@media only screen and (max-width: 768px) {
+  .corpus_messagerie {
+    width: 100vw !important;
+  }
+
+  .section_droite {
+    display: none;
+  }
+  .section_gauche {
+    width: 100vw !important;
+    left: 0;
+  }
+
+  .message .liste {
+    list-style: none;
+    margin: 0;
+    min-width: 100%;
+    padding: 10px 5px;
+    overflow-y: scroll;
+  }
+
+  .corpus_messagerie {
+    margin: 0;
+  }
+
+  nav {
+    height: 50px !important;
+  }
+}

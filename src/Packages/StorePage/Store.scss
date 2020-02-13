@@ -1,0 +1,612 @@
+@import "../../components/Scss/reset";
+@import "../../components/Scss/theme";
+@import "../../components/Scss/responsive";
+
+/** PC **/
+
+@media #{$pc-screen} {
+  .sectionStore {
+    z-index: 16;
+    position: absolute;
+    width: 40%;
+    height: 100vh !important;
+    top: 100px;
+    left: 100px;
+    background: transparent;
+
+    .monStoreBtn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 50px;
+      left: 2%;
+      z-index: 30;
+      margin-left: 5px;
+      cursor: pointer;
+
+      a {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        // width: 2px !important;
+        background: $back-light;
+        width: 50px;
+        // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+        border-radius: 30px 30px 10px 30px !important;
+        padding: 15px 20px !important;
+        // text-align: center;
+        border: none !important;
+        // color: $gray-dark;
+        font-size: $mob-text-max -1 !important;
+        background: rgba($orange-light, 1);
+        color: $blanc;
+        animation: callToAction 2s infinite;
+        @keyframes callToAction {
+          0% {
+            background: rgba($orange-light, 1);
+            color: $blanc;
+          }
+          25% {
+            background: rgba($orange, 1);
+            color: $blanc;
+          }
+          50% {
+            background: rgba($orange-dark, 1);
+            color: $blanc;
+          }
+          75% {
+            background: rgba($orange, 1);
+            color: $blanc;
+          }
+          100% {
+            background: rgba($orange-light, 1);
+            color: $blanc;
+          }
+        }
+
+        &:hover {
+          background: $back-light !important;
+          border: none;
+          color: $orange-dark !important;
+        }
+      }
+    }
+
+    .listeStore {
+      position: absolute;
+      width: 100% !important;
+      padding: 5px 10px 100px !important;
+      margin-bottom: 50px;
+
+      & > .filtreStore:nth-child(2n) {
+        background: rgba(#000, 0.1);
+      }
+
+      li {
+        margin: 20px 0px !important;
+        position: relative;
+        max-width: 500px;
+
+        &:nth-child(2n) .filtreStore {
+          background: rgba(#000, 0.1) !important;
+        }
+
+        &:nth-child(2n) .descriptionStore .titreStore {
+          background: $orange-light;
+          color: $noir;
+        }
+      }
+    }
+
+    .fondStore {
+      background: url("/Assets/images/fondStore.png");
+      height: 250px;
+      max-height: 400px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: $mob-border * 3;
+      box-shadow: $shadowbox;
+    }
+
+    .filtreStore {
+      height: 250px;
+      max-height: 400px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: $mob-border * 3;
+      box-shadow: $shadowbox;
+      position: absolute;
+      top: 0 !important;
+      background: rgba(#000, 0.4);
+    }
+
+    .descriptionStore {
+      position: absolute;
+      top: 0;
+      padding: 0px 15px 10px;
+      color: $blanc;
+
+      .titreStore {
+        font-family: "woodcutter carnage", "product sans", sans-serif;
+        font-size: $mob-text-max;
+        height: $mob-text-max + 12px;
+        margin-bottom: 5px !important;
+        overflow: hidden;
+        width: 80%;
+        padding: 2px 5px !important;
+        background: $noir;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .descStore {
+        font-family: monospace !important;
+        font-size: $mob-text-min;
+        opacity: 0.6;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 20px;
+        height: 100px;
+        max-height: 200px;
+        padding: 0 30px !important;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        text-align: left;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    a:first-child {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      font-size: $mob-text-med + 2;
+      color: $orange-dark;
+      background: $noir;
+      padding: 10px 25px;
+      border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+
+      &:hover {
+        background: $orange-light;
+        color: $noir;
+      }
+    }
+
+    a:last-child {
+      position: absolute;
+      bottom: 10px;
+      right: 8px;
+      border-radius: 50px;
+      border: 1.5px solid $blanc;
+      color: $blanc;
+      font-size: $mob-text-med + 2;
+      font-weight: lighter !important;
+      padding: 5px 30px;
+
+      &:hover {
+        background: $orange-light;
+        color: $noir;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sectionMap {
+    z-index: 16;
+    background: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 70%;
+    width: 52%;
+    right: 0;
+    overflow: hidden;
+    margin: 0 5px;
+    border-radius: 5px;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+/** TABLETTE **/
+
+@media #{$tablet-screen} {
+  .sectionStore {
+    z-index: 16;
+    position: absolute;
+    width: 50% !important;
+    height: 100vh !important;
+    top: 100px;
+    display: flex;
+    left: 0;
+    background: transparent;
+
+    .monStoreBtn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 1%;
+      right: auto;
+      left: 10%;
+      z-index: 30;
+      cursor: pointer;
+
+      a {
+        position: relative;
+        background: $back-light;
+        width: 50px;
+        // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+        border-radius: 30px 30px 10px 30px;
+        padding: 15px 20px;
+        border: none;
+        // color: $gray-dark;
+        font-size: $mob-text-max -1 !important;
+        animation: callToAction 2s infinite;
+        @keyframes callToAction {
+          0% {
+            background: rgba($orange-light, 1);
+            color: $blanc;
+          }
+          25% {
+            background: rgba($orange, 1);
+            color: $blanc;
+          }
+          50% {
+            background: rgba($orange-dark, 1);
+            color: $blanc;
+          }
+          75% {
+            background: rgba($orange, 1);
+            color: $blanc;
+          }
+          100% {
+            background: rgba($orange-light, 1);
+            color: $blanc;
+          }
+        }
+
+        &:hover {
+          background: $back-light !important;
+          border: none;
+          color: $orange-dark !important;
+        }
+      }
+    }
+
+    .listeStore {
+      position: absolute;
+      width: 100% !important;
+      padding: 5px 10px 100px !important;
+      // background: #000;
+
+      li {
+        margin: 20px 0px !important;
+        position: relative;
+        max-width: 500px;
+
+        &:nth-child(2n) .filtreStore {
+          background: rgba(#000, 0.1) !important;
+        }
+
+        &:nth-child(2n) .descriptionStore .titreStore {
+          background: $orange-light;
+          color: $noir;
+        }
+      }
+    }
+
+    .fondStore {
+      background: url("/Assets/images/fondStore.png");
+      height: 220px;
+      max-height: 300px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: $mob-border * 3;
+      box-shadow: $shadowbox;
+    }
+
+    .filtreStore {
+      height: 220px;
+      max-height: 300px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: $mob-border * 3;
+      box-shadow: $shadowbox;
+      position: absolute;
+      top: 0 !important;
+      background: rgba(#000, 0.3) !important;
+    }
+
+    .descriptionStore {
+      position: absolute;
+      top: 0;
+      padding: 0px 15px 10px;
+      color: $blanc;
+
+      .titreStore {
+        font-family: "woodcutter carnage", "product sans", sans-serif;
+        font-size: $mob-text-max;
+        height: $mob-text-max + 12px;
+        margin-bottom: 5px !important;
+        overflow: hidden;
+        width: 80%;
+        padding: 2px 5px !important;
+        background: $noir;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .descStore {
+        font-family: monospace !important;
+        font-size: $mob-text-min;
+        opacity: 0.8;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 20px;
+        height: 100px;
+        padding: 0 30px !important;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-align: left;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    a:first-child {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      font-size: $mob-text-med + 2;
+      color: $orange-dark;
+      background: $noir;
+      padding: 10px 25px;
+      border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+
+      &:hover {
+        background: $orange-light;
+        color: $noir;
+      }
+    }
+
+    a:last-child {
+      position: absolute;
+      bottom: 10px;
+      right: 8px;
+      border-radius: 50px;
+      border: 1.5px solid $blanc;
+      color: $blanc;
+      font-size: $mob-text-med + 2;
+      font-weight: lighter !important;
+      padding: 5px 30px;
+
+      &:hover {
+        background: $orange-light;
+        color: $noir;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sectionMap {
+    background: transparent;
+    position: fixed;
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    right: 0;
+    overflow: hidden;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 70px 0;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+/** SMARTPHONE **/
+
+@media #{$smart-screen} {
+  .sectionStore {
+    z-index: 16;
+    position: absolute;
+    width: 100% !important;
+    height: 100vh !important;
+    top: 100px;
+    display: flex;
+
+    .listeStore {
+      position: absolute;
+      width: 100% !important;
+      padding: 5px 10px 100px !important;
+
+      // background: #000;
+
+      li {
+        margin: 20px auto !important;
+        position: relative;
+        max-width: 500px;
+
+        &:nth-child(2n) .filtreStore {
+          background: rgba(#000, 0.3) !important;
+        }
+
+        &:nth-child(2n) .descriptionStore .titreStore {
+          background: $orange-light;
+          color: $noir;
+        }
+      }
+    }
+
+    .fondStore {
+      background: url("/Assets/images/fondStore.png");
+      height: 250px;
+      max-height: 300px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: $mob-border * 3;
+      box-shadow: $shadowbox;
+    }
+
+    .filtreStore {
+      height: 250px;
+      max-height: 300px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: $mob-border * 3;
+      box-shadow: $shadowbox;
+      position: absolute;
+      top: 0 !important;
+      background: rgba(#000, 0.1) !important;
+    }
+
+    .descriptionStore {
+      position: absolute;
+      top: 0px;
+      padding: 0px 15px 10px;
+      color: $blanc;
+
+      .titreStore {
+        font-family: "woodcutter carnage", "product sans", sans-serif;
+        font-size: $mob-text-max -9px;
+        height: $mob-text-max + 12px;
+        margin-bottom: 5px !important;
+        overflow: hidden;
+        width: 80%;
+        padding: 2px 5px !important;
+        background: $noir;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .descStore {
+        font-family: monospace !important;
+        font-size: $mob-text-min;
+        opacity: 0.8;
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 20px;
+        height: 100px;
+        padding: 0 30px !important;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-align: left;
+        margin-top: 20px !important;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+
+    a:first-child {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      font-size: $mob-text-med + 2;
+      color: $orange-dark;
+      background: $noir;
+      padding: 10px 25px;
+      border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+
+      &:hover {
+        background: $orange-light;
+        color: $noir;
+      }
+    }
+
+    a:last-child {
+      position: absolute;
+      bottom: 10px;
+      right: 8px;
+      border-radius: 50px;
+      border: 1.5px solid $blanc;
+      color: $blanc;
+      font-size: $mob-text-med + 2;
+      font-weight: lighter !important;
+      padding: 5px 30px;
+
+      &:hover {
+        background: $orange-light;
+        color: $noir;
+        cursor: pointer;
+      }
+    }
+
+    .monStoreBtn {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      position: fixed;
+      bottom: 50px;
+      // width: 50%;
+      right: 5px;
+      z-index: 5;
+      cursor: pointer;
+
+      a {
+        position: relative;
+        background: $back-light;
+        // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+        border-radius: 30px 30px 10px 30px;
+        padding: 15px 20px;
+        border: none;
+        // right: 50px;
+        // color: $gray-dark;
+        font-size: $mob-text-max -1 !important;
+        animation: callToAction 2s infinite;
+        @keyframes callToAction {
+          0% {
+            background: rgba($orange-light, 1);
+            color: $blanc;
+          }
+          25% {
+            background: rgba($orange, 1);
+            color: $blanc;
+          }
+          50% {
+            background: rgba($orange-dark, 1);
+            color: $blanc;
+          }
+          75% {
+            background: rgba($orange, 1);
+            color: $blanc;
+          }
+          100% {
+            background: rgba($orange-light, 1);
+            color: $blanc;
+          }
+        }
+
+        &:hover {
+          background: $back-light !important;
+          border: none;
+          color: $orange-dark !important;
+        }
+      }
+    }
+  }
+
+  .secondaire {
+    display: none;
+  }
+}
+
+//END

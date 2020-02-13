@@ -1,0 +1,11 @@
+.carte {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  bottom: 0;
+  width: 100vw !important;
+  height: 90vh !important;
+  left: 0;
+}

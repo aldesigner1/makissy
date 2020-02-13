@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+    format("woff2");
+}
+
+/** Colorimetrie **/
+$blanc: #fff;
+$noir: #000;
+
+$night: #0e1823;
+
+$orange-dark: #f7630c;
+$orange: #ff8c00;
+$orange-light: #ffb900;
+
+$green: #08d9b6;
+
+$gray-dark: #68768a;
+$gray: #cdcdcd;
+$gray-light: #e6e6e6;
+
+$red: #ff0066;
+
+$red: #ff0066;
+
+$back-flat: #f1f4f8;
+$back-night: rgba(#0e1823, 0.8);
+$back-light: rgba(#fff, 0.9);
+
+/** Taille de Police **/
+$pc-text-min: 18px;
+$pc-text-med: 25px;
+$pc-text-max: 35px;
+
+$tab-text-min: 12px;
+$tab-text-med: 16px;
+$tab-text-max: 30px;
+
+$mob-text-min: 12px;
+$mob-text-med: 15px;
+$mob-text-max: 25px;
+
+/** Bordure de carte **/
+$mob-border: 8px;
+$tab-border: 12px;
+$pc-border: 20px;
+
+/** Ombre **/
+$shadowbox: 0 0 2px rgba(0, 0, 0, 0.2);
+$shadowbox-dark: 0 0 5px rgba(0, 0, 0, 0.4);
+
+/** Scroll **/
+$remove-scroll: -webkit-scrollbar;

@@ -1,0 +1,240 @@
+/** ////////// CORPUS //////////**/
+
+.corpus_store {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0 2px 0 90px;
+}
+
+.corpus_store .section_gauche_store {
+  background: transparent;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.corpus_store .section_droite_store {
+  width: 60%;
+  height: 100%;
+}
+
+/** ///////// SECTION GAUCHE ///////// **/
+
+.section_gauche_store .entete {
+  height: 100px;
+  position: relative;
+  padding: 0px 10px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section_gauche_store .entete .titre {
+  display: flex;
+  /*    position: absolute;*/
+  bottom: 0;
+  height: 50px;
+  align-items: flex-end;
+}
+
+.section_gauche_store .entete .titre h1 {
+  font-size: 22px;
+  font-weight: 550;
+  letter-spacing: 1px;
+  color: var(--night-text);
+  margin: 0;
+}
+
+.section_gauche_store .entete .titre .notification {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 10px;
+  font-style: italic;
+  color: #ccc;
+}
+
+/** STORES **/
+
+.store {
+  width: 95%;
+  margin: 0 auto;
+  flex: 1;
+  padding: 10px 0;
+}
+
+.store .liste {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.store .liste::-webkit-scrollbar {
+  display: none;
+}
+
+.store .liste li .messagerie img {
+  width: 100%;
+  height: auto;
+}
+
+.store .liste li .messagerie {
+  margin: 10px 0;
+  position: relative;
+  transform: scale(1);
+  transition: ease-in 0.5s;
+}
+
+.messagerie .calque {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  color: var(--col-blanc);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #ccc;
+
+  transition: ease-in 0.5s;
+}
+
+.messagerie .calque a {
+  text-decoration: none;
+  color: var(--col-blanc) !important;
+}
+
+.messagerie .calque p:hover {
+  color: var(--col-orange);
+  text-shadow: none;
+}
+
+.store .liste li .messagerie:hover {
+  transform: scale(1.1);
+}
+
+.store .liste li .messagerie:hover .calque {
+  visibility: visible;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.store .liste li:last-child .messagerie img,
+.store .liste li:last-child .messagerie .calque {
+  border-radius: 0 0 15px 15px !important;
+}
+
+.store .liste li:nth-child(1) .messagerie img,
+.store .liste li:nth-child(1) .messagerie .calque {
+  border-radius: 15px 15px 0 0 !important;
+}
+
+/** ////////// SECTION DROITE ////////// **/
+
+.section_droite_store {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+
+.section_droite_store .maps {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section_droite_store .maps iframe {
+  max-width: 100%;
+  max-height: auto;
+  cursor: crosshair !important;
+}
+
+.section_droite_store .cartographe {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  top: 60%;
+  width: 100%;
+  height: 145px;
+  max-width: 600px;
+  color: var(--col-blanc);
+  padding: 5px 10px;
+}
+.section_droite_store:hover .cartographe {
+  display: block;
+}
+
+.section_droite_store .cartographe h2 {
+  margin: 10px 0 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.section_droite_store .cartographe button {
+  position: absolute;
+  right: 10px;
+  top: -12px;
+  background: var(--night-sombre);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--col-jaune);
+  cursor: pointer;
+}
+
+.section_droite_store .cartographe #detail_cart ul {
+  display: flex;
+  list-style: none;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 !important;
+}
+
+.section_droite_store .cartographe #detail_cart ul li {
+  /*    width: 10px;*/
+  text-align: left;
+  margin: 0 20px;
+}
+
+.section_droite_store .cartographe #detail_cart ul li label {
+  color: #c1c1c1;
+}
+
+.section_droite_store .cartographe #detail_cart ul li span {
+  color: yellow;
+}
+
+/** TABLETTE **/
+@media only screen and (max-width: 768px) {
+  .section_droite_store {
+    display: none;
+  }
+  .section_gauche_store {
+    width: 100% !important;
+  }
+  .corpus_store {
+    margin: 0;
+  }
+
+  nav {
+    height: 50px !important;
+  }
+}

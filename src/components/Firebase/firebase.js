@@ -2,6 +2,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
+import 'firebase/storage';
 
 const config = {
     apiKey: "AIzaSyDFw9t9RvivPa7IYxpaYfi-JW_zRCS1bLo",
@@ -12,21 +13,16 @@ const config = {
     messagingSenderId: "1073914991900",
     appId: "1:1073914991900:web:bb8d871645413c9fe796d9",
     measurementId: "G-R0FQLMWNB5"
-  };
+};
 
-// const config = {
-//     apiKey: process.env.REACT_APP_API_KEY,
-//     authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-//     databaseURL: process.env.REACT_APP_DATABASE_URL,
-//     projectId: process.env.REACT_APP_PROJECT_ID,
-//     storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-//     messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-// };
+
+let storage = '';
 
 class Firebase {
     constructor() {
         /** Initialisation de la liaison au projet */
         app.initializeApp(config);
+        storage = app.storage();
         /** Initialisation de l'API d'AUTH */
         this.auth = app.auth();
         this.db = app.database();
@@ -52,4 +48,5 @@ class Firebase {
 
 }
 
+export { storage };
 export default Firebase;

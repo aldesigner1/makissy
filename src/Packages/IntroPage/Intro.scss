@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+
+@import "../../components/Scss/responsive.scss";
+@import "../../components/Scss/theme.scss";
+@import "../../components/Scss/reset.scss";
+
+:root {
+  --main-font: "Source Sans Pro", sans-serif;
+  --secondary-font: "bellarina", "Herr Von Muellerhoff", cursive;
+  --body-font: "Cabin", sans-serif;
+  --main-font-color-dark: #252525;
+  --secondary-font-color: #ffb900; /**#c59d5f;**/
+  --body-font-color: $orange; /**#515151;**/
+}
+
+#body {
+  font-family: var(--body-font);
+  font-size: 10px;
+  color: var(--body-font-color);
+  scroll-behavior: smooth;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  section {
+    padding: 3.9rem 0 !important;
+  }
+
+  img {
+    // width: 100%;
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 1.6rem !important;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+  }
+}
+/** HEADER */
+#body header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: black;
+  // background-image: linear-gradient(to bottom, rgba($noir, 0.5), transparent);
+
+  .nav {
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($noir, 0.8);
+      z-index: 1000;
+      opacity: 0;
+      transform: scale(0);
+      transition: opacity 0.5s;
+    }
+  }
+
+  .menu-toggle {
+    color: $blanc;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+  }
+
+  .fa-times {
+    display: none;
+  }
+
+  .nav-list {
+    list-style: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 90vh;
+    background: var(--main-font-color-dark);
+    padding: 4.4rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
+  .nav-item {
+    border-bottom: 2px solid rgba($blanc, 0.3);
+  }
+
+  .nav-link {
+    display: block;
+    color: $blanc;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color 0.5s;
+
+    &:hover {
+      color: var(--secondary-font-color);
+    }
+  }
+}
+
+.open {
+  .fa-times {
+    display: block;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .nav-list {
+    transform: translateX(0);
+  }
+
+  .nav::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/** HERO **/
+
+#body .hero {
+  width: 100% !important;
+  height: 100vh !important;
+  background-image: url("/assets/images/planet-3710757_1920.jpg");
+  background-position: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .sub-headline {
+    font-size: 7.5rem;
+    font-family: "Kunstler Script", "brush script mt", sans-serif;
+    color: var(--secondary-font-color);
+    font-weight: 500 !important;
+    letter-spacing: -3px;
+    line-height: 0.3;
+  }
+
+  .first-letter {
+    text-transform: uppercase;
+    font-size: 8.3rem;
+  }
+
+  .headline {
+    color: $blanc;
+    font-size: 3.7rem;
+    font-family: "zilap urban", var(--main-font);
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin-right: -0.5rem !important;
+    text-shadow: 1px 1px 5px rgba($noir, 0.5);
+  }
+
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .line {
+    width: 100%;
+    max-width: 8.4rem;
+    height: 0.25rem;
+    background-color: $blanc;
+    position: relative;
+  }
+
+  .line-right::before,
+  .line-left::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0.6rem solid transparent;
+  }
+
+  .line-right::before {
+    border-right-color: $blanc;
+    right: 0;
+  }
+
+  .line-left::before {
+    border-left-color: $blanc;
+    left: 0;
+  }
+
+  .asterisk {
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+    font-weight: 1000;
+  }
+
+  .headline-description h5 {
+    color: $blanc;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem !important;
+    letter-spacing: 3px;
+    margin-right: -3px !important;
+    text-shadow: 1px 1px 5px rgba($noir, 0.5);
+  }
+
+  .btn {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+  }
+
+  .cta-btn {
+    font-size: 1.1rem;
+    background: $blanc;
+    padding: 0.9rem 1.8rem;
+    color: var(--body-font-color);
+    border-radius: 0.4rem;
+    transition: background-color 0.5s;
+
+    &:hover,
+    &:focus {
+      color: $blanc;
+      background: var(--secondary-font-color);
+    }
+  }
+}
+
+///////////////////////////
+#body .global-headline {
+  margin-top: 6.9rem;
+
+  .sub-headline {
+    font-size: 7.5rem;
+    font-family: "Kunstler Script", "brush script mt", sans-serif;
+    color: var(--secondary-font-color);
+    font-weight: 500 !important;
+    letter-spacing: -3px;
+    line-height: 0.5;
+    letter-spacing: -0.1rem;
+  }
+}
+
+#body .asterisk {
+  color: var(--body-font-color);
+  margin: 2.4rem 0;
+}
+#body .headline {
+  color: var(--main-font-color-dark);
+  color: $blanc;
+  letter-spacing: 0.7rem;
+  margin-right: -7rem;
+  font-size: 2.7rem;
+  font-family: "woodcutter carnage", var(--main-font);
+  font-weight: 900;
+  letter-spacing: 1rem;
+  margin-right: -0.5rem !important;
+  text-shadow: 1px 1px 5px rgba($noir, 0.5);
+}
+
+/** Discover our story **/
+#body .global-headline {
+  text-align: center;
+  margin-top: 3.9rem;
+}
+
+#body .discover-our-story {
+  .global-headline {
+    margin-top: 6.9rem;
+
+    .sub-headline {
+      font-size: 7.5rem;
+      font-family: "Kunstler Script", "brush script mt", sans-serif;
+      color: var(--secondary-font-color);
+      font-weight: 500 !important;
+      letter-spacing: -3px;
+      line-height: 0.5;
+      letter-spacing: -0.1rem;
+    }
+  }
+
+  .asterisk {
+    color: var(--body-font-color);
+    margin: 2.4rem 0;
+  }
+  .headline-dark {
+    color: var(--main-font-color-dark);
+    letter-spacing: 0.7rem;
+    margin-right: -7rem;
+    font-size: 2.7rem;
+    font-family: "woodcutter carnage", var(--main-font);
+    font-weight: 900;
+    letter-spacing: 1rem;
+    margin-right: -0.5rem !important;
+    text-shadow: 1px 1px 5px rgba($noir, 0.5);
+  }
+
+  .marketplace-info {
+    text-align: center;
+  }
+
+  .marketplace-description {
+    margin-bottom: 3rem;
+
+    p {
+      line-height: 3rem;
+      margin-bottom: 2.4rem !important;
+    }
+  }
+
+  .body-btn {
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.5s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 2px;
+      background: var(--secondary-font-color);
+      transition: background 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--main-font-color-dark);
+    }
+
+    &:hover::before,
+    &:focus::before {
+      background: var(--main-font-color-dark);
+    }
+  }
+}
+
+/** TasteFul Recipes **/
+#body .tasteful-Recipes {
+  background: url("/assets/images/spaghetti-2931846_1920.jpg") center no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+#body .between {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+}
+
+/** Discover our menu **/
+
+/** ENDS **/

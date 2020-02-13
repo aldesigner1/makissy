@@ -1,0 +1,589 @@
+@import "../Scss/reset.scss";
+@import "../Scss/theme";
+@import "../Scss/responsive";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "product sans", sans-serif !important;
+  background: $blanc !important;
+  // background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/debut_light.png");
+}
+
+/** PC **/
+
+@media #{$pc-screen} {
+  header {
+    z-index: 29;
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    background: $back-light;
+    width: 100vw;
+    display: flex;
+    padding: 10px 0 5px 0;
+    height: 70px;
+
+    & > div {
+      width: 100%;
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  .introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $gray-light;
+
+    .btn-grad {
+      color: rgba($blanc, 0.9);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: $mob-text-med;
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 1px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #f09819 50%,
+        #ff512f 100%
+      );
+    }
+  }
+
+  header {
+    .logo {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      width: $pc-text-med * 6;
+
+      transition: 2s;
+    }
+
+    %shadowbox3 {
+      box-shadow: $shadowbox;
+    }
+
+    %icon-touch3 {
+      font-size: $pc-text-med - 3;
+      color: $gray-dark;
+      cursor: pointer;
+    }
+
+    .button:hover,
+    .favicon:hover,
+    .favicon:active {
+      color: $orange-dark;
+    }
+
+    .recherche {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 40%;
+      bottom: 0;
+
+      input {
+        // display: none;
+
+        position: absolute;
+        border: 0px solid $gray-light;
+        padding: 2px 0 2px 15px;
+        width: 200px;
+        border-radius: 50px;
+        bottom: 0px;
+        right: 20px;
+        font-family: monospace;
+        height: $pc-text-min + 15;
+        font-size: $pc-text-min - 3;
+        font-weight: bold;
+        background: $back-light;
+        color: #aaa;
+        text-align: left;
+        // @extend %shadowbox2;
+      }
+      .favicon {
+        margin: 0 0 8px 0;
+        @extend %icon-touch3;
+        font-size: $pc-text-min - 1;
+      }
+      label {
+        margin-bottom: 6px;
+      }
+    }
+
+    .options {
+      position: absolute;
+      bottom: 2px;
+      right: 2%;
+      padding: 3px;
+
+      .favicon {
+        margin: 0 10px;
+        @extend %icon-touch3;
+      }
+    }
+
+    .titreur {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      bottom: 2px;
+      left: 10%;
+      font-family: "product sans", sans-serif;
+      font-size: $pc-text-min;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: $gray-dark;
+      text-transform: capitalize;
+
+      label {
+        margin: 0 0 0 10px !important;
+        max-width: 210px;
+      }
+      .favicon {
+        margin: 5px 10px 0 0;
+        @extend %icon-touch3;
+      }
+    }
+  }
+
+  #searchResult {
+    position: absolute;
+    bottom: -24px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: $pc-text-min;
+    color: $blanc;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    padding: 2px 10px !important;
+  }
+
+  .nav {
+    z-index: 30;
+    display: inline-flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
+    left: 2%;
+    bottom: 50%;
+    transform: translateY(50%);
+    // max-width: 100%;
+    background-color: #fff;
+    padding: 20px 0px !important;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
+    transition: 1s;
+  }
+  .nav-item {
+    color: #83818c;
+    padding: $pc-text-med $pc-text-min - 10;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 5px;
+    z-index: 1;
+    font-size: $pc-text-min;
+    font-family: "product sans", sans-serif;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .menucon:hover,
+  .nav-item:hover {
+    color: #f7630c;
+  }
+
+  .menucon {
+    font-size: $pc-text-min;
+  }
+}
+
+/** TABLETTE **/
+
+@media #{$tablet-screen} {
+  header {
+    z-index: 29;
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    background: $back-light;
+    width: 100vw;
+    display: flex;
+    padding: 10px 0 5px 0;
+    height: 50px;
+
+    & > div {
+      width: 100%;
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  .introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $gray-light;
+
+    .btn-grad {
+      color: rgba($blanc, 0.9);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: $mob-text-med;
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 1px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #f09819 50%,
+        #ff512f 100%
+      );
+    }
+  }
+
+  header {
+    .logo {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      width: $tab-text-med * 8;
+
+      transition: 2s;
+    }
+
+    %shadowbox2 {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    %icon-touch2 {
+      font-size: $tab-text-med + 2;
+      color: $gray-dark;
+    }
+
+    .button:hover,
+    .favicon:hover,
+    .favicon:active {
+      color: $orange-dark;
+    }
+
+    .recherche {
+      position: absolute;
+      left: 40%;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+
+      input {
+        // display: none;
+
+        position: absolute;
+        border: 0px solid $gray-light;
+        padding: 2px 0 2px 15px;
+        width: 110px;
+        border-radius: 50px;
+        bottom: 0px;
+        right: 35px;
+        height: $tab-text-med + 15;
+        font-size: $tab-text-med - 2;
+        font-weight: bold;
+        background: $back-light;
+        color: #aaa;
+        text-align: left;
+        // @extend %shadowbox2;
+      }
+      .favicon {
+        margin: 0 0 5px 0;
+        @extend %icon-touch2;
+        font-size: $tab-text-med - 2;
+      }
+    }
+
+    .options {
+      position: absolute;
+      bottom: 2px;
+      right: 2%;
+      padding: 3px;
+
+      .favicon {
+        margin: 0 10px;
+        @extend %icon-touch2;
+      }
+    }
+
+    .titreur {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      bottom: 2px;
+      left: 5px;
+      font-family: "product sans", sans-serif;
+      font-size: $tab-text-med;
+      color: $gray-dark;
+      text-transform: capitalize;
+
+      label {
+        margin: 0;
+        max-width: 150px;
+      }
+      .favicon {
+        margin: 0 10px;
+        @extend %icon-touch2;
+      }
+    }
+  }
+
+  #searchResult {
+    position: absolute;
+    bottom: -24px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: $tab-text-min;
+    color: $blanc;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    padding: 2px 10px !important;
+  }
+
+  .nav {
+    z-index: 30 !important;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    overflow: hidden;
+    bottom: 2%;
+    max-width: 60%;
+    width: 400px;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 0 20px !important;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, 0.8);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+  }
+  .nav-item {
+    padding: $tab-text-med - 5 $tab-text-med;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 5px;
+    z-index: 1;
+    font-family: "product sans", sans-serif;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .menucon:hover,
+  .nav-item:hover {
+    color: #f7630c;
+  }
+
+  .menucon {
+    font-size: $tab-text-med + 2;
+  }
+}
+
+/** SMARTPHONE **/
+
+@media #{$smart-screen} {
+  header {
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw;
+    height: 80px;
+    padding: 10px 0 5px 0;
+    background: $blanc;
+    display: flex;
+
+    & > div {
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  .introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $gray-light;
+
+    .btn-grad {
+      color: rgba($blanc, 1);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: $mob-text-med;
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 1px;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(
+        to right,
+        #ff512f 0%,
+        #f09819 50%,
+        #ff512f 100%
+      );
+    }
+  }
+
+  header {
+    .logo {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0 !important;
+      width: $mob-text-med * 7;
+
+      transition: 2s;
+    }
+
+    %shadowbox {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    }
+
+    %icon-touch {
+      font-size: $mob-text-med + 5;
+      color: $gray-dark;
+    }
+
+    .button:hover,
+    .favicon:hover,
+    .favicon:active {
+      color: $orange-dark;
+    }
+
+    .recherche {
+      position: absolute;
+      right: 4% !important;
+      left: auto;
+      top: -60px !important;
+
+      input {
+        display: none;
+
+        position: absolute;
+        border: 1px solid $gray-light;
+        padding: 2px 15px;
+        border-radius: 50px;
+        bottom: -40px !important;
+        right: 0;
+        height: $mob-text-med + 15;
+        font-size: $mob-text-med - 2;
+        font-weight: bold;
+        background: $back-light;
+        font-family: monospace;
+        @extend %shadowbox;
+      }
+      .favicon {
+        @extend %icon-touch;
+      }
+    }
+
+    .options {
+      position: absolute;
+      bottom: 2px;
+      right: 2%;
+      padding: 3px;
+
+      .favicon {
+        margin: 0 10px;
+        @extend %icon-touch;
+      }
+    }
+
+    .titreur {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      bottom: 2px;
+      left: 5px;
+      font-family: "product sans", sans-serif;
+      font-size: $mob-text-med + 2;
+      color: $gray-dark;
+      text-transform: capitalize;
+
+      label {
+        margin: 0;
+        max-width: 200px;
+      }
+      .favicon {
+        margin: 0 10px;
+        @extend %icon-touch;
+      }
+    }
+  }
+
+  #searchResult {
+    position: absolute;
+    bottom: -24px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: $mob-text-min;
+    color: $blanc;
+    font-style: italic;
+    max-width: 90%;
+    max-height: 18px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    padding: 2px 10px !important;
+  }
+
+  .nav {
+    z-index: 30;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    overflow: hidden;
+    justify-content: space-around;
+    bottom: 0;
+    height: 55px !important;
+    min-width: 100%;
+    max-width: 100%;
+    background: $back-light;
+    padding: 0 !important;
+    border-radius: 0;
+    @extend %shadowbox;
+    margin: 0 auto;
+    left: 0% !important;
+    transform: translate(0%, 0%);
+    transition: 1s;
+  }
+  .nav-item {
+    color: #83818c;
+    padding: $mob-text-med;
+    text-decoration: none;
+    transition: 0.3s;
+    margin: 0 10px;
+    z-index: 1;
+    font-family: "product sans", sans-serif;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .menucon:hover,
+  .nav-item:hover {
+    color: $orange;
+  }
+
+  .menucon {
+    font-size: $tab-text-med + 5;
+  }
+}
