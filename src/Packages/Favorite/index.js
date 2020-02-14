@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import FavoriteProduct from './FavoriteProduct';
 
-import './Favorite.scss';
+// import './Favorite.scss';
 
 export default class Favorite extends Component {
 
@@ -170,11 +170,11 @@ export default class Favorite extends Component {
         ))
 
         return (
-                <section className="principalFavoris">
-                    <ol className="listeFavoris">
-                        {FavoriteList}
-                    </ol>
-                </section>
+            <section className="principalFavoris">
+                <ol className="listeFavoris">
+                    {FavoriteList}
+                </ol>
+            </section>
         )
     }
 }

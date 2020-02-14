@@ -1,4 +1,4 @@
-@import "../../components/Scss/reset";
+// @import "../../components/Scss/reset";
 @import "../../components/Scss/theme";
 @import "../../components/Scss/responsive";
 
@@ -79,13 +79,13 @@
       left: 0 !important;
       top: 0 !important;
       min-width: 50%;
-      height: calc(width) !important;
+      height: width !important;
       font-size: $pc-text-min;
 
       img {
         border-radius: 50%;
         max-width: $tab-text-max * 1.2;
-        height: calc(width) !important;
+        height: width !important;
         border: 3px solid $green;
         margin: 0 10px 0 20px;
       }

@@ -1,6 +1,6 @@
-@import "../../components/Scss/reset";
-@import "../../components/Scss/theme";
-@import "../../components/Scss/responsive";
+// @import "../../components/Scss/reset";
+// @import "../../components/Scss/theme";
+// @import "../../components/Scss/responsive";
 
 /** PC **/
 
@@ -340,12 +340,12 @@
     }
 
     .uniteFavoris {
-      width: 45%;
+      // width: 50%;
       margin: 20px 5px !important;
       border: 0px solid $gray;
       border-radius: 10px;
       // min-height: 170px;
-      height: auto !important;
+      // height: auto !important;
       display: inline;
 
       input[type="checkbox"] {
@@ -366,7 +366,6 @@
         box-shadow: 0 0 8px rgba(#ff4343, 0.7);
         border: 1px solid $orange;
       }
-
     }
 
     .imageurFavoris {

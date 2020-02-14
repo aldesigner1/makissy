@@ -1,6 +1,6 @@
-@import "../../components/Scss/reset";
-@import "../../components/Scss/theme";
-@import "../../components/Scss/responsive";
+// @import "../../components/Scss/reset";
+// @import "../../components/Scss/theme";
+// @import "../../components/Scss/responsive";
 
 #bodyHome {
   background: #fff;
@@ -146,10 +146,10 @@ input[type="file"]:focus {
       /*    border-bottom: 2px solid #f1f1f1;*/
       transition: 2s;
     }
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      /*    border-bottom: 2px solid rgba(254, 134, 1, 0.5);*/
-    }
+    // input[type="text"]:focus,
+    // input[type="password"]:focus {
+    //   /*    border-bottom: 2px solid rgba(254, 134, 1, 0.5);*/
+    // }
 
     .cont span {
       width: 100%;
@@ -665,10 +665,10 @@ input[type="file"]:focus {
       /*    border-bottom: 2px solid #f1f1f1;*/
       transition: 2s;
     }
-    input[type="text"]:focus,
-    input[type="password"]:focus {
-      /*    border-bottom: 2px solid rgba(254, 134, 1, 0.5);*/
-    }
+    // input[type="text"]:focus,
+    // input[type="password"]:focus {
+    //   /*    border-bottom: 2px solid rgba(254, 134, 1, 0.5);*/
+    // }
 
     .cont span {
       width: 100%;

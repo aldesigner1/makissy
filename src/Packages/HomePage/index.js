@@ -214,7 +214,8 @@ export default class HomePage extends Component {
 
                 </section>
 
-            </div >
+            </div>
         )
     }
 }
+
