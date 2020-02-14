@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import FavoriteProduct from './FavoriteProduct';
 
-// import './Favorite.scss';
+import './Favorite.scss';
 
 export default class Favorite extends Component {
 
