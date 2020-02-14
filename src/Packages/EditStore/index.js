@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-// import './EditStore.scss';
+import './EditStore.scss';
 
 export default class EditStore extends Component {
     render() {
