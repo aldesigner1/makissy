@@ -19,7 +19,7 @@ export default class StorePage extends Component {
     render() {
 
         const Stores = this.state.stores.map((index) => (
-            <Store key={index} />
+            <Store key={index} id={index} />
         ))
 
         return (

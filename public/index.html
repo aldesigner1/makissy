@@ -60,38 +60,39 @@
         document.getElementById("head").style.display = "none";
       };
     </script>
+    <script>
+      function previewProfileImage(uploader) {
+        //ensure a file was selected
+        if (uploader.files && uploader.files[0]) {
+          var imageFile = uploader.files[0];
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            //set the image data as source
+            $("#profileImage").attr("src", e.target.result);
+          };
+          reader.readAsDataURL(imageFile);
+        }
+      }
+
+      $("#imageUpload").change(function() {
+        previewProfileImage(this);
+      });
+    </script>
     <title>Makissy</title>
   </head>
+
   <body>
     <div id="root"></div>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiYWx5bXgiLCJhIjoiY2s1czJjN3RmMDV3OTNsbzE3cHl2aGRpeSJ9.Tqh2wRgX4VKL5PF0vhDupg";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11"
+        // zoom: 12
+      });
+    </script>
+
+    <script src="js/main.js"></script>
   </body>
-
-  <script>
-    mapboxgl.accessToken =
-      "pk.eyJ1IjoiYWx5bXgiLCJhIjoiY2s1czJjN3RmMDV3OTNsbzE3cHl2aGRpeSJ9.Tqh2wRgX4VKL5PF0vhDupg";
-    var map = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/mapbox/streets-v11"
-      // zoom: 12
-    });
-  </script>
-  <script>
-    function previewProfileImage(uploader) {
-      //ensure a file was selected
-      if (uploader.files && uploader.files[0]) {
-        var imageFile = uploader.files[0];
-        var reader = new FileReader();
-        reader.onload = function(e) {
-          //set the image data as source
-          $("#profileImage").attr("src", e.target.result);
-        };
-        reader.readAsDataURL(imageFile);
-      }
-    }
-
-    $("#imageUpload").change(function() {
-      previewProfileImage(this);
-    });
-  </script>
-  <script src="js/main.js"></script>
 </html>

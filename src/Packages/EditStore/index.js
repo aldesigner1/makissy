@@ -9,7 +9,7 @@ export default class EditStore extends Component {
             <div id="bodyHome">
                 <div className="storeEntete">
                     <div className="picStore">
-                        <img id="profileImage" src='Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png' alt="PIC" />
+                        <img id="profileImage" src="Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png" alt="PIC" />
                         <span> <label htmlFor="imageUpload"><i className="fab fa-instagram"></i></label></span>
                         <label>@ Express Shopping</label>
                         <input id="imageUpload" type="file" accept="image/png, image/jpeg" />

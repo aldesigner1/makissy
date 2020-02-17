@@ -555,23 +555,24 @@
       justify-content: flex-end;
       align-items: center;
       position: fixed;
-      bottom: 50px;
+      bottom: 65px;
       // width: 50%;
-      right: 5px;
+      right: 10px;
       z-index: 5;
       cursor: pointer;
 
       a {
         position: relative;
-        background: $back-light;
+        background: $green !important;
         // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
-        border-radius: 30px 30px 10px 30px;
+        border-radius: 30px 30px 10px 30px !important;
         padding: 15px 20px;
-        border: none;
+        border: 2px solid $blanc !important;
         // right: 50px;
         // color: $gray-dark;
+        box-shadow: 0 0 5px #000;
         font-size: $mob-text-max -1 !important;
-        animation: callToAction 2s infinite;
+        animation: callToAction 1s infinite;
         @keyframes callToAction {
           0% {
             background: rgba($orange-light, 1);

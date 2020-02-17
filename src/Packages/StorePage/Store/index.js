@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default class Store extends Component {
     render() {
         return (
-            <li className="store">
+            <li className="store" id={this.props.id}>
                 <div className="fondStore">
 
                 </div>
