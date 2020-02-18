@@ -165,7 +165,7 @@ body {
     bottom: -24px;
     right: 50%;
     transform: translateX(50%);
-    font-size: $pc-text-min;
+    font-size: $pc-text-min -2;
     color: $blanc;
     font-style: italic;
     background: rgba(0, 0, 0, 0.5);

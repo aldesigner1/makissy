@@ -31,8 +31,8 @@ export default class Post extends React.Component {
                 </div>
                 <div className="detailleur">
                     <div className="enteteDetailleur">
-                        <Link to="/">{this.props.delai}</Link>
-                        <Link to="/" id="like"> <i class="fas fa-heart" id="likeArticle"></i> <label for="likeArticle">{this.props.kiff} kiff</label> </Link>
+                        <Link to="/"><i class="fas fa-history"></i> {this.props.delai}</Link>
+                        {/* <Link to="/" id="like"> <i class="fas fa-heart" id="likeArticle"></i> <label for="likeArticle">{this.props.kiff} kiff</label> </Link> */}
 
                         <span class="appelDetailArticle">
                             <i class="fas fa-phone-square-alt iconContact"></i>

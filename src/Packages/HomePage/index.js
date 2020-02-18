@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
-
+import Map from '../MapPage/';
 import Post from './Post';
 
 import './Landing.scss';
+
 
 export default class HomePage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            lng: 12.4914,
+            lat: 6.9772,
+            zoom: 4.85,
             posts: [
                 {
                     nomUtil: "Makissy",
@@ -207,12 +211,7 @@ export default class HomePage extends Component {
 
                     </ul>
                 </section>
-                <section className="secondaire sectionMap">
-                    {/* <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16255.485185623327!2d11.482445527720174!3d3.8240691554908164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bd0261bb7ffff%3A0xb5c2179e2f6d7730!2sF.%20ONANA!5e1!3m2!1sfr!2scm!4v1578055554274!5m2!1sfr!2scm" width="400" height="300" frameborder="0" style={{ "border": "0" }} allowfullscreen=""></iframe> */}
-                    {/* <iframe title="maps" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.482566297054293%2C3.8352878962582038%2C11.485843956470491%2C3.837265607325087&amp;layer=transportmap" style={{ "border": "1px solid black" }}></iframe><br /><small>*<a href="https://www.openstreetmap.org/#map=19/3.83628/11.48421&amp;layers=TN">Afficher une carte plus grande</a>*</small> */}
-                    <div id='map' className="iframe" ></div>
-
-                </section>
+                <Map />
 
             </div>
         )
