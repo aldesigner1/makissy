@@ -1,6 +1,14 @@
 import React from 'react';
 
 class Geoloc extends React.Component {
+
+    handleCoord = () => {
+        var long = this.props.coords.longitude;
+        var lat = this.props.coords.lat;
+        let coord = { long, lat };
+        return coord;
+    }
+
     render() {
         return !this.props.isGeolocationAvailable
             ? <div>Your browser does not support Geolocation</div>

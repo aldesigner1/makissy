@@ -7,7 +7,7 @@ import { withAuthorization } from '../../components/Session';
 
 import Geoloc from './Geoloc';
 
-import "./Maps.css";
+import "./Maps.scss";
 
 const Maps = () => (
     <Plan />
@@ -26,9 +26,6 @@ export class Main extends Component {
     }
 
     componentDidMount() {
-        // this.setState({ lng: this.props.coords.longitude, lat: this.props.latitude, zoom: 4.85 });
-        // console.log('LONG:' + this.props.coords.longitude + ' LAT:' + this.props.coords.latitude);
-
         const map = new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/mapbox/streets-v11',
@@ -45,6 +42,13 @@ export class Main extends Component {
         });
     }
 
+    handleCoord = (coord) => {
+        this.setState.lng = coord.long;
+        this.setState.lat = coord.lat;
+        console.log("valeurs: " + coord.long + "et" + coord.lat);
+
+    }
+
     render() {
         return (
 
@@ -55,10 +59,10 @@ export class Main extends Component {
                 <div className="sidebarStyle">
                     <div>Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}</div>
                 </div>
-                <div class="carte">
+                <div className="carte">
                     <h1>Hell world!</h1>
-                    <p>{this.props.coords && this.props.coords.latitude}</p>
-                    <Geoloc {...this.props} />
+                    <p>{this.props.coords && this.props.coords.longitude}<br />{this.props.coords && this.props.coords.latitude}</p>
+                    <Geoloc {...this.props} handleCoord={(e) => this.handleCoord} />
                 </div>
             </section>
         )

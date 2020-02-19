@@ -89,7 +89,7 @@ const NavigationAuth = () => (
                     <label for="" class="titrePage"> Actualités</label>
                 </div>
                 <SignOutButton />
-                <a href="/stores#5"><h4 id="searchResult"> 12 resultats </h4></a>
+                <a href="/stores#5"><h4 id="searchResult"> 32 resultats </h4></a>
             </div>
         </header>
         <nav class="nav">
