@@ -62,7 +62,7 @@ const NavigationNonAuth = () => (
             </div>
         </nav> */}
         <header className="introduction">
-            <Link className="btn-grad" to={ROUTES.INTRO}> Commençons... </Link>
+            <Link className="btn-grad" to={ROUTES.INTRO}> C'est Parti... </Link>
         </header>
         <nav class="nav">
             <Link to={ROUTES.LANDING} onClick={(evt) => googleSignIn(evt)} data-tip="Inscription" data-place="bottom" className="nav-item">

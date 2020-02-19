@@ -32,8 +32,8 @@ const App = () => (
         <Route exact path={ROUTES.LANDING} component={HomePage} />
         <Route path={ROUTES.HOME} component={HomePage} />
         {/* <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-        <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-        <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+        
+        
         <Route path={ROUTES.ADMIN} component={AdminPage} />
         <Route path={ROUTES.PASS_FORGET} component={PassForgetPage} />
 
@@ -41,9 +41,14 @@ const App = () => (
         <Route path={ROUTES.ARTICLE} component={ArticlePage} />
         <Route path={ROUTES.DASHBOARD} component={Dashboard} />
         <Route path={ROUTES.MAPS} component={Maps} />
-        <Route path={ROUTES.SIGN} component={SignPage} />
+        
         <Route path={ROUTES.MESSAGERIE} component={Messagerie} />
         <Route path={ROUTES.PANIER} component={CartPage} /> */}
+
+        <Route path={ROUTES.SIGN} component={HomePage} />
+        <Route path={ROUTES.SIGN_IN} component={HomePage} />
+        <Route path={ROUTES.SIGN_UP} component={HomePage} />
+
         <Route path={ROUTES.STORE} component={StorePage} />
         <Route path={ROUTES.FAVORITE} component={FavoritePage} />
         <Route path={ROUTES.LOADER} component={LoaderPage} />
