@@ -316,7 +316,7 @@ export default class HomePage extends Component {
                     kiff: 71,
                     like: true,
                     ville: "Yaoundé ||",
-                    desc: "Commandez vos gâteaux au chocolat, à la vanille, au yaourt, à la noix de coco, au citron, etc. Et faites-vous livrer en 24h...",           
+                    desc: "Commandez vos gâteaux au chocolat, à la vanille, au yaourt, à la noix de coco, au citron, etc. Et faites-vous livrer en 24h...",
                     telephone: "+237 696 80 95 30",
                 },
                 {
@@ -333,7 +333,7 @@ export default class HomePage extends Component {
                     kiff: 58,
                     like: true,
                     ville: "Yaoundé ||",
-                    desc: "Commandez vos chaussures.",           
+                    desc: "Commandez vos chaussures.",
                     telephone: "+237 657 33 38 15",
                 },
                 {
@@ -350,7 +350,7 @@ export default class HomePage extends Component {
                     kiff: 357,
                     like: true,
                     ville: "",
-                    desc: "Performances: 04 caméras IA - Ultra recharge - 6,6''HD+.",           
+                    desc: "Performances: 04 caméras IA - Ultra recharge - 6,6''HD+.",
                     telephone: "",
                 },
                 {
@@ -367,7 +367,7 @@ export default class HomePage extends Component {
                     kiff: 187,
                     like: true,
                     ville: "",
-                    desc: "Detail oriented for best quality",           
+                    desc: "Detail oriented for best quality",
                     telephone: "+237 690 33 50 31",
                 },
                 {
@@ -384,7 +384,7 @@ export default class HomePage extends Component {
                     kiff: 612,
                     like: true,
                     ville: "Yaoundé ||",
-                    desc: "Learning is for all, and we're there for that... ",           
+                    desc: "Learning is for all, and we're there for that... ",
                     telephone: "",
                 },
                 {
@@ -401,7 +401,7 @@ export default class HomePage extends Component {
                     kiff: 43,
                     like: true,
                     ville: "Yaoundé ||",
-                    desc: "Incubateurs et couveuses disponibles pour vos oeufs. ",           
+                    desc: "Incubateurs et couveuses disponibles pour vos oeufs. ",
                     telephone: "+237 679 94 59 40",
                 },
                 {
@@ -418,7 +418,7 @@ export default class HomePage extends Component {
                     kiff: 10,
                     like: true,
                     ville: "Yaoundé ||",
-                    desc: "Conception Infographique: Faites votre choix à travers nos packages.",           
+                    desc: "Conception Infographique: Faites votre choix à travers nos packages.",
                     telephone: "+237 695 54 85 33",
                 },
                 {
@@ -567,6 +567,7 @@ export default class HomePage extends Component {
 
         const Posts = this.state.posts.map((element, index) => (
             <Post key={index}
+                id={element.nomUtil}
                 nomUtil={element.nomUtil}
                 categorie={element.categorie}
                 titre={element.titre}
