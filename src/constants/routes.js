@@ -20,7 +20,7 @@ export const FAVORITE = "/myFavorites";
 export const MESSAGERIE = "/messages";
 export const ACTUALITE = "/actualites";
 export const MAPS = "/maps";
-// export const SIGN = "/sign";
+export const SIGN = "/sign";
 export const DASHBOARD = "/dashboard";
 
 export const LOADER = "/loader";
