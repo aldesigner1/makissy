@@ -10,6 +10,7 @@ import FavoritePage from '../../Packages/Favorite';
 import StorePage from '../../Packages/StorePage';
 import LoaderPage from '../../Packages/LoaderPage';
 import EditStorePage from '../../Packages/EditStore';
+import AddStorePage from '../../Packages/AddStore';
 import IntroPage from '../../Packages/IntroPage';
 // import AccountPage from '../Account';
 // import SignInPage from '../SignIn';
@@ -53,6 +54,7 @@ const App = () => (
         <Route path={ROUTES.FAVORITE} component={FavoritePage} />
         <Route path={ROUTES.LOADER} component={LoaderPage} />
         <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
+        <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
         <Route path={ROUTES.INTRO} component={IntroPage} />
 
 

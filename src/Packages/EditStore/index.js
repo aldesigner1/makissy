@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 import './EditStore.scss';
 
@@ -30,7 +31,7 @@ export default class EditStore extends Component {
                             </div>
                         </div>
                         <div className="optionStore">
-                            <Link to="#"> <i className="fas fa-fingerprint favicon"></i> <span>Mon Compte</span>  </Link>
+                            <Link to={ROUTES.ADDSTORE}> <i className="fas fa-fingerprint favicon"></i> <span>Mon Store</span>  </Link>
                         </div>
                     </div>
                 </div>
@@ -65,7 +66,9 @@ export default class EditStore extends Component {
                     <label htmlFor="demo2" id="onglet" className="o2">
                         <span id="btn2"><i className="fas fa-person-booth"></i></span>
                         <div className="pageOnglet ong2">
+
                             <ul>
+
                                 <li>
                                     <img src="assets/images/Free-Shipping-Trend-white-Men-s-2015-Fashion-teenage-Shoes-High-Casual-Sneakers-Male-Size-39.jpg" width="100%" height="auto" alt="" />
                                 </li>

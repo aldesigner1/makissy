@@ -12,6 +12,7 @@ export const PASS_FORGET = "/pw-forget";
 
 export const STORE = "/stores";
 export const EDITSTORE = "/myStore";
+export const ADDSTORE = "/newStore";
 export const ARTICLE = "/articles";
 export const PANIER = "/cart";
 export const FAVORITE = "/myFavorites";
