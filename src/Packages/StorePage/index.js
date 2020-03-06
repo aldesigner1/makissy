@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { EDITSTORE } from '../../constants/routes';
 
+import { withAuthorization } from '../../components/Session';
+
 import Store from './Store';
 
 import './Store.scss';
 
-export default class StorePage extends Component {
+export class StorePage extends Component {
 
 
     constructor(props) {
@@ -149,3 +151,6 @@ export default class StorePage extends Component {
     }
 }
 
+const condition = (authUser) => !!authUser;
+
+export default withAuthorization(condition)(StorePage);

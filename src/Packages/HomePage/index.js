@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import Map from '../MapPage/';
 import Post from './Post';
 
+
+// import { withAuthorization } from '../../components/Session';
+
 import './Landing.scss';
 
 
@@ -15,6 +18,23 @@ export default class HomePage extends Component {
             lat: 6.9772,
             zoom: 4.85,
             posts: [
+                {
+                    nomUtil: "Annonce !!!",
+                    categorie: "santé",
+                    titre: "#CORONAVIRUS - covid19",
+                    following: "Suivi...",
+                    prix: " ",
+                    devise: " ",
+                    srcImage: "/Assets/images/IMG_20200306_220956_884.jpg",
+                    profilePic: "Assets/icons/IMG_20200114_153834_752.jpg",
+                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                    delai: "Aujourd'hui",
+                    kiff: 500,
+                    like: true,
+                    ville: "Yaoundé ||",
+                    desc: "Pour les actualités concernant ce virus, rejoignez le groupe [ t.me/CoronaAfrique ]",
+                    telephone: "1510",
+                },
                 {
                     nomUtil: "Makissy",
                     categorie: "PUB",
@@ -603,3 +623,7 @@ export default class HomePage extends Component {
     }
 }
 
+
+// const condition = (authUser) => !!authUser;
+
+// export default withAuthorization(condition)(HomePage);
