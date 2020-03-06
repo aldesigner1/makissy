@@ -34,10 +34,16 @@ export default class Post extends React.Component {
                         <Link to="/"><i class="fas fa-history"></i> {this.props.delai}</Link>
                         {/* <Link to="/" id="like"> <i class="fas fa-heart" id="likeArticle"></i> <label for="likeArticle">{this.props.kiff} kiff</label> </Link> */}
 
+                        {/* <span class="appelDetailArticle">
+                            <i class="fas fa-sms iconSMS"></i>
+                            <a class="contactArticle" href={`sms:${this.props.telephone}`} > {this.props.telephone}  </a>
+                        </span> */}
+
                         <span class="appelDetailArticle">
                             <i class="fas fa-phone-square-alt iconContact"></i>
                             <a class="contactArticle" href={`tel:${this.props.telephone}`} > {this.props.telephone}  </a>
                         </span>
+
                         <h3 id="nomArticle"> {this.props.titre} </h3>
                     </div>
                     <div className="descriptionDetailleur">

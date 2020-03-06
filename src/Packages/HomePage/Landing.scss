@@ -969,6 +969,31 @@
           }
         }
 
+        .iconSMS {
+          font-size: $mob-text-max;
+          // text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+          animation: manga2 infinite 3s;
+          // background: transparent !important;
+
+          @keyframes manga2 {
+            0% {
+              color: #ffbb00;
+            }
+            25% {
+              color: #ffe600;
+            }
+            50% {
+              color: $green;
+            }
+            75% {
+              color: #ffe600;
+            }
+            100% {
+              color: #ffbb00;
+            }
+          }
+        }
+
         .contactArticle {
           color: transparent;
           font-family: monospace;
