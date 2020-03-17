@@ -16,6 +16,7 @@ export const ADDSTORE = "/newStore";
 export const ARTICLE = "/articles";
 export const PANIER = "/cart";
 export const FAVORITE = "/myFavorites";
+export const TUTORIAL = "/tuto";
 
 
 export const MESSAGERIE = "/messages";

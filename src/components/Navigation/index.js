@@ -97,7 +97,7 @@ const NavigationAuth = () => (
                 <i class="fab fa-chromecast menucon"></i>
             </Link>
 
-            <Link to={ROUTES.FAVORITE} class="nav-item is-active" active-color="#F7630C">
+            <Link to={ROUTES.TUTORIAL} class="nav-item is-active" active-color="#F7630C">
                 <i class="fab fa-cloudsmith menucon"></i>
             </Link>
 

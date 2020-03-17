@@ -6,7 +6,7 @@ import Navigation from '../Navigation';
 
 // import LandingPage from '../Landing';
 import HomePage from '../../Packages/HomePage';
-import FavoritePage from '../../Packages/Favorite';
+import TutoPage from '../../Packages/TutorialPage';
 import StorePage from '../../Packages/StorePage';
 import LoaderPage from '../../Packages/LoaderPage';
 import EditStorePage from '../../Packages/EditStore';
@@ -51,7 +51,7 @@ const App = () => (
         <Route path={ROUTES.SIGN_UP} component={HomePage} />
 
         <Route path={ROUTES.STORE} component={StorePage} />
-        <Route path={ROUTES.FAVORITE} component={FavoritePage} />
+        <Route path={ROUTES.TUTORIAL} component={TutoPage} />
         <Route path={ROUTES.LOADER} component={LoaderPage} />
         <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
         <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
