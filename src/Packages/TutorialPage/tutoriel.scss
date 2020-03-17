@@ -57,12 +57,13 @@ ol {
         position: relative;
         width: 90%;
         min-height: 250px;
+        background: ($gray-dark);
         // height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        background: white;
+        // background: white;
         border-radius: 10px;
         // border: 1px solid $gray-light;
         overflow: hidden;
