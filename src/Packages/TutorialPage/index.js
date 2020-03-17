@@ -7,7 +7,7 @@ export default class Tutoriel extends Component {
             <div className="principalTuto">
                 <div className="listeTuto">
                     <ol>
-                        <li>
+                        <li style={{ "box-shadow": "0 0 10px #ff4400" }}>
 
                             <div className="imageTuto">
                                 <img src="Assets\images\Miniature_Makissy.png" width="100px" alt="miniature tutotriel" />
