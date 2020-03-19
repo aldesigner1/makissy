@@ -1,5 +1,7 @@
 
-import React from 'react';
+import React, { Component } from "react";
+import classnames from "classnames";
+
 import firebase from 'firebase';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom';
@@ -77,21 +79,7 @@ const NavigationAuth = () => (
 
     <div>
         <ReactTooltip place="right" effect="solid" type="dark" />
-        <header id="head">
-            <div>
-                <div class="logo">
-                    <img src="assets\icons\logolightx1.png" alt="Makissy" />
-                </div>
-                <div class="titreur">
-                    <Link to="#" class="back">
-                        {/* <!-- <i class="fas fa-caret-left favicon"></!--> --> */}
-                    </Link>
-                    <label for="" class="titrePage"> Actualités</label>
-                </div>
-                <SignOutButton />
-                <a href="/stores#5"><h4 id="searchResult"> 32 resultats </h4></a>
-            </div>
-        </header>
+        <Headbar />
         <nav class="nav">
             <Link to={ROUTES.HOME} class="nav-item is-active" active-color="#F7630C">
                 <i class="fab fa-chromecast menucon"></i>
@@ -107,90 +95,65 @@ const NavigationAuth = () => (
         </nav>
     </div>
 
-
-    // <header>
-    //     <ReactTooltip place="right" effect="solid" type="dark" />
-    //     {/**<!-- Barre de navigation -->**/}
-    //     <nav className="navbar navbar-fixed-top">
-    //         <div className="container">
-    //             {/**<!-- Partie Gauche -->**/}
-    //             <div id="header-gauche" className="navbar-header">
-
-
-    //                 <button type="button" className="navbar-toggle menu-btn" data-toggle="collapse" data-target="#header-navig" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="glyphicon glyphicon-option-vertical"></span></button>
-
-    //                 <Link className="navbar-brand" to="/"> <img src="Assets/icones/logolightx1.png" alt="Makissy" width="150px" /> </Link>
-    //             </div>
-    //         </div>
-    //         {/**<!-- Navigation -->**/}
-    //         <div id="header-navig" className="collapse navbar-collapse">
-    //             {/**<!--
-    //                 <ul className="nav navbar-nav" id="touche-navig">
-    //                       <li id="header-search"> <span className="glyphicon glyphicon-search"></span>  <input type="text" placeholder="Discover your next favorite thing..." /> </li>
-    //                     <li> <Link to="/"> ••• </Link> </li>  
-    //                 </ul>
-    //             -->**/}
-
-
-
-    //             <ul id="connecter" className="nav navbar-nav navbar-right">
-    //                 <li id="login">
-    //                     <SignOutButton />
-    //                 </li>
-    //                 <li id="signup"> <Link onClick={(evt) => googleSignIn()} to={ROUTES.SIGN} data-tip="Inscription" data-place="bottom">
-
-    //                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-edit" className="svg-inline--fa fa-user-edit fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="16px" data-tip="Inscription" data-toggle="tooltip" data-placement="right"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h274.9c-2.4-6.8-3.4-14-2.6-21.3l6.8-60.9 1.2-11.1 7.9-7.9 77.3-77.3c-24.5-27.7-60-45.5-99.9-45.5zm45.3 145.3l-6.8 61c-1.1 10.2 7.5 18.8 17.6 17.6l60.9-6.8 137.9-137.9-71.7-71.7-137.9 137.8zM633 268.9L595.1 231c-9.3-9.3-24.5-9.3-33.8 0l-37.8 37.8-4.1 4.1 71.8 71.7 41.8-41.8c9.3-9.4 9.3-24.5 0-33.9z"></path></svg>
-    //                 </Link> </li>
-    //             </ul>
-
-
-    //             <ul className="nav navbar-nav" id="touche-navig">
-    //                 {/**<!--
-    //                     <li> Profil </li>
-    //                     <li> Store </li>
-    //                     <li> Article </li>
-    //                     <li> Conversation </li>
-    //                     <li> Maps </li>
-    //                 -->**/}
-    //             </ul>
-    //             <ul className="nav navbar-nav menu_list">
-    //                 <li data-tip="Actualités" data-toggle="tooltip" data-placement="right">
-    //                     <Link to={ROUTES.ACTUALITE} className="btn_menu">
-    //                         <img src="Assets/icones/icone1.svg" width="35" alt="A" />
-    //                     </Link>
-    //                 </li>
-    //                 <li data-tip="Stores" data-toggle="tooltip" data-placement="right">
-    //                     <Link to={ROUTES.STORE} className="btn_menu">
-    //                         <img src="Assets/icones/icone2.svg" width="35" alt="B" />
-    //                     </Link>
-    //                 </li>
-    //                 <li data-tip="Article" data-toggle="tooltip" data-placement="right">
-    //                     <Link to={ROUTES.ARTICLE} className="btn_menu">
-    //                         <img src="Assets/icones/icone3.svg" width="35" alt="C" />
-    //                     </Link>
-    //                 </li>
-    //                 <li data-tip="Messagerie" data-toggle="tooltip" data-placement="right">
-    //                     <Link to={ROUTES.MESSAGERIE} className="btn_menu">
-    //                         <img src="Assets/icones/icone4.svg" width="35" alt="D" />
-    //                     </Link>
-    //                 </li>
-    //                 <li data-tip="Dashboard" data-toggle="tooltip" data-placement="right">
-    //                     <Link to={ROUTES.DASHBOARD} className="btn_menu">
-    //                         <span className="glyphicon glyphicon-tasks" style={{ "color": "#aaa", "fontSize": "25px" }}></span>
-    //                     </Link>
-    //                 </li>
-    //                 <li data-tip="Maps" data-toggle="tooltip" data-placement="right">
-    //                     <Link to={ROUTES.MAPS} className="btn_menu">
-    //                         <img src="Assets/icones/icone5.svg" width="35" alt="E" />
-    //                     </Link>
-    //                 </li>
-    //             </ul>
-
-    //         </div>
-    //     </nav>
-    // </header>
-
 );
+
+
+export class Headbar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            prevScrollpos: window.pageYOffset,
+            visible: true
+        };
+    }
+
+    // Adds an event listener when the component is mount.
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+
+    // Remove the event listener when the component is unmount.
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+
+    // Hide or show the menu.
+    handleScroll = () => {
+        const { prevScrollpos } = this.state;
+
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollpos > currentScrollPos;
+
+        this.setState({
+            prevScrollpos: currentScrollPos,
+            visible
+        });
+    };
+
+    render() {
+        return (
+            <header id="head" className={classnames("navbarx", {
+                "navbar--hidden": !this.state.visible
+            })}>
+                <div>
+                    <div class="logo">
+                        <img src="assets\icons\logolightx1.png" alt="Makissy" />
+                    </div>
+                    <div class="titreur">
+                        <Link to="#" class="back">
+                            {/* <!-- <i class="fas fa-caret-left favicon"></!--> --> */}
+                        </Link>
+                        <label for="" class="titrePage"> Actualités</label>
+                    </div>
+                    <SignOutButton />
+                    <a href="/stores#5"><h4 id="searchResult"> 32 resultats </h4></a>
+                </div>
+            </header>
+
+        );
+    }
+}
 export default Navigation;
 
 export { googleSignIn };

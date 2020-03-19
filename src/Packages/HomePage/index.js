@@ -53,7 +53,7 @@ export default class HomePage extends Component {
                 },
 
                 {
-                    nomUtil: "Bloomy Edition House",
+                    nomUtil: "Bloomy_Edition_House",
                     categorie: "",
                     titre: "YOU !",
                     following: "Suivre",
@@ -70,7 +70,7 @@ export default class HomePage extends Component {
                     telephone: "+86 188 4017 8748"
                 },
                 {
-                    nomUtil: "MTN - Cameroon",
+                    nomUtil: "MTN-Cameroon",
                     categorie: "INFO",
                     titre: "MTN - promo",
                     following: "Suivre",
@@ -138,7 +138,7 @@ export default class HomePage extends Component {
                 //     telephone: ""
                 // },
                 {
-                    nomUtil: "OFFRES D'EMPLOI",
+                    nomUtil: "OFFRES_EMPLOI",
                     categorie: "job",
                     titre: "Recherche d'un emploi ?",
                     following: "Suivi...",
@@ -155,7 +155,7 @@ export default class HomePage extends Component {
                     telephone: ""
                 },
                 {
-                    nomUtil: "ENSP - Cameroun",
+                    nomUtil: "ENSP-Cameroun",
                     categorie: "job",
                     titre: "Arts Martiaux du Dessin",
                     following: "Suivi...",
@@ -172,7 +172,7 @@ export default class HomePage extends Component {
                     telephone: "+237 693 79 51 88"
                 },
                 {
-                    nomUtil: "COMISA - Cameroun",
+                    nomUtil: "COMISA-Cameroun",
                     categorie: "concours",
                     titre: "Miss Santé",
                     following: "Suivi...",
@@ -206,7 +206,7 @@ export default class HomePage extends Component {
                     telephone: "+237 697 058 905"
                 },
                 {
-                    nomUtil: "Futur $ Riche",
+                    nomUtil: "Futur_Riche",
                     categorie: "OUTILS",
                     titre: "Futur$Riche",
                     following: "Suivre",
@@ -223,7 +223,7 @@ export default class HomePage extends Component {
                     telephone: "+237 697 94 49 39"
                 },
                 {
-                    nomUtil: "ALAMBA - Films",
+                    nomUtil: "ALAMBA-Films",
                     categorie: "concours",
                     titre: "Un vampire à Yaoundé",
                     following: "Suivre",
@@ -290,7 +290,7 @@ export default class HomePage extends Component {
                 //     telephone: "",
                 // },
                 {
-                    nomUtil: "ENSTP - Cameroun",
+                    nomUtil: "ENSTP-Cameroun",
                     categorie: "education",
                     titre: "Formation en Topographie",
                     following: "Suivre",
@@ -341,7 +341,7 @@ export default class HomePage extends Component {
                     telephone: "",
                 },
                 {
-                    nomUtil: "Chez Sandra",
+                    nomUtil: "Chez_Sandra",
                     categorie: "aliment",
                     titre: "Vos pâtisseries maison",
                     following: "Suivre",
@@ -358,7 +358,7 @@ export default class HomePage extends Component {
                     telephone: "+237 696 80 95 30",
                 },
                 {
-                    nomUtil: "chez ANK",
+                    nomUtil: "chez_ANK",
                     categorie: "vestimentaire",
                     titre: "Arrivage de Chaussures",
                     following: "Suivre",
@@ -375,7 +375,7 @@ export default class HomePage extends Component {
                     telephone: "+237 657 33 38 15",
                 },
                 {
-                    nomUtil: "INFINIX - Cameroun",
+                    nomUtil: "INFINIX-Cameroun",
                     categorie: "tech",
                     titre: "#Infinix S5",
                     following: "Suivre",
@@ -392,7 +392,7 @@ export default class HomePage extends Component {
                     telephone: "",
                 },
                 {
-                    nomUtil: "ANoella's Luscious",
+                    nomUtil: "ANoellas_Luscious",
                     categorie: "tech",
                     titre: "Luscious Plantain CHIPS",
                     following: "Suivre",
@@ -409,7 +409,7 @@ export default class HomePage extends Component {
                     telephone: "+237 690 33 50 31",
                 },
                 {
-                    nomUtil: "Coalition Digitale",
+                    nomUtil: "Coalition_Digitale",
                     categorie: "tech",
                     titre: "#Code4School",
                     following: "Suivre",
@@ -426,7 +426,7 @@ export default class HomePage extends Component {
                     telephone: "",
                 },
                 {
-                    nomUtil: "AMKA Elevage",
+                    nomUtil: "AMKA_Elevage",
                     categorie: "tech",
                     titre: "Poulets de chair",
                     following: "Suivre",
@@ -443,7 +443,7 @@ export default class HomePage extends Component {
                     telephone: "+237 679 94 59 40",
                 },
                 {
-                    nomUtil: "Jeune & Fort Production",
+                    nomUtil: "Jeune_Fort_Production",
                     categorie: "tech",
                     titre: "Conception Infographique",
                     following: "Suivre",
@@ -495,7 +495,7 @@ export default class HomePage extends Component {
                 //     telephone: "+237 697 13 55 24",
                 // },
                 {
-                    nomUtil: "JOBS - Cameroun",
+                    nomUtil: "JOBS-Cameroun",
                     categorie: "ecom",
                     titre: "Offres d'emploi",
                     following: "Suivi...",
@@ -512,7 +512,7 @@ export default class HomePage extends Component {
                     telephone: "",
                 },
                 {
-                    nomUtil: "TCHOP N' YAMO",
+                    nomUtil: "TCHOP_N_YAMO",
                     categorie: "aliment",
                     titre: "#TchopEtYamo",
                     following: "Suivre",
@@ -546,7 +546,7 @@ export default class HomePage extends Component {
                     telephone: "",
                 },
                 {
-                    nomUtil: "DR SHAWARMA",
+                    nomUtil: "DR_SHAWARMA",
                     categorie: "aliment",
                     titre: "#Dr Shawarma",
                     following: "Suivre",
@@ -563,7 +563,7 @@ export default class HomePage extends Component {
                     telephone: "",
                 },
                 {
-                    nomUtil: "KAROKA BBO Service",
+                    nomUtil: "KAROKA_BBO_Service",
                     categorie: "aliment",
                     titre: "#Karaka BBO",
                     following: "Suivre",

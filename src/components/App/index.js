@@ -30,115 +30,113 @@ import IntroPage from '../../Packages/IntroPage';
 import { withAuthentification } from '../Session';
 
 
-export class App extends Component {
+// export class App extends Component {
 
-    constructor(props) {
-        super(props);
+//     constructor(props) {
+//         super(props);
 
-        this.state = {
-            prevScrollpos: window.pageYOffset,
-            visible: true
-        };
-    }
+//         this.state = {
+//             prevScrollpos: window.pageYOffset,
+//             visible: true
+//         };
+//     }
 
-    handleScroll = () => {
-        const { prevScrollpos } = this.state;
+//     handleScroll = () => {
+//         const { prevScrollpos } = this.state;
 
-        const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos > currentScrollPos;
+//         const currentScrollPos = window.pageYOffset;
+//         const visible = prevScrollpos > currentScrollPos;
 
-        this.setState({
-            prevScrollpos: currentScrollPos,
-            visible
-        });
-    };
+//         this.setState({
+//             prevScrollpos: currentScrollPos,
+//             visible
+//         });
+//     };
 
-    componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
-    }
+//     componentDidMount() {
+//         window.addEventListener("scroll", this.handleScroll);
+//     }
 
-    componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-    }
-
-
-    render() {
-        return (
-            <Switch>
-                <Navigation className={classnames("navbar", {
-                    "navbar--hidden": !this.state.visible
-                })} />
-
-                <Route exact path={ROUTES.LANDING} component={HomePage} />
-                <Route path={ROUTES.HOME} component={HomePage} />
-                {/* <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-            
-            
-            <Route path={ROUTES.ADMIN} component={AdminPage} />
-            <Route path={ROUTES.PASS_FORGET} component={PassForgetPage} />
-    
-            <Route path={ROUTES.ACTUALITE} component={NewsPage} />
-            <Route path={ROUTES.ARTICLE} component={ArticlePage} />
-            <Route path={ROUTES.DASHBOARD} component={Dashboard} />
-            <Route path={ROUTES.MAPS} component={Maps} />
-            
-            <Route path={ROUTES.MESSAGERIE} component={Messagerie} />
-            <Route path={ROUTES.PANIER} component={CartPage} /> */}
-
-                <Route path={ROUTES.SIGN} component={HomePage} />
-                <Route path={ROUTES.SIGN_IN} component={HomePage} />
-                <Route path={ROUTES.SIGN_UP} component={HomePage} />
-
-                <Route path={ROUTES.STORE} component={StorePage} />
-                <Route path={ROUTES.TUTORIAL} component={TutoPage} />
-                <Route path={ROUTES.LOADER} component={LoaderPage} />
-                <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
-                <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
-                <Route path={ROUTES.INTRO} component={IntroPage} />
+//     componentWillUnmount() {
+//         window.removeEventListener("scroll", this.handleScroll);
+//     }
 
 
-            </Switch>
-        )
-    }
-}
+//     render() {
+//         return (
+//             <Switch>
+//                 <Navigation className={classnames("navbar", {
+//                     "navbar--hidden": !this.state.visible
+//                 })} />
+
+//                 <Route exact path={ROUTES.LANDING} component={HomePage} />
+//                 <Route path={ROUTES.HOME} component={HomePage} />
+//                 {/* <Route path={ROUTES.ACCOUNT} component={AccountPage} />
 
 
-// const App = () => (
-//     <Switch>
-//         <Navigation className={classnames("navbar", {
-//             "navbar--hidden": !this.state.visible
-//         })} />
+//             <Route path={ROUTES.ADMIN} component={AdminPage} />
+//             <Route path={ROUTES.PASS_FORGET} component={PassForgetPage} />
 
-//         <Route exact path={ROUTES.LANDING} component={HomePage} />
-//         <Route path={ROUTES.HOME} component={HomePage} />
-//         {/* <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+//             <Route path={ROUTES.ACTUALITE} component={NewsPage} />
+//             <Route path={ROUTES.ARTICLE} component={ArticlePage} />
+//             <Route path={ROUTES.DASHBOARD} component={Dashboard} />
+//             <Route path={ROUTES.MAPS} component={Maps} />
 
+//             <Route path={ROUTES.MESSAGERIE} component={Messagerie} />
+//             <Route path={ROUTES.PANIER} component={CartPage} /> */}
 
-//         <Route path={ROUTES.ADMIN} component={AdminPage} />
-//         <Route path={ROUTES.PASS_FORGET} component={PassForgetPage} />
+//                 <Route path={ROUTES.SIGN} component={HomePage} />
+//                 <Route path={ROUTES.SIGN_IN} component={HomePage} />
+//                 <Route path={ROUTES.SIGN_UP} component={HomePage} />
 
-//         <Route path={ROUTES.ACTUALITE} component={NewsPage} />
-//         <Route path={ROUTES.ARTICLE} component={ArticlePage} />
-//         <Route path={ROUTES.DASHBOARD} component={Dashboard} />
-//         <Route path={ROUTES.MAPS} component={Maps} />
-
-//         <Route path={ROUTES.MESSAGERIE} component={Messagerie} />
-//         <Route path={ROUTES.PANIER} component={CartPage} /> */}
-
-//         <Route path={ROUTES.SIGN} component={HomePage} />
-//         <Route path={ROUTES.SIGN_IN} component={HomePage} />
-//         <Route path={ROUTES.SIGN_UP} component={HomePage} />
-
-//         <Route path={ROUTES.STORE} component={StorePage} />
-//         <Route path={ROUTES.TUTORIAL} component={TutoPage} />
-//         <Route path={ROUTES.LOADER} component={LoaderPage} />
-//         <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
-//         <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
-//         <Route path={ROUTES.INTRO} component={IntroPage} />
+//                 <Route path={ROUTES.STORE} component={StorePage} />
+//                 <Route path={ROUTES.TUTORIAL} component={TutoPage} />
+//                 <Route path={ROUTES.LOADER} component={LoaderPage} />
+//                 <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
+//                 <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
+//                 <Route path={ROUTES.INTRO} component={IntroPage} />
 
 
-//     </Switch>
-// );
+//             </Switch>
+//         )
+//     }
+// }
+
+
+const App = () => (
+    <Switch>
+        <Navigation />
+
+        <Route exact path={ROUTES.LANDING} component={HomePage} />
+        <Route path={ROUTES.HOME} component={HomePage} />
+        {/* <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+
+
+        <Route path={ROUTES.ADMIN} component={AdminPage} />
+        <Route path={ROUTES.PASS_FORGET} component={PassForgetPage} />
+
+        <Route path={ROUTES.ACTUALITE} component={NewsPage} />
+        <Route path={ROUTES.ARTICLE} component={ArticlePage} />
+        <Route path={ROUTES.DASHBOARD} component={Dashboard} />
+        <Route path={ROUTES.MAPS} component={Maps} />
+
+        <Route path={ROUTES.MESSAGERIE} component={Messagerie} />
+        <Route path={ROUTES.PANIER} component={CartPage} /> */}
+
+        <Route path={ROUTES.SIGN} component={HomePage} />
+        <Route path={ROUTES.SIGN_IN} component={HomePage} />
+        <Route path={ROUTES.SIGN_UP} component={HomePage} />
+
+        <Route path={ROUTES.STORE} component={StorePage} />
+        <Route path={ROUTES.TUTORIAL} component={TutoPage} />
+        <Route path={ROUTES.LOADER} component={LoaderPage} />
+        <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
+        <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
+        <Route path={ROUTES.INTRO} component={IntroPage} />
+
+
+    </Switch>
+);
 
 
 export default withAuthentification(App);
