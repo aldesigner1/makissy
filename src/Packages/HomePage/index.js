@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import Map from '../MapPage/';
 import Post from './Post';
 
+import Loader from '../LoaderPage';
+
 
 // import { withAuthorization } from '../../components/Session';
+import * as firebase from 'firebase';
 
 import './Landing.scss';
 
@@ -13,6 +15,7 @@ export default class HomePage extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             lng: 12.4914,
             lat: 6.9772,
@@ -582,7 +585,19 @@ export default class HomePage extends Component {
 
 
             ],
+            loading: true,
         }
+    }
+
+    componentWillMount() {
+        const ref = firebase.database().ref('store');
+
+        ref.on('value', (snap) => {
+            this.setState({
+                stores: snap.val(),
+                loading: false
+            })
+        })
     }
 
     render() {
@@ -607,6 +622,12 @@ export default class HomePage extends Component {
                 telephone={element.telephone}
             />
         ))
+
+        if (this.state.loading) {
+            return (<div><Loader /></div>);
+        }
+
+        const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
 
         return (
             <div>

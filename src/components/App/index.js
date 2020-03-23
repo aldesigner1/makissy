@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
 import * as ROUTES from '../../constants/routes';
 import Navigation from '../Navigation';
 
-import classnames from "classnames";
+// import classnames from "classnames";
 
 
 // import LandingPage from '../Landing';
