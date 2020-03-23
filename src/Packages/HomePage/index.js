@@ -627,7 +627,7 @@ export default class HomePage extends Component {
             return (<div><Loader /></div>);
         }
 
-        const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
+        // const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
 
         return (
             <div>
