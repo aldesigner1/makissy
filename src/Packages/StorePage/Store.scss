@@ -79,9 +79,10 @@
       width: 100% !important;
       padding: 5px 10px 100px !important;
       margin-bottom: 50px;
+      color: $noir;
 
       & > .filtreStore:nth-child(2n) {
-        background: rgba(#000, 0.1);
+        background: rgba(#fff, 0.1);
       }
 
       li {
@@ -90,7 +91,7 @@
         max-width: 500px;
 
         &:nth-child(2n) .filtreStore {
-          background: rgba(#000, 0.1) !important;
+          background: rgba(#fff, 0.1) !important;
         }
 
         &:nth-child(2n) .descriptionStore .titreStore {
@@ -101,13 +102,13 @@
     }
 
     .fondStore {
-      background: url("/Assets/images/fondStore.png");
+      background: $blanc; //url("/Assets/images/fondStore.png");
       height: 250px;
       max-height: 400px;
       width: 100%;
       margin: 0 auto;
       border-radius: $mob-border * 3;
-      box-shadow: $shadowbox;
+      // box-shadow: $shadowbox;
     }
 
     .filtreStore {
@@ -119,14 +120,14 @@
       box-shadow: $shadowbox;
       position: absolute;
       top: 0 !important;
-      background: rgba(#000, 0.4);
+      background: rgba(#fff, 0.4);
     }
 
     .descriptionStore {
       position: absolute;
       top: 0;
       padding: 0px 15px 10px;
-      color: $blanc;
+      color: $noir;
 
       .titreStore {
         font-family: "woodcutter carnage", "product sans", sans-serif;
@@ -138,6 +139,7 @@
         padding: 2px 5px !important;
         background: $noir;
         border-radius: 0 0 10px 10px;
+        color: $blanc;
       }
 
       .descStore {
@@ -296,7 +298,7 @@
         max-width: 500px;
 
         &:nth-child(2n) .filtreStore {
-          background: rgba(#000, 0.1) !important;
+          background: rgba(#fff, 0.1) !important;
         }
 
         &:nth-child(2n) .descriptionStore .titreStore {
@@ -307,13 +309,13 @@
     }
 
     .fondStore {
-      background: url("/Assets/images/fondStore.png");
+      background: $blanc; // url("/Assets/images/fondStore.png");
       height: 220px;
       max-height: 300px;
       width: 100%;
       margin: 0 auto;
       border-radius: $mob-border * 3;
-      box-shadow: $shadowbox;
+      // box-shadow: $shadowbox;
     }
 
     .filtreStore {
@@ -322,17 +324,17 @@
       width: 100%;
       margin: 0 auto;
       border-radius: $mob-border * 3;
-      box-shadow: $shadowbox;
+      // box-shadow: $shadowbox;
       position: absolute;
       top: 0 !important;
-      background: rgba(#000, 0.3) !important;
+      background: rgba(#fff, 0.3) !important;
     }
 
     .descriptionStore {
       position: absolute;
       top: 0;
       padding: 0px 15px 10px;
-      color: $blanc;
+      color: $noir;
 
       .titreStore {
         font-family: "woodcutter carnage", "product sans", sans-serif;
@@ -445,7 +447,7 @@
         max-width: 500px;
 
         &:nth-child(2n) .filtreStore {
-          background: rgba(#000, 0.3) !important;
+          background: rgba(#fff, 0.3) !important;
         }
 
         &:nth-child(2n) .descriptionStore .titreStore {
@@ -456,13 +458,13 @@
     }
 
     .fondStore {
-      background: url("/Assets/images/fondStore.png");
+      background: $blanc; //url("/Assets/images/fondStore.png");
       height: 250px;
       max-height: 300px;
       width: 100%;
       margin: 0 auto;
       border-radius: $mob-border * 3;
-      box-shadow: $shadowbox;
+      // box-shadow: $shadowbox;
     }
 
     .filtreStore {
@@ -471,17 +473,17 @@
       width: 100%;
       margin: 0 auto;
       border-radius: $mob-border * 3;
-      box-shadow: $shadowbox;
+      // box-shadow: $shadowbox;
       position: absolute;
       top: 0 !important;
-      background: rgba(#000, 0.1) !important;
+      background: rgba(#fff, 0.1) !important;
     }
 
     .descriptionStore {
       position: absolute;
       top: 0px;
       padding: 0px 15px 10px;
-      color: $blanc;
+      color: $noir;
 
       .titreStore {
         font-family: "woodcutter carnage", "product sans", sans-serif;

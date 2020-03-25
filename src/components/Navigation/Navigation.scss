@@ -5,6 +5,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   text-align: center;
   display: flex;
@@ -221,6 +222,22 @@ body {
 
   .menucon {
     font-size: $pc-text-min;
+  }
+
+  input[type="radio"] {
+    // display: none;
+  }
+
+  #nav_actu:checked + label > .nav-item {
+    color: #f7630c;
+  }
+
+  #nav_tuto:checked + label > .nav-item {
+    color: #f7630c;
+  }
+
+  #nav_stores:checked + label > .nav-item {
+    color: #f7630c;
   }
 }
 

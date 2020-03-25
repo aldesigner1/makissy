@@ -81,17 +81,30 @@ const NavigationAuth = () => (
         <ReactTooltip place="right" effect="solid" type="dark" />
         <Headbar />
         <nav class="nav">
+
+
+            {/* <input checked type="radio" name="navigator" id="nav_actu" /> */}
+            {/* <label for="nav_actu" id="onglet_actu"> */}
             <Link to={ROUTES.HOME} class="nav-item is-active" active-color="#F7630C">
                 <i class="fab fa-chromecast menucon"></i>
             </Link>
+            {/* </label> */}
 
+
+            {/* <input type="radio" name="navigator" id="nav_tuto" /> */}
+            {/* <label for="nav_tuto" id="onglet_tuto"> */}
             <Link to={ROUTES.TUTORIAL} class="nav-item is-active" active-color="#F7630C">
                 <i class="fab fa-cloudsmith menucon"></i>
             </Link>
+            {/* </label> */}
 
+
+            {/* <input type="radio" name="navigator" id="nav_stores" /> */}
+            {/* <label for="nav_stores" id="onglet_stores"> */}
             <Link to={ROUTES.STORE} class="nav-item is-active" active-color="#F7630C">
                 <i class="fas fa-chalkboard-teacher menucon"></i>
             </Link>
+            {/* </label> */}
         </nav>
     </div>
 
@@ -147,7 +160,7 @@ export class Headbar extends Component {
                         <label for="" class="titrePage"> Actualités</label>
                     </div>
                     <SignOutButton />
-                    <a href="/stores#5"><h4 id="searchResult"> 32 resultats </h4></a>
+                    {/* <a href="/stores#5"><h4 id="searchResult"> 32 resultats </h4></a> */}
                 </div>
             </header>
 
