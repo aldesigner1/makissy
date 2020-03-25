@@ -91,10 +91,10 @@ export default class HomePage extends Component {
                 },
                 {
                     nomUtil: "First_Style",
-                    categorie: "Gchaussures",
+                    categorie: "Chaussures",
                     titre: "Air Jordan",
                     following: "Suivi...",
-                    prix: "-25 000",
+                    prix: "25 000",
                     devise: "XAF",
                     srcImage: "/Assets/images/test/IMG-20200323-WA0007.jpg",
                     profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
