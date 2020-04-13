@@ -54,6 +54,23 @@ export default class HomePage extends Component {
                     desc: "Bienvenue sur Makissy",
                     telephone: "+237 682 33 22 06",
                 },
+                {
+                    nomUtil: "SMPS",
+                    categorie: "entreprise",
+                    titre: "Prestation de service",
+                    following: "Suivre",
+                    prix: "--",
+                    devise: "XAF",
+                    srcImage: "/Assets/images/test/électricien.jpg",
+                    profilePic: "Assets/images/test/LOGO-SMPS1.png",
+                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                    delai: "aujourd'hui",
+                    kiff: 22,
+                    like: true,
+                    ville: "Douala || ",
+                    desc: "Bureau d'étude, Froid et climatisation, Electricité Bâtiment MT/BT, Maintenance Industrielle, Maintenance Informatique, Maintenance en audiovisuel, Instrumentation Prestation Maritime, Prestations de services, Commerce Général - Retrouvez nous à Mbanya Bonamoussadi",
+                    telephone: "+237 696 81 87 91"
+                },
 
                 {
                     nomUtil: "Bloomy_Edition_House",
