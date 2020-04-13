@@ -71,6 +71,23 @@ export default class HomePage extends Component {
                     desc: "Bureau d'étude, Froid et climatisation, Electricité Bâtiment MT/BT, Maintenance Industrielle, Maintenance Informatique, Maintenance en audiovisuel, Instrumentation Prestation Maritime, Prestations de services, Commerce Général - Retrouvez nous à Mbanya Bonamoussadi",
                     telephone: "+237 696 81 87 91"
                 },
+                {
+                    nomUtil: "Intelligentsia_Corporation",
+                    categorie: "",
+                    titre: "Smart Mask - Covid_19",
+                    following: "Suivi...",
+                    prix: "1 000",
+                    devise: "XAF",
+                    srcImage: "/Assets/images/test/Screenshot_20200413-092103.png",
+                    profilePic: "Assets/images/test/imagesitc.jpg",
+                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                    delai: "aujourd'hui",
+                    kiff: 852,
+                    like: true,
+                    ville: "Yaoundé ||",
+                    desc: "Votre ecomask est disponible en face de l'école des travaux publics (Campus Tunisie)",
+                    telephone: "+237 690 64 90 90"
+                },
 
                 {
                     nomUtil: "Bloomy_Edition_House",
