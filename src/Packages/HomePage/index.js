@@ -54,23 +54,23 @@ export default class HomePage extends Component {
                 //     desc: "Bienvenue sur Makissy",
                 //     telephone: "+237 682 33 22 06",
                 // },
-                {
-                    nomUtil: "SMPS",
-                    categorie: "entreprise",
-                    titre: "Prestation de service",
-                    following: "Suivre",
-                    prix: "--",
-                    devise: "XAF",
-                    srcImage: "/Assets/images/test/électricien.jpg",
-                    profilePic: "Assets/images/test/LOGO-SMPS1.png",
-                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
-                    delai: "aujourd'hui",
-                    kiff: 22,
-                    like: true,
-                    ville: "Douala || ",
-                    desc: "Bureau d'étude, Froid et climatisation, Electricité Bâtiment MT/BT, Maintenance Industrielle, Maintenance Informatique, Maintenance en audiovisuel, Instrumentation Prestation Maritime, Prestations de services, Commerce Général - Retrouvez nous à Mbanya Bonamoussadi",
-                    telephone: "+237 696 81 87 91"
-                },
+                // {
+                //     nomUtil: "SMPS",
+                //     categorie: "entreprise",
+                //     titre: "Prestation de service",
+                //     following: "Suivre",
+                //     prix: "--",
+                //     devise: "XAF",
+                //     srcImage: "/Assets/images/test/électricien.jpg",
+                //     profilePic: "Assets/images/test/LOGO-SMPS1.png",
+                //     srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                //     delai: "aujourd'hui",
+                //     kiff: 22,
+                //     like: true,
+                //     ville: "Douala || ",
+                //     desc: "Bureau d'étude, Froid et climatisation, Electricité Bâtiment MT/BT, Maintenance Industrielle, Maintenance Informatique, Maintenance en audiovisuel, Instrumentation Prestation Maritime, Prestations de services, Commerce Général - Retrouvez nous à Mbanya Bonamoussadi",
+                //     telephone: "+237 696 81 87 91"
+                // },
                 {
                     nomUtil: "Smart_Mask",
                     categorie: "",
@@ -105,6 +105,23 @@ export default class HomePage extends Component {
                     ville: "Jinzhou ||",
                     desc: "Faites de vos idées, une  source d'inspiration et d'espoir pour les autres...",
                     telephone: "+86 188 4017 8748"
+                },
+                {
+                    nomUtil: "ABYL",
+                    categorie: "Infographie",
+                    titre: "Production Audiovisuelle",
+                    following: "Suivre",
+                    prix: "--",
+                    devise: "XAF",
+                    srcImage: "/Assets/images/test/IMG-20200409-WA0027.jpg",
+                    profilePic: "Assets/images/test/IMG-20200409-WA00257.jpg",
+                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                    delai: "hier",
+                    kiff: 497,
+                    like: true,
+                    ville: "Yaoundé ||",
+                    desc: "Agence de production audiovisuelle - Dessin animé, Bande dessinée, Illustration 2D/3D, Son, Photo, Vidéo, Design Graphique, Consulting, Formations et Ateliers - Faisons briller l'Afrique ensemble !",
+                    telephone: "+237 695 74 26 05"
                 },
                 {
                     nomUtil: "MTN-Cameroon",
@@ -157,23 +174,7 @@ export default class HomePage extends Component {
                 //     desc: "Jeux en VR, Show Cosplay, Street Dance, Concert Gospel, Concours de Danse, Challenge Gestion; et tentez de gagner 500 000 XAF",
                 //     telephone: "+237 690 22 94 12"
                 // },
-                {
-                    nomUtil: "ABYL",
-                    categorie: "Infographie",
-                    titre: "Production Audiovisuelle",
-                    following: "Suivre",
-                    prix: "--",
-                    devise: "XAF",
-                    srcImage: "/Assets/images/test/IMG-20200409-WA0027.jpg",
-                    profilePic: "Assets/images/test/IMG-20200409-WA00257.jpg",
-                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
-                    delai: "hier",
-                    kiff: 497,
-                    like: true,
-                    ville: "Yaoundé ||",
-                    desc: "Agence de production audiovisuelle - Dessin animé, Bande dessinée, Illustration 2D/3D, Son, Photo, Vidéo, Design Graphique, Consulting, Formations et Ateliers - Faisons briller l'Afrique ensemble !",
-                    telephone: "+237 695 74 26 05"
-                },
+
                 // {
                 //     nomUtil: "KIROO GAMES",
                 //     categorie: "Game",
@@ -636,7 +637,7 @@ export default class HomePage extends Component {
 
 
             ],
-            loading: true,
+            loading: false,
         }
     }
 
