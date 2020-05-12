@@ -2,57 +2,79 @@
 
 @import "../../components/Scss/responsive.scss";
 @import "../../components/Scss/theme.scss";
-// @import "../../components/Scss/reset.scss";
+@import "../../components/Scss/reset.scss";
 
 :root {
   --main-font: "Source Sans Pro", sans-serif;
-  --secondary-font: "bellarina", "Herr Von Muellerhoff", cursive;
+  --secondary-font: "Herr Von Muellerhoff", cursive;
   --body-font: "Cabin", sans-serif;
   --main-font-color-dark: #252525;
-  --secondary-font-color: #ffb900; /**#c59d5f;**/
-  --body-font-color: $orange; /**#515151;**/
+  --secondary-font-color: #c59d5f;
+  --body-font-color: #515151;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  top: 0px !important;
+  left: 0;
+  // border: 2px solid red;
+}
+
+* {
+  font-family: "product sans", sans-serif !important;
 }
 
 #body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+
+  width: 100% !important;
   font-family: var(--body-font);
   font-size: 10px;
   color: var(--body-font-color);
   scroll-behavior: smooth;
-  position: absolute;
-  top: 0;
+  z-index: 15 !important;
+  top: 70px;
   left: 0;
-  width: 100%;
-  height: 100vh;
-
-  section {
-    padding: 3.9rem 0 !important;
-  }
-
-  img {
-    // width: 100%;
-    max-width: 100%;
-  }
-
-  p {
-    font-size: 1.6rem !important;
-  }
-
-  .container {
-    width: 100%;
-    max-width: 122.5rem;
-    margin: 0 auto;
-    padding: 0 2.4rem;
-  }
 }
-/** HEADER */
-#body header {
+
+section {
+  padding: 3.9rem 0 !important;
+}
+
+img {
+  // width: 100%;
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.6rem !important;
+}
+
+.container {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background: black;
-  // background-image: linear-gradient(to bottom, rgba($noir, 0.5), transparent);
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/** HEADER */
+#head {
+  // position: fixed !important;
+  // width: 100%;
+  // position: absolute;
+  // top: 0px !important;
+  // left: 0;
+  // z-index: 55;
+  // background: transparent !important;
+  // background-image: linear-gradient( to bottom , rgba($noir, 0.5), transparent);
 
   .nav {
     height: 7.2rem;
@@ -65,8 +87,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       background-color: rgba($noir, 0.8);
       z-index: 1000;
       opacity: 0;
@@ -76,14 +98,19 @@
   }
 
   .menu-toggle {
+    position: fixed;
     color: $blanc;
     font-size: 2.2rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 2.5rem;
+    right: 1.1rem;
     cursor: pointer;
     z-index: 1500;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 8px 13px;
+    border-radius: 10px;
+    border: 1px solid #eee;
   }
 
   .fa-times {
@@ -96,7 +123,7 @@
     left: 0;
     top: 0;
     width: 80%;
-    height: 90vh;
+    height: 100vh;
     background: var(--main-font-color-dark);
     padding: 4.4rem !important;
     display: flex;
@@ -147,118 +174,91 @@
 
 /** HERO **/
 
-#body .hero {
+.hero {
   width: 100% !important;
   height: 100vh !important;
-  background-image: url("/assets/images/planet-3710757_1920.jpg");
+  background: transparent !important;
+  position: relative;
+
+  // background: url("/Assets/images/planet-3710757_1920.jpg");
   background-position: 60%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  .sub-headline {
-    font-size: 7.5rem;
-    font-family: "Kunstler Script", "brush script mt", sans-serif;
-    color: var(--secondary-font-color);
-    font-weight: 500 !important;
-    letter-spacing: -3px;
-    line-height: 0.3;
-  }
-
-  .first-letter {
-    text-transform: uppercase;
-    font-size: 8.3rem;
-  }
-
-  .headline {
-    color: $blanc;
-    font-size: 3.7rem;
-    font-family: "zilap urban", var(--main-font);
-    font-weight: 900;
-    letter-spacing: 0.5rem;
-    margin-right: -0.5rem !important;
-    text-shadow: 1px 1px 5px rgba($noir, 0.5);
-  }
-
-  .separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .line {
-    width: 100%;
-    max-width: 8.4rem;
-    height: 0.25rem;
-    background-color: $blanc;
-    position: relative;
-  }
-
-  .line-right::before,
-  .line-left::before {
-    content: "";
+  #formeAbstraite1 {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 0.6rem solid transparent;
+    top: -430px;
+    left: -800px !important;
+    background: url("/Assets/images/Groupe_3.png");
+    background-repeat: no-repeat;
+    width: 1300px;
+    height: 1300px;
+    margin: auto;
+    background-size: cover !important;
+    z-index: 10 !important;
   }
 
-  .line-right::before {
-    border-right-color: $blanc;
-    right: 0;
+  #formeAbstraite2 {
+    display: none;
   }
 
-  .line-left::before {
-    border-left-color: $blanc;
-    left: 0;
+  .bienvenueMakissy {
+    position: absolute;
+    top: 20%;
+
+    h3 {
+      text-align: left;
+      font-style: italic !important;
+      color: $gray;
+      font-size: $pc-text-med + 5 !important;
+      font-weight: 1 !important;
+      letter-spacing: 1px;
+    }
+
+    .imageHero {
+      background: url("/Assets/images/MAKISSY2x.png");
+      background-size: cover !important;
+      width: 600px;
+      height: 200px;
+    }
   }
 
-  .asterisk {
-    font-size: 1rem;
-    color: var(--secondary-font-color);
-    margin: 0 1.6rem;
-    font-weight: 1000;
-  }
+  .sloganMakissy {
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    font-size: $pc-text-med + 7;
+    // background: url("/Assets/images/Trace_4.png");
+    width: 400px;
+    height: 200px;
+    background-size: cover !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  .headline-description h5 {
-    color: $blanc;
-    font-size: 1.4rem;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem !important;
-    letter-spacing: 3px;
-    margin-right: -3px !important;
-    text-shadow: 1px 1px 5px rgba($noir, 0.5);
-  }
+    h4 {
+      position: absolute;
+      text-align: left;
+      color: $gray-dark;
+    }
 
-  .btn {
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: -2px;
-  }
-
-  .cta-btn {
-    font-size: 1.1rem;
-    background: $blanc;
-    padding: 0.9rem 1.8rem;
-    color: var(--body-font-color);
-    border-radius: 0.4rem;
-    transition: background-color 0.5s;
-
-    &:hover,
-    &:focus {
-      color: $blanc;
-      background: var(--secondary-font-color);
+    .fondSlogan {
+      // background: url("/Assets/images/Trace_4.png");
+      width: 300px;
+      height: 140px;
+      background-size: cover !important;
     }
   }
 }
 
 ///////////////////////////
-#body .global-headline {
+.global-headline {
   margin-top: 6.9rem;
 
   .sub-headline {
@@ -272,116 +272,560 @@
   }
 }
 
-#body .asterisk {
-  color: var(--body-font-color);
-  margin: 2.4rem 0;
-}
-#body .headline {
-  color: var(--main-font-color-dark);
-  color: $blanc;
-  letter-spacing: 0.7rem;
-  margin-right: -7rem;
-  font-size: 2.7rem;
-  font-family: "woodcutter carnage", var(--main-font);
-  font-weight: 900;
-  letter-spacing: 1rem;
-  margin-right: -0.5rem !important;
-  text-shadow: 1px 1px 5px rgba($noir, 0.5);
-}
+/** PC-Screen **/
 
-/** Discover our story **/
-#body .global-headline {
-  text-align: center;
-  margin-top: 3.9rem;
-}
+@media #{$pc-screen} {
+  .hero {
+    width: 100% !important;
+    height: 100vh !important;
+    background: transparent !important;
 
-#body .discover-our-story {
-  .global-headline {
-    margin-top: 6.9rem;
+    // background-image: url("Assets/images/planet-3710757_1920.jpg");
+    background-position: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-    .sub-headline {
-      font-size: 7.5rem;
-      font-family: "Kunstler Script", "brush script mt", sans-serif;
-      color: var(--secondary-font-color);
-      font-weight: 500 !important;
-      letter-spacing: -3px;
-      line-height: 0.5;
-      letter-spacing: -0.1rem;
+    #formeAbstraite1 {
+      position: absolute;
+      top: -430px;
+      left: -1000px !important;
+      background: url("/Assets/images/Groupe_3.png");
+      background-repeat: no-repeat;
+      width: 1300px;
+      height: 1300px;
+      margin: auto;
+      background-size: cover !important;
+      z-index: 10 !important;
+    }
+
+    #formeAbstraite2 {
+      display: none;
+    }
+
+    .bienvenueMakissy {
+      position: absolute;
+      top: 15%;
+
+      h3 {
+        text-align: left;
+        font-style: italic !important;
+        color: $gray;
+        font-size: $pc-text-med + 5 !important;
+        font-weight: 1 !important;
+        letter-spacing: 1px;
+      }
+
+      .imageHero {
+        background: url("/Assets/images/MAKISSY2x.png");
+        background-size: cover !important;
+        width: 500px;
+        height: 130px;
+      }
+    }
+
+    .sloganMakissy {
+      position: absolute;
+      bottom: 10%;
+      right: 4%;
+      font-size: $pc-text-max;
+      width: 480px;
+      height: 200px;
+      background-size: cover !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        position: absolute;
+        text-align: left;
+        color: $gray-dark;
+      }
+
+      .fondSlogan {
+        background: url("/Assets/images/Trace_4.png");
+        width: 430px;
+        height: 450px;
+        background-size: cover !important;
+      }
     }
   }
 
-  .asterisk {
-    color: var(--body-font-color);
-    margin: 2.4rem 0;
-  }
-  .headline-dark {
-    color: var(--main-font-color-dark);
-    letter-spacing: 0.7rem;
-    margin-right: -7rem;
-    font-size: 2.7rem;
-    font-family: "woodcutter carnage", var(--main-font);
-    font-weight: 900;
-    letter-spacing: 1rem;
-    margin-right: -0.5rem !important;
-    text-shadow: 1px 1px 5px rgba($noir, 0.5);
-  }
+  /** SECTION 1  */
 
-  .marketplace-info {
-    text-align: center;
-  }
+  .premiereSection {
+    top: 0;
+    left: 0;
+    margin: 70px 0px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid #000;
 
-  .marketplace-description {
-    margin-bottom: 3rem;
+    #hashtagNom {
+      font-size: 18px;
+      text-decoration: underline;
+      color: #ccc;
+    }
+
+    .cadrePremiereSection {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+    }
+
+    #cadre2,
+    #cadre4 {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    img {
+      width: 50%;
+      margin: 20px 0;
+      // flex: 1;
+    }
+
+    h3 {
+      font-size: $pc-text-max;
+      font-weight: bold;
+      margin: 70px auto !important;
+      color: $orange;
+      border-top: 5px solid rgba(#ccc, 0.5);
+      border-bottom: 5px solid rgba(#ccc, 0.5);
+      // background: rgba(#ccc, 0.2);
+      width: 500px;
+      text-align: center;
+      text-shadow: 2px 2px 2px #ccc;
+      border-radius: 5px;
+    }
 
     p {
-      line-height: 3rem;
-      margin-bottom: 2.4rem !important;
+      width: 60%;
+      font-size: $pc-text-med + 2 !important;
+      text-align: justify;
+      line-height: 50px;
+      margin: 70px !important;
     }
   }
 
-  .body-btn {
-    font-size: 1.5rem;
-    color: var(--secondary-font-color);
-    position: relative;
-    text-transform: uppercase;
-    transition: color 0.5s;
+  /** END SECTION 1 **/
 
-    &::before {
-      content: "";
+  /** SECTION 2 **/
+  .secondeSection {
+    width: 100%;
+    text-align: center;
+
+    a {
+      font-size: $pc-text-med + 1;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border: 1px solid #eee;
+      padding: 20px 50px !important;
+      border-radius: 50px;
+      color: $orange-light;
+      box-shadow: -2px -2px 8px rgba($blanc, 1),
+        -2px -2px 12px rgba($blanc, 0.5), inset 2px 2px 4px rgba($blanc, 0.1),
+        2px 2px 8px rgba($noir, 0.15);
+
+      &:hover {
+        box-shadow: inset -2px -2px 8px rgba($blanc, 1),
+          inset -2px -2px 12px rgba($blanc, 0.5),
+          inset 2px 2px 4px rgba($blanc, 0.1),
+          inset 2px 2px 8px rgba($noir, 0.15);
+        font-size: $pc-text-med;
+        color: $orange;
+      }
+    }
+  }
+  /** END SECTION 2 **/
+}
+
+/** Tablet-Screen **/
+
+@media #{$tablet-screen} {
+  #head {
+    display: none;
+  }
+  .hero {
+    width: 100% !important;
+    height: 100vh !important;
+    background: transparent !important;
+
+    // background-image: url("Assets/images/planet-3710757_1920.jpg");
+    background-position: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    #formeAbstraite1 {
       position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 100%;
-      height: 2px;
-      background: var(--secondary-font-color);
-      transition: background 0.5s;
+      top: -430px;
+      left: -1050px !important;
+      background: url("/Assets/images/Groupe_3.png");
+      background-repeat: no-repeat;
+      width: 1300px;
+      height: 1300px;
+      margin: auto;
+      background-size: cover !important;
+      z-index: 10 !important;
     }
 
-    &:hover,
-    &:focus {
-      color: var(--main-font-color-dark);
+    #formeAbstraite2 {
+      background: url("/Assets/images/Groupe_2.png");
+      position: absolute;
+      display: flex;
+
+      background-repeat: no-repeat;
+      background-size: cover !important;
+      z-index: 10 !important;
+      width: 150px;
+      height: 550px;
+      right: 0px;
+      bottom: 150px;
     }
 
-    &:hover::before,
-    &:focus::before {
-      background: var(--main-font-color-dark);
+    .bienvenueMakissy {
+      position: absolute;
+      top: 15%;
+
+      h3 {
+        text-align: left;
+        font-style: italic !important;
+        color: $gray;
+        font-size: $pc-text-med + 5 !important;
+        font-weight: 1 !important;
+        letter-spacing: 1px;
+      }
+
+      .imageHero {
+        background: url("/Assets/images/MAKISSY2x.png");
+        background-size: cover !important;
+        width: 400px;
+        height: 100px;
+      }
+    }
+
+    .sloganMakissy {
+      position: absolute;
+      bottom: 10%;
+      right: 4%;
+      font-size: $tab-text-max;
+      width: 300px;
+      height: 200px;
+      background-size: cover !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        position: absolute;
+        text-align: left;
+        color: $gray-dark;
+      }
+
+      .fondSlogan {
+        background: url("/Assets/images/Trace_4.png");
+        width: 210px;
+        height: 100px;
+        background-size: cover !important;
+      }
     }
   }
+
+  /** SECTION 1  */
+
+  .premiereSection {
+    top: 0;
+    left: 0;
+    margin: 70px 0px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid #000;
+
+    .cadrePremiereSection {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+    }
+
+    #cadre2,
+    #cadre4 {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    img {
+      width: 50%;
+      margin: 20px 0;
+      // flex: 1;
+    }
+
+    h3 {
+      font-size: $mob-text-max + 3;
+      font-weight: bold;
+      margin: 30px auto !important;
+      color: $orange;
+      border-bottom: 5px solid rgba(#ccc, 0.3);
+      border-top: 5px solid rgba(#ccc, 0.3);
+      padding: 15px 0 !important;
+      // background: rgba(#ccc, 0.2);
+      width: 100%;
+      text-align: center;
+      text-shadow: 2px 2px 2px #ccc;
+    }
+
+    p {
+      width: 80%;
+      font-size: $tab-text-med + 2 !important;
+      text-align: justify;
+      line-height: 30px;
+      margin: 30px !important;
+    }
+  }
+
+  /** END SECTION 1 **/
+
+  /** SECTION 2 **/
+  .secondeSection {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 200px !important;
+
+    a {
+      font-size: $mob-text-med + 2;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border: 1px solid #eee;
+      padding: 20px 50px !important;
+      border-radius: 50px;
+      color: $orange-light;
+      box-shadow: -2px -2px 8px rgba($blanc, 1),
+        -2px -2px 12px rgba($blanc, 0.5), inset 2px 2px 4px rgba($blanc, 0.1),
+        2px 2px 8px rgba($noir, 0.15);
+
+      &:hover {
+        box-shadow: inset -2px -2px 8px rgba($blanc, 1),
+          inset -2px -2px 12px rgba($blanc, 0.5),
+          inset 2px 2px 4px rgba($blanc, 0.1),
+          inset 2px 2px 8px rgba($noir, 0.15);
+        font-size: $mob-text-med;
+        color: $orange;
+      }
+    }
+  }
+  /** END SECTION 2 **/
 }
 
-/** TasteFul Recipes **/
-#body .tasteful-Recipes {
-  background: url("/assets/images/spaghetti-2931846_1920.jpg") center no-repeat;
-  background-size: cover;
-  width: 100%;
-}
+/** Smart-Screen **/
 
-#body .between {
-  min-height: 65vh;
-  display: flex;
-  align-items: center;
-}
+@media #{$smart-screen} {
+  body {
+    // margin-top: 220px !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    // border: 1px solid red;
+    overflow-x: hidden;
+    font-size: $mob-text-med;
+  }
 
-/** Discover our menu **/
+  .hero {
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100vh !important;
+    background: transparent !important;
+    // border: 1px solid #000;
+
+    // background-image: url("Assets/images/planet-3710757_1920.jpg");
+    background-position: 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    #formeAbstraite1 {
+      position: absolute;
+      top: -220px;
+      left: -10px !important;
+      background: url("/Assets/images/Trace_5.png");
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      background-size: cover !important;
+      z-index: 10 !important;
+    }
+
+    #formeAbstraite2 {
+      position: absolute;
+      display: inline-block;
+      background: url("/Assets/images/Groupe_2.png");
+      background-repeat: no-repeat;
+      background-size: cover !important;
+      z-index: 10 !important;
+      width: 200px;
+      height: 550px;
+      bottom: -150px;
+      right: 0;
+    }
+
+    .bienvenueMakissy {
+      width: 90%;
+      margin: auto;
+      position: absolute;
+      top: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h3 {
+        text-align: left !important;
+        font-style: italic !important;
+        color: $gray;
+        font-size: $mob-text-med + 5 !important;
+        font-weight: 1 !important;
+        letter-spacing: 3px;
+      }
+
+      .imageHero {
+        background: url("/Assets/images/MAKISSY2x.png");
+        background-size: cover !important;
+        width: 250px;
+        height: 70px;
+      }
+    }
+
+    .sloganMakissy {
+      position: absolute;
+      bottom: 25%;
+      left: -50px;
+      font-size: $mob-text-med + 4;
+      width: 400px;
+      height: 200px;
+      background-size: cover !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        position: absolute;
+        text-align: left;
+        color: $gray-dark;
+      }
+
+      .fondSlogan {
+        background: url("/Assets/images/Trace_4.png");
+        width: 210px;
+        height: 100px;
+        background-size: cover !important;
+      }
+    }
+  }
+
+  /** SECTION 1  */
+
+  .premiereSection {
+    top: 0;
+    left: 0;
+    margin: 70px 0px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid #000;
+
+    .cadrePremiereSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #cadre2,
+    #cadre4 {
+      flex-direction: column;
+    }
+
+    img {
+      width: 90%;
+      margin: 20px 0;
+    }
+
+    h3 {
+      font-size: $mob-text-max + 3;
+      font-weight: bold;
+      margin: 30px auto !important;
+      color: $orange;
+      background: rgba(#ccc, 0.2);
+      width: 100%;
+      text-align: center;
+      text-shadow: 2px 2px 2px #ccc;
+      border: none;
+    }
+
+    p {
+      width: 80%;
+      font-size: $mob-text-med + 2 !important;
+      text-align: justify;
+      line-height: 30px;
+    }
+  }
+
+  /** END SECTION 1 **/
+
+  /** SECTION 2 **/
+  .secondeSection {
+    width: 100%;
+    text-align: center;
+
+    a {
+      font-size: $mob-text-med + 4;
+      font-weight: bold;
+      letter-spacing: 2px;
+      border: 1px solid #eee;
+      padding: 20px 50px !important;
+      border-radius: 50px;
+      color: $orange-light;
+      box-shadow: -2px -2px 8px rgba($blanc, 1),
+        -2px -2px 12px rgba($blanc, 0.5), inset 2px 2px 4px rgba($blanc, 0.1),
+        2px 2px 8px rgba($noir, 0.15);
+
+      &:hover {
+        box-shadow: inset -2px -2px 8px rgba($blanc, 1),
+          inset -2px -2px 12px rgba($blanc, 0.5),
+          inset 2px 2px 4px rgba($blanc, 0.1),
+          inset 2px 2px 8px rgba($noir, 0.15);
+        font-size: $mob-text-med + 2;
+        color: $orange;
+      }
+    }
+  }
+  /** END SECTION 2 **/
+}
 
 /** ENDS **/

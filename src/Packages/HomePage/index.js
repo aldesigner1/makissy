@@ -637,14 +637,16 @@ export default class HomePage extends Component {
 
 
             ],
-            loading: false,
+            loading: true,
         }
     }
 
     componentWillMount() {
-        const ref = firebase.database().ref('store');
+        const ref = firebase.database().ref('stores');
 
         ref.on('value', (snap) => {
+            console.log(snap.val());
+
             this.setState({
                 stores: snap.val(),
                 loading: false
@@ -654,9 +656,15 @@ export default class HomePage extends Component {
 
     render() {
 
+        // const Storing = this.state.stores.map((e, k) => (
+        //     <p key={k}> {e.NomStore} </p>
+        // ))
+
+
+
         const Posts = this.state.posts.map((element, index) => (
             <Post key={index}
-                id={element.nomUtil}
+                id={element.NomStore}
                 nomUtil={element.nomUtil}
                 categorie={element.categorie}
                 titre={element.titre}
@@ -674,27 +682,46 @@ export default class HomePage extends Component {
                 telephone={element.telephone}
             />
         ))
-
         if (this.state.loading) {
             return (<div><Loader /></div>);
         }
+        else {
+            const Storing = this.state.stores.map((element, index) => (
+                <Post key={index}
+                    id={element.NomStore}
+                    nomUtil={element.NomStore}
+                    titre={element.articles[0].TitreArt}
+                    following={element.following}
+                    prix={element.articles[0].PrixArt}
+                    devise={element.devise}
+                    srcImage={element.srcImage}
+                    profilePic={element.ProfilePic}
+                    srcBlur={element.srcBlur}
+                    delai={element.articles[0].DelaiArt}
+                    // kiff={element.kiff}
+                    // like={element.like}
+                    ville={element.VilleStore + ` ||`}
+                    desc={element.desc}
+                    telephone={element.PhoneStore}
+                />
+            ))
+            // const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
 
-        // const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
+            return (
+                <div>
+                    <section className="principale sectionActualite" id="principal">
 
-        return (
-            <div>
-                <section className="principale sectionActualite" id="principal">
+                        <ul className="listeActualite">
+                            {Storing}
+                            {Posts}
 
-                    <ul className="listeActualite">
+                        </ul>
+                    </section>
+                    <Map />
 
-                        {Posts}
-
-                    </ul>
-                </section>
-                <Map />
-
-            </div>
-        )
+                </div>
+            )
+        }
     }
 }
 

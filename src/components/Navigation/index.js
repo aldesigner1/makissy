@@ -27,12 +27,12 @@ let googleSignIn = () => {
         // firebase.auth().signInWithRedirect(base_provider).then((result) => {
 
         console.log(result);
-        console.log("Success Google account Linked");
+        console.log("Vous venez de vous inscrire sur MAKISSY !");
 
     }).catch((err) => {
         console.log(err);
 
-        console.log("Something went wrong when auth");
+        console.log("Un problème est survenu lors de votre insertion à MAKISSY");
 
     })
 }
