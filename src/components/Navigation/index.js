@@ -67,7 +67,7 @@ const NavigationNonAuth = () => (
             <Link className="btn-grad" to={ROUTES.INTRO}> C'est Parti... </Link>
         </header>
         <nav class="nav">
-            <Link to={ROUTES.LANDING} onClick={(evt) => googleSignIn(evt)} data-tip="Inscription" data-place="bottom" className="nav-item">
+            <Link to={ROUTES.LANDING} onClick={(evt) => googleSignIn(evt)} data-tip="Inscription" data-place="top" className="nav-item">
                 <i class="fab fa-gofore menucon"> </i>
             </Link>
         </nav>

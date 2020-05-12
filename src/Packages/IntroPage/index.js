@@ -11,7 +11,7 @@ export default class Intro extends Component {
         return (
             <div class="" id="body">
 
-                <header id="head">
+                <header id="head2">
                     <div class="container">
                         <nav class="nav">
                             <div class="menu-toggle">
