@@ -712,7 +712,7 @@ export default class HomePage extends Component {
                     <section className="principale sectionActualite" id="principal">
 
                         <ul className="listeActualite">
-                            {Storing}
+                            {/* {Storing} */}
                             {Posts}
 
                         </ul>
