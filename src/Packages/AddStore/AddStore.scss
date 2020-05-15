@@ -8,15 +8,29 @@
   //   font-family: "poppins", sans-serif;
 }
 
+body {
+  max-width: 100%;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .addStore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid rgba($gray, 0.2);
   border-left: 4px solid rgba($orange-light, 0.4);
   border-radius: 20px;
   padding: 20px 10px 5vh 10px;
+  overflow: visible;
   overflow-y: scroll;
-  overflow-x: visible;
-  width: 100%;
-  max-height: 70vh;
+
+  width: 80%;
+  margin: auto !important;
+  max-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,13 +77,14 @@
   }
 
   #submitBtnStore {
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 80px;
-    left: 50%;
-    width: 60%;
+    bottom: -20px;
+    right: -50%+10;
+    transform: translateX(-50%);
+    width: 80%;
     max-width: 300px !important;
     transform: translateX(-50%);
     margin: 10px 0 !important;
@@ -79,6 +94,7 @@
     font-weight: bold !important;
     font-size: $tab-text-med;
     color: white;
+    z-index: 100;
     background: linear-gradient(
       to right,
       $rouge,

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './tutoriel.scss';
+import { Link} from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
 export default class Tutoriel extends Component {
     render() {
@@ -24,7 +26,7 @@ export default class Tutoriel extends Component {
                                 <img src="Assets\images\planet-4124063.jpg" width="100px" alt="miniature tutotriel" />
                             </div>
                             <div className="titreTuto">
-                                <label htmlFor="">Urgence !</label>
+                                <label htmlFor="">Il était une fois...</label>
                             </div>
                             <div className="filtreTuto">
                             </div>
@@ -34,9 +36,9 @@ export default class Tutoriel extends Component {
                             <div className="imageTuto">
                                 <img src="Assets\images\paper-3033204.jpg" width="100px" alt="miniature tutotriel" />
                             </div>
-                            <div className="titreTuto">
-                                <label htmlFor="">StormBreakers</label>
-                            </div>
+                            <Link to={ROUTES.INTRO} className="titreTuto">
+                                <label htmlFor="">Un peu de réflexion</label>
+                            </Link>
                             <div className="filtreTuto">
                             </div>
                         </li>
@@ -65,8 +67,12 @@ export default class Tutoriel extends Component {
                     </ol>
                 </div>
 
+
                 <div className="contentTuto">
+                <video id="video" src="Assets/videos/episode-1.mp4" controls />
+
                     <h2 className="titrePrincipalTuto">REPRENONS DEPUIS LE DEBUT</h2>
+
                     <img src="Assets/images/galerie/depart.png" className="illustrationTuto" alt="illustration depart" />
                     <p className="paragrapheTuto">En tant que personne faisant du commerce en Afrique, être une référence sur le marché ou simplement faire grandir son business, implique de le faire à la fois de manière traditionnelle, mais aussi en utilisant les ‘‘nouvelles technologies’’… <br /> Et malheureusement, c’est là que tout se gâte! Entre l’internet, le niveau de vie local et le marketing digital; eh bien, commençons par comprendre les bases de ce type de commerce qui se fait en ligne.</p>
                     <ol>
@@ -146,8 +152,10 @@ export default class Tutoriel extends Component {
                             </ol>
 
                             <p className="paragrapheTuto">En d’autres termes, il serait sage de privilégier les idées où vous avez un avantage, un bonus, un plus. Parce que si votre business ne nécessite aucun effort ou aucune compétence particulière et que vous comptez vivre de ça rapidement, vous risquez vite être déçu•e. Évidemment si vous pouvez facilement construire votre commerce c’est-à-dire que votre objectif ne souligne pas votre talent ; eh bien, tout le monde va le faire ; et le marché risque vite devenir tellement saturé qu’il n’y aura plus moyen de vraiment se faire un revenu… D’où l’importance pour vous d’avoir un avantage.
-<br /> Pour que les choses soient plus claires, l’objectif que vous devez vous fixer ne dépend pas encore de votre ambition, mais de ce que vous êtes prêt•e à faire pour que le minimum soit viable... Prenons un exemple : <span id="exempleTuto"> [ Aïcha voudrait lancer sa start-up ; son objectif de départ, devenir une entreprise de textile connue à travers le continent ; son ‘‘vrai’’ objectif de départ pourrait être, fournir du tissu à 10 personnes inconnues qu’elle aurait su convaincre ]. </span>Ça paraît stupide et trop facile, mais c’est la méthode la plus sage et la plus simple pour découvrir graduellement votre avantage. A partir de cet avantage, vous pourrez facilement atteindre votre ‘‘vrai’’ objectif, lorsque ce dernier est atteint, il devient au final votre nouveau point de départ. </p>
-
+<br /> Pour que les choses soient plus claires, l’objectif que vous devez vous fixer ne dépend pas encore de votre ambition, mais de ce que vous êtes prêt•e à faire pour que le minimum soit viable... Prenons un exemple : <span id="exempleTuto"> [ Aïcha voudrait lancer sa start-up ; son objectif de départ, devenir une entreprise de textile connue à travers le continent ; son ‘‘vrai’’ objectif de départ pourrait être, fournir du tissu à 10 personnes inconnues qu’elle aurait su convaincre ]. </span>Ça paraît stupide et trop facile, mais c’est la méthode la plus sage et la plus simple pour découvrir gimport ImageUpload from 'src\components\Upload\ImageUpload';
+raduellement votre avantage. A partir de cet avantage, vous pourrez facilement atteindre votre ‘‘vrai’’ objectif, lorsque ce dernier est atteint, il devient au final votre nouveau point de départ. </p>;
+                            
+                            
                         </li>
 
                         <li>

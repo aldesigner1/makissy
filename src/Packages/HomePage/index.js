@@ -686,25 +686,25 @@ export default class HomePage extends Component {
             return (<div><Loader /></div>);
         }
         else {
-            const Storing = this.state.stores.map((element, index) => (
-                <Post key={index}
-                    id={element.NomStore}
-                    nomUtil={element.NomStore}
-                    titre={element.articles[0].TitreArt}
-                    following={element.following}
-                    prix={element.articles[0].PrixArt}
-                    devise={element.devise}
-                    srcImage={element.srcImage}
-                    profilePic={element.ProfilePic}
-                    srcBlur={element.srcBlur}
-                    delai={element.articles[0].DelaiArt}
-                    // kiff={element.kiff}
-                    // like={element.like}
-                    ville={element.VilleStore + ` ||`}
-                    desc={element.desc}
-                    telephone={element.PhoneStore}
-                />
-            ))
+            // const Storing = this.state.stores.map((element, index) => (
+            //     <Post key={index}
+            //         id={element.NomStore}
+            //         nomUtil={element.NomStore}
+            //         titre={element.articles[0].TitreArt}
+            //         following={element.following}
+            //         prix={element.articles[0].PrixArt}
+            //         devise={element.devise}
+            //         srcImage={element.srcImage}
+            //         profilePic={element.ProfilePic}
+            //         srcBlur={element.srcBlur}
+            //         delai={element.articles[0].DelaiArt}
+            //         // kiff={element.kiff}
+            //         // like={element.like}
+            //         ville={element.VilleStore + ` ||`}
+            //         desc={element.desc}
+            //         telephone={element.PhoneStore}
+            //     />
+            // ))
             // const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
 
             return (
@@ -721,9 +721,9 @@ export default class HomePage extends Component {
 
                 </div>
             )
+            // }
         }
     }
-}
 
 
 // const condition = (authUser) => !!authUser;

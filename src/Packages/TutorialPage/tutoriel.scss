@@ -7,15 +7,19 @@
   box-sizing: border-box;
   font-family: "product sans", sans-serif !important;
 }
+
+body {
+  height: 100vh;
+  max-height: 100vh;
+}
+
 .principalTuto {
-  top: 80px;
+  top: 0px;
   left: 0;
-  padding-top: 80px;
+  padding-top: 80px !important;
   position: fixed;
   width: 100% !important;
-  height: 100vh;
-
-  padding: 0 !important;
+  height: 100% !important;
 }
 ol {
   list-style: none;
@@ -35,8 +39,14 @@ ol {
     position: relative;
     width: 40%;
     margin-left: 100px;
-    top: 0;
-    height: 100vh;
+    top: 0px;
+    height: 100%;
+
+    #video {
+      position: absolute;
+      margin: 0px 0px 70px !important;
+      width: 50% !important;
+    }
 
     ol {
       position: absolute;
@@ -72,7 +82,8 @@ ol {
         .imageTuto img {
           width: 100%;
           // min-height: 200px;
-          height: 150%;
+          min-height: 150%;
+          max-height: 150%;
           border-radius: 10px;
           transform: scale(1);
           transition: 2s;
@@ -107,7 +118,7 @@ ol {
           }
 
           img {
-            transform: scale(1.2);
+            transform: scale(1.4);
           }
 
           .titreTuto label {
@@ -135,28 +146,33 @@ ol {
     position: relative;
     flex: 1;
     // width: 50%;
-    padding: 50px 20px 100px !important;
+    padding: 5px 20px 50px !important;
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     overflow-y: scroll;
 
     .titrePrincipalTuto {
-      font-size: $pc-text-max;
+      font-size: $pc-text-max * 0.8 !important;
       text-transform: uppercase;
       font-weight: 900;
       color: $orange;
       text-align: center;
+      margin: 50px 0 30px !important;
     }
 
     .paragrapheTuto {
       padding: 30px !important;
-      line-height: $pc-text-max + 12;
+      line-height: $pc-text-max * 1.5;
       text-align: justify;
       color: $gray-dark;
-      font-size: $pc-text-min + 2;
+      font-size: $pc-text-min * 1.1 !important;
+    }
+
+    img {
+      margin: 30px 0 !important;
     }
 
     ol li {
@@ -367,7 +383,7 @@ ol {
       line-height: $pc-text-max + 12;
       text-align: justify;
       color: $gray-dark;
-      font-size: $pc-text-min + 2;
+      font-size: $tab-text-med + 3 !important;
     }
 
     ol {
@@ -396,7 +412,7 @@ ol {
 
         .elementEnumereTuto {
           display: flex;
-          font-size: $pc-text-min + 1;
+          font-size: $tab-text-med + 1;
           // width: 100%;
           text-align: left;
           flex-direction: row;
@@ -593,11 +609,11 @@ ol {
     }
 
     .paragrapheTuto {
-      padding: 0px !important;
+      padding: 20px 0px !important;
       line-height: $pc-text-max;
       text-align: justify;
       color: $gray-dark;
-      font-size: $mob-text-med + 2;
+      font-size: $mob-text-med + 3 !important;
     }
 
     ol li {
@@ -622,7 +638,7 @@ ol {
 
         .elementEnumereTuto {
           display: flex;
-          font-size: $mob-text-med;
+          font-size: $mob-text-med + 2;
           // width: 100%;
           text-align: left;
           flex-direction: row;
