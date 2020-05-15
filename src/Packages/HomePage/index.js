@@ -721,9 +721,9 @@ export default class HomePage extends Component {
 
                 </div>
             )
-            // }
         }
     }
+}
 
 
 // const condition = (authUser) => !!authUser;
