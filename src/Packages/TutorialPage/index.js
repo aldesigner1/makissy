@@ -69,7 +69,7 @@ export default class Tutoriel extends Component {
 
 
                 <div className="contentTuto">
-                <video id="video" src="Assets/videos/episode-1.mp4" controls />
+                <video id="video" src="Assets/videos/mks-podcast-episode-1.mp4" controls />
 
                     <h2 className="titrePrincipalTuto">REPRENONS DEPUIS LE DEBUT</h2>
 
