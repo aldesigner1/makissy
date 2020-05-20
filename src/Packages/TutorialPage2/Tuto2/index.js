@@ -29,6 +29,25 @@ function index() {
                 </li>
 
                 <li>
+                    <h3 className="sousTitreTuto">LE REFERENCEMENT</h3>
+                    <img src="Assets/images/galerie/referencement.png" className="illustrationTuto" alt="illustration" />
+                    <p className="paragrapheTuto">Cette notion désigne le fait de positionner sa boutique sur une plateforme, un site ou sur internet de manière générale afin d’être vite vu·e. Pour être plus clair, c’est comme décider de déplacer sa boutique de plus en plus près du centre-ville, zone où il y a plus de chance pour vous d’être vu•e. C’est une technique incontournable et suffisamment importante pour dire si, oui ou non, vous avez des chances de convertir des tiers en visiteurs voire même en prospects. Évidemment, l’effet inverse est tout à fait faisable, en ce sens que la position de votre store pourrait s’éloigner du « centre-ville » et ce, pour diverses raisons. Donc la tâche qui consiste à améliorer son référencement se veut alors continue à travers le temps.</p>
+
+                    <blockquote cite="http://">
+
+                    </blockquote>
+                    <div className="exampleTuto">
+
+                    </div>
+                    {/* <ol className="enumerationTuto">
+                                <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i> <span>C’est plus simple à réaliser mais moins évident à comprendre;</span> </li>
+                                <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i>	<span>C’est bien plus libre et vaste en tant que domaine de vente, mais d’autant plus rude en termes de concurrence et d’individualisme;</span></li>
+                                <li className="elementEnumereTuto"><i className="fas fa-check symbol"></i> <span>Aussi, chez nous, c’est la forme de commerce la moins crédibilisée, mais la plus enviée…</span> </li>
+                            </ol>
+                            <p className="paragrapheTuto">Bref, la liste est longue… Alors essayez de peser le pour et le contre, car lancer un commerce peut se décider ensemble, mais il s’assume souvent seul.</p> */}
+                </li>
+
+                <li>
                     <h3 className="sousTitreTuto">LA PRODUCTION DE CONTENU</h3>
                     <img src="Assets/images/galerie/contenu.png" className="illustrationTuto" alt="illustration" />
                     <p className="paragrapheTuto">Il n’est pas possible de sentir, toucher ou même ressentir les objets à travers des supports virtuels. L’attention devrait donc être portée sur le visuel et dans une certaine mesure l’audio ; qui sont les moyens par excellence de crédibilisation de l’achat-vente en ligne, aussi bien pour les petits commerces que pour les grands. Rentre alors sur scène la <b>création de contenu</b>, qui va permettre – à tous ceux qui reconnaissent l’importance de faire une <b>bonne impression</b> à de potentiels clients – de donner une touche professionnelle à leur prestation de service ou leurs biens. Ainsi, travailler ses images, vidéos, textes et même audios vont, en plus d’améliorer votre positionnement, faire que vos visiteurs gardent une bonne image de ce que vous faites et soient convaincus du sérieux de votre marque. </p>
