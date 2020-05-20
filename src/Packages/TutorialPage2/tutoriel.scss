@@ -66,7 +66,7 @@ ol {
       li {
         position: relative;
         width: 90%;
-        min-height: 250px;
+        // height: 200px;
         background: ($gray-dark);
         // height: 300px;
         display: flex;
@@ -82,16 +82,16 @@ ol {
         .imageTuto img {
           width: 100%;
           // min-height: 200px;
-          min-height: 150%;
-          max-height: 150%;
+          min-height: 33vh !important;
+          // max-height: 200%;
           border-radius: 10px;
-          transform: scale(1);
+          transform: scale(1.1);
           transition: 2s;
         }
 
         .titreTuto label {
           display: none;
-          height: 0;
+          // height: 0;
           font-weight: bold;
           text-transform: uppercase;
           font-size: $pc-text-med;
@@ -293,13 +293,13 @@ ol {
         margin: 20px 0 !important;
 
         .imageTuto {
-          height: 100% !important;
+          height: 100vh !important;
         }
 
         .imageTuto img {
           width: 100%;
           // min-height: 200px;
-          height: 200% !important;
+          min-height: 10vh !important;
           border-radius: 10px;
           transform: scale(1);
           transition: 2s;
@@ -500,7 +500,7 @@ ol {
       li {
         position: relative;
         min-width: 150px !important;
-        min-height: 100px !important;
+        min-height: 90px !important;
         // height: 300px;
         display: flex;
         flex-direction: column;
@@ -514,22 +514,22 @@ ol {
         margin: 0 15px 0 0 !important;
 
         .imageTuto {
-          height: 8vh !important;
+          height: 100% !important;
           width: 100%;
         }
 
         .imageTuto img {
           width: 100%;
           // min-height: 200px;
-          height: 200% !important;
+          min-height: 13vh !important;
           border-radius: 10px;
-          transform: scale(1);
+          transform: scale(1.1);
           transition: 2s;
         }
 
         .titreTuto label {
           display: none;
-          height: 0;
+          // height: 0;
           font-weight: bold;
           text-transform: uppercase;
           font-size: $tab-text-min;

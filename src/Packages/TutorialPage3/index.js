@@ -11,7 +11,7 @@ export default class Tutoriel extends Component {
             <div className="principalTuto">
                 <div className="listeTuto">
                     <ol>
-                        <li style={{ "box-shadow": "0 0 10px #ff4400" }}>
+                        <li>
 
                             <div className="imageTuto">
                                 <img src="Assets\images\Miniature_Makissy.png" width="100px" alt="miniature tutotriel" />
@@ -33,7 +33,7 @@ export default class Tutoriel extends Component {
                             <div className="filtreTuto">
                             </div>
                         </li>
-                        <li>
+                        <li style={{ "box-shadow": "0 0 10px #ff4400" }}>
 
                             <div className="imageTuto">
                                 <img src="Assets\images\paper-3033204.jpg" width="100px" alt="miniature tutotriel" />
@@ -44,28 +44,7 @@ export default class Tutoriel extends Component {
                             <div className="filtreTuto">
                             </div>
                         </li>
-                        <li>
 
-                            <div className="imageTuto">
-                                <img src="Assets\images\spaghetti-2931846_1920.jpg" width="100px" alt="miniature tutotriel" />
-                            </div>
-                            <div className="titreTuto">
-                                <label htmlFor="">Shokugeki</label>
-                            </div>
-                            <div className="filtreTuto">
-                            </div>
-                        </li>
-                        <li>
-
-                            <div className="imageTuto">
-                                <img src="Assets\images\data_book_exploration_by_gleb.gif" width="100px" alt="miniature tutotriel" />
-                            </div>
-                            <div className="titreTuto">
-                                <label htmlFor="">The Web in Africa</label>
-                            </div>
-                            <div className="filtreTuto">
-                            </div>
-                        </li>
                     </ol>
                 </div>
 

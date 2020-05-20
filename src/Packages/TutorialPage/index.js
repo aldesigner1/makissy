@@ -44,28 +44,6 @@ export default class Tutoriel extends Component {
                             <div className="filtreTuto">
                             </div>
                         </li>
-                        <li>
-
-                            <div className="imageTuto">
-                                <img src="Assets\images\spaghetti-2931846_1920.jpg" width="100px" alt="miniature tutotriel" />
-                            </div>
-                            <div className="titreTuto">
-                                <label htmlFor="">Shokugeki</label>
-                            </div>
-                            <div className="filtreTuto">
-                            </div>
-                        </li>
-                        <li>
-
-                            <div className="imageTuto">
-                                <img src="Assets\images\data_book_exploration_by_gleb.gif" width="100px" alt="miniature tutotriel" />
-                            </div>
-                            <div className="titreTuto">
-                                <label htmlFor="">The Web in Africa</label>
-                            </div>
-                            <div className="filtreTuto">
-                            </div>
-                        </li>
                     </ol>
                 </div>
 
