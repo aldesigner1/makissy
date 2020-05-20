@@ -10,11 +10,14 @@ import Navigation from '../Navigation';
 // import LandingPage from '../Landing';
 import HomePage from '../../Packages/HomePage';
 import TutoPage from '../../Packages/TutorialPage';
+import TutoPage2 from '../../Packages/TutorialPage2';
+import TutoPage3 from '../../Packages/TutorialPage3';
 import StorePage from '../../Packages/StorePage';
 import LoaderPage from '../../Packages/LoaderPage';
 import EditStorePage from '../../Packages/EditStore';
 import AddStorePage from '../../Packages/AddStore';
 import IntroPage from '../../Packages/IntroPage';
+
 // import AccountPage from '../Account';
 // import SignInPage from '../SignIn';
 // import SignUpPage from '../SignUp';
@@ -129,6 +132,8 @@ const App = () => (
 
         <Route path={ROUTES.STORE} component={StorePage} />
         <Route path={ROUTES.TUTORIAL} component={TutoPage} />
+        <Route path={ROUTES.TUTORIAL2} component={TutoPage2} />
+        <Route path={ROUTES.TUTORIAL3} component={TutoPage3} />
         <Route path={ROUTES.LOADER} component={LoaderPage} />
         <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
         <Route path={ROUTES.ADDSTORE} component={AddStorePage} />

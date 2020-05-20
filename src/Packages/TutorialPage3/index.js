@@ -3,7 +3,7 @@ import './tutoriel.scss';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
-import Tuto1 from './Tuto1';
+import Tuto3 from './Tuto3';
 
 export default class Tutoriel extends Component {
     render() {
@@ -70,7 +70,7 @@ export default class Tutoriel extends Component {
                 </div>
 
 
-                <Tuto1 />
+                <Tuto3 />
 
 
             </div>

@@ -315,7 +315,7 @@
       overflow-y: scroll;
 
       p {
-        font-size: $tab-text-med;
+        font-size: $tab-text-med !important;
         line-height: 28px;
         width: 100%;
       }
