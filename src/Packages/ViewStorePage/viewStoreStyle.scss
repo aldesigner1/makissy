@@ -1,0 +1,154 @@
+@import "../../components/Scss/reset";
+@import "../../components/Scss/theme";
+@import "../../components/Scss/responsive";
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.viewerStore {
+  position: relative;
+  width: 100vw !important;
+  height: 50%;
+  padding: 90px 0 !important;
+}
+
+#discoverScreen {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("/Assets/images/Miniature_Makissy.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 95%;
+  background-attachment: fixed;
+  margin: 0 auto !important;
+  clip-path: circle(00px at center);
+}
+
+marquee {
+  width: 70px;
+  margin: 0px auto;
+  text-align: center;
+  height: 1.5em;
+  color: $gray-dark;
+}
+
+b {
+  color: $orange-dark;
+  font-weight: bold !important;
+}
+
+.containerViewer {
+  position: absolute;
+  margin: 100vh auto 0;
+  background: $blanc;
+  padding: 30px;
+  width: 100%;
+  left: 0;
+  min-width: 100% !important;
+  // background: #f2f3f7;
+  text-align: justify;
+  line-height: 40px;
+  color: $gray-dark;
+  p {
+    margin: 0 auto !important;
+    font-size: $mob-text-med !important;
+    max-width: 800px;
+  }
+}
+
+.containerViewer h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 900 !important;
+  margin: 0px auto 30px !important;
+  text-align: center;
+  color: $noir;
+}
+
+h2 {
+  position: absolute;
+  top: 40% !important;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+  font-size: 2.1em;
+  text-align: center;
+  width: 100% !important;
+  font-weight: lighter !important;
+  line-height: 30px;
+}
+
+.centreur {
+  width: 100%;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px !important;
+}
+
+.buttonSucc {
+  margin: 0 auto;
+  display: inline-block;
+  width: 220px;
+  height: 60px;
+  border: 2px solid $orange;
+  color: $orange;
+  font-size: $mob-text-med;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 56px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  background: transparent;
+  outline: none !important;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.active {
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation: rotate 0.8s ease 1s infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.success {
+  position: relative;
+  background-color: $orange;
+  animation: bounce 0.3 ease-in;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(0.9);
+  }
+}
+
+.success::before {
+  content: "";
+  position: absolute;
+  background: url("/Assets/icons/check-solid.svg");
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 31px;
+  height: 31px;
+  line-height: 31px;
+  top: 8px;
+  color: #fff;
+}

@@ -21,6 +21,8 @@ export const TUTORIAL = "/tuto";
 export const TUTORIAL2 = "/tuto2";
 export const TUTORIAL3 = "/tuto3";
 
+export const VIEWSTORE = "/viewer";
+
 
 export const MESSAGERIE = "/messages";
 export const ACTUALITE = "/actualites";

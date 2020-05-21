@@ -86,5 +86,28 @@
         previewProfileImage(this);
       });
     </script>
+    <script type="text/javascript">
+      var section = document.getElementById("discoverScreen"); //document.querySelector("section");
+      window.addEventListener("scroll", function() {
+        var value = window.scrollY;
+        document.getElementById("discoverScreen").style.clipPath =
+          "circle(" + value + "px at center)";
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".buttonSucc").click(function() {
+          $(this).addClass("active");
+
+          setTimeout(function() {
+            $(".buttonSucc").addClass("success");
+          }, 3700);
+          setTimeout(function() {
+            $(".buttonSucc").removeClass("active");
+            $(".buttonSucc").removeClass("success");
+          }, 5000);
+        });
+      });
+    </script>
   </body>
 </html>

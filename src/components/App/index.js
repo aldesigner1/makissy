@@ -17,6 +17,7 @@ import LoaderPage from '../../Packages/LoaderPage';
 import EditStorePage from '../../Packages/EditStore';
 import AddStorePage from '../../Packages/AddStore';
 import IntroPage from '../../Packages/IntroPage';
+import ViewStorePage from '../../Packages/ViewStorePage';
 
 // import AccountPage from '../Account';
 // import SignInPage from '../SignIn';
@@ -138,6 +139,7 @@ const App = () => (
         <Route path={ROUTES.EDITSTORE} component={EditStorePage} />
         <Route path={ROUTES.ADDSTORE} component={AddStorePage} />
         <Route path={ROUTES.INTRO} component={IntroPage} />
+        <Route path={ROUTES.VIEWSTORE} component={ViewStorePage} />
 
 
     </Switch>

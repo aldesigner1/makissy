@@ -144,14 +144,14 @@
 
       .descStore {
         font-family: monospace !important;
-        font-size: $mob-text-min;
+        font-size: $pc-text-min !important;
         opacity: 0.6;
         font-weight: bold;
         letter-spacing: 2px;
         line-height: 20px;
-        height: 100px;
+        height: 110px;
         max-height: 200px;
-        padding: 0 30px !important;
+        padding: 10px 30px !important;
         overflow-x: hidden;
         overflow-y: scroll;
         text-align: left;
@@ -350,7 +350,7 @@
 
       .descStore {
         font-family: monospace !important;
-        font-size: $mob-text-min;
+        font-size: $tab-text-med !important;
         opacity: 0.8;
         font-weight: bold;
         letter-spacing: 2px;
@@ -499,7 +499,7 @@
 
       .descStore {
         font-family: monospace !important;
-        font-size: $mob-text-min;
+        font-size: $mob-text-med !important;
         opacity: 0.8;
         font-weight: bold;
         letter-spacing: 2px;
