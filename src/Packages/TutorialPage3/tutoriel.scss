@@ -13,6 +13,10 @@ body {
   max-height: 100vh;
 }
 
+#gras {
+  color: $gray-dark !important;
+}
+
 .principalTuto {
   top: 0px;
   left: 0;
@@ -155,12 +159,13 @@ ol {
     overflow-y: scroll;
 
     .titrePrincipalTuto {
+      position: relative;
       font-size: $pc-text-max * 0.8 !important;
       text-transform: uppercase;
       font-weight: 900;
       color: $orange;
       text-align: center;
-      margin: 50px 0 30px !important;
+      margin: 0px 0 30px !important;
     }
 
     .paragrapheTuto {
@@ -180,6 +185,12 @@ ol {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      p {
+        font-size: $pc-text-min + 3 !important;
+        line-height: 40px;
+        padding: 0 25px !important;
+      }
 
       .enumerationTuto {
         list-style: square !important;
@@ -362,7 +373,7 @@ ol {
   .contentTuto {
     position: relative;
     flex: 1;
-    padding: 50px 20px 200px !important;
+    padding: 5px 20px 200px !important;
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -371,6 +382,7 @@ ol {
     overflow-y: scroll;
 
     .titrePrincipalTuto {
+      position: relative;
       font-size: $pc-text-max;
       text-transform: uppercase;
       font-weight: 900;
@@ -395,6 +407,11 @@ ol {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      p {
+        font-size: $tab-text-med + 3 !important;
+        line-height: 45px;
+      }
 
       .enumerationTuto {
         list-style: square !important;
@@ -584,7 +601,7 @@ ol {
   .contentTuto {
     position: relative;
     flex: 1;
-    // padding: 20px 20px 150px !important;
+    padding: 50px 20px 100px !important;
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -597,6 +614,7 @@ ol {
     }
 
     .titrePrincipalTuto {
+      position: relative;
       font-size: $tab-text-max;
       text-transform: uppercase;
       font-weight: 900;
@@ -621,6 +639,12 @@ ol {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      p {
+        font-size: $mob-text-med + 3 !important;
+        padding: 0 !important;
+        line-height: 35px;
+      }
 
       .enumerationTuto {
         list-style: square !important;

@@ -13,6 +13,10 @@ body {
   max-height: 100vh;
 }
 
+#gras {
+  color: $gray-dark !important;
+}
+
 .principalTuto {
   top: 0px;
   left: 0;
@@ -597,9 +601,11 @@ ol {
     }
 
     .titrePrincipalTuto {
+      position: absolute;
+      top: 20px !important;
       font-size: $tab-text-max;
       text-transform: uppercase;
-      font-weight: 900;
+      font-weight: 900 !important;
       color: $orange;
       text-align: center;
       width: 100%;
