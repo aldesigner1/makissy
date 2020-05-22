@@ -8,7 +8,7 @@ export default class index extends Component {
     render() {
         return (
             <div classname="viewerStore">
-                <h2 className="titre">Bienvenue dans le store <br /> <br /> <b>#MAKISSY </b> <br /> <marquee Behavior="alternate" Direction="down" scrollDelay="200"> <i className="fas fa-chevron-down"></i></marquee> </h2>
+                <h2 className="titre">Bienvenue dans le store <br /> <br /> <b id="boldColor">#MAKISSY </b> <br /> <marquee Behavior="alternate" Direction="down" scrollDelay="200"> <i className="fas fa-chevron-down"></i></marquee> </h2>
                 <section id="discoverScreen"> </section>
 
                 <div className="containerViewer">
