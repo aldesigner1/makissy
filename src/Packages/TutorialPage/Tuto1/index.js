@@ -3,8 +3,8 @@ import React from 'react';
 function index() {
     return (
         <div className="contentTuto">
-                {/* <video id="video" src="Assets/videos/mks-podcast-episode-1.mp4" controls /> */}
-                <audio src="Assets/audible/podcast episode -1.m4a" controls></audio>
+                <video id="video" src="Assets/audible/podcastepisode.mp3" controls />
+                {/* <audio id="podcast" src="Assets/audible/podcastepisode.mp3" controls/> */}
 
                     <h2 className="titrePrincipalTuto">REPRENONS DEPUIS LE DEBUT</h2>
 

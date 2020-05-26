@@ -32,7 +32,7 @@ export default class AddStore extends Component {
     }
 
     onSubmit = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         // const { id_mail, titreStore, telephoneStore, villeStore, descStore } = this.state;
         console.log(
             this.state.mail + " - " +
