@@ -1,615 +1,1180 @@
-// @import "../../components/Scss/reset";
+@import "../../components/Scss/reset";
 @import "../../components/Scss/theme";
 @import "../../components/Scss/responsive";
 
-/** PC **/
+body {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  // background: rgba(#FFCC00, 0.05) !important;
+}
 
 @media #{$pc-screen} {
-  .sectionStore {
-    z-index: 16;
-    position: absolute;
-    width: 40%;
-    height: 100vh !important;
-    top: 100px;
-    left: 100px;
-    background: transparent;
+  .monStoreBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 50px;
+    left: 2%;
+    z-index: 30;
+    margin-left: 5px;
+    cursor: pointer;
 
-    .monStoreBtn {
+    a {
       display: flex;
-      flex-direction: row;
       justify-content: center;
-      align-items: center;
-      position: fixed;
-      bottom: 50px;
-      left: 2%;
-      z-index: 30;
-      margin-left: 5px;
-      cursor: pointer;
+      position: relative;
+      // width: 2px !important;
+      background: $back-light;
+      width: 50px;
+      // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+      border-radius: 30px 30px 10px 30px !important;
+      padding: 15px 20px !important;
+      // text-align: center;
+      border: none !important;
+      // color: $gray-dark;
+      font-size: $mob-text-max -1 !important;
+      background: rgba($orange-light, 1);
+      color: $blanc;
+      animation: callToAction 2s infinite;
+      @keyframes callToAction {
+        0% {
+          background: rgba($orange-light, 1);
+          color: $blanc;
+        }
+        25% {
+          background: rgba($orange, 1);
+          color: $blanc;
+        }
+        50% {
+          background: rgba($orange-dark, 1);
+          color: $blanc;
+        }
+        75% {
+          background: rgba($orange, 1);
+          color: $blanc;
+        }
+        100% {
+          background: rgba($orange-light, 1);
+          color: $blanc;
+        }
+      }
 
-      a {
+      &:hover {
+        background: $back-light !important;
+        border: none;
+        color: $orange-dark !important;
+      }
+    }
+  }
+
+  .listeStore {
+    position: absolute;
+    padding: 70px 0 !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(#bbff,0.05);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    margin: 20px 0 70px !important;
+    flex-wrap: wrap;
+
+    .entityStore {
+      position: relative;
+      display: flex;
+      align-items: center;
+      // background: #ffcc00;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      padding: 20px 10px 20px 15px !important;
+      width: 30%;
+      height: 150px;
+      box-shadow: 0 0 5px #aaa;
+      margin: 15px 5px !important;
+
+      .cadreStoreImage {
         display: flex;
         justify-content: center;
-        position: relative;
-        // width: 2px !important;
-        background: $back-light;
-        width: 50px;
-        // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
-        border-radius: 30px 30px 10px 30px !important;
-        padding: 15px 20px !important;
-        // text-align: center;
-        border: none !important;
-        // color: $gray-dark;
-        font-size: $mob-text-max -1 !important;
-        background: rgba($orange-light, 1);
-        color: $blanc;
-        animation: callToAction 2s infinite;
-        @keyframes callToAction {
-          0% {
-            background: rgba($orange-light, 1);
-            color: $blanc;
-          }
-          25% {
-            background: rgba($orange, 1);
-            color: $blanc;
-          }
-          50% {
-            background: rgba($orange-dark, 1);
-            color: $blanc;
-          }
-          75% {
-            background: rgba($orange, 1);
-            color: $blanc;
-          }
-          100% {
-            background: rgba($orange-light, 1);
-            color: $blanc;
-          }
-        }
-
-        &:hover {
-          background: $back-light !important;
-          border: none;
-          color: $orange-dark !important;
-        }
-      }
-    }
-
-    .listeStore {
-      position: absolute;
-      width: 100% !important;
-      padding: 5px 10px 100px !important;
-      margin-bottom: 50px;
-      color: $noir;
-
-      & > .filtreStore:nth-child(2n) {
-        background: rgba(#fff, 0.1);
-      }
-
-      li {
-        margin: 20px 0px !important;
-        position: relative;
-        max-width: 500px;
-
-        &:nth-child(2n) .filtreStore {
-          background: rgba(#fff, 0.1) !important;
-        }
-
-        &:nth-child(2n) .descriptionStore .titreStore {
-          background: $orange-light;
-          color: $noir;
-        }
-      }
-    }
-
-    .fondStore {
-      background: url("/Assets/images/fondStore.png");
-      height: 250px;
-      max-height: 400px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: $mob-border * 3;
-      // box-shadow: $shadowbox;
-    }
-
-    .filtreStore {
-      height: 250px;
-      max-height: 400px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: $mob-border * 3;
-      box-shadow: $shadowbox;
-      position: absolute;
-      top: 0 !important;
-      background: rgba(#fff, 0.4);
-    }
-
-    .descriptionStore {
-      position: absolute;
-      top: 0;
-      padding: 0px 15px 10px;
-      color: $noir;
-
-      .titreStore {
-        font-family: "woodcutter carnage", "product sans", sans-serif;
-        font-size: $mob-text-max;
-        height: $mob-text-max + 12px;
-        margin-bottom: 5px !important;
         overflow: hidden;
-        width: 80%;
-        padding: 2px 5px !important;
-        background: $noir;
-        border-radius: 0 0 10px 10px;
-        color: $blanc;
-      }
-
-      .descStore {
-        font-family: monospace !important;
-        font-size: $pc-text-min !important;
-        opacity: 0.6;
-        font-weight: bold;
-        letter-spacing: 2px;
-        line-height: 20px;
-        height: 110px;
-        max-height: 200px;
-        padding: 10px 30px !important;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        text-align: left;
-
-        &::-webkit-scrollbar {
-          display: none;
+        // border: 1px solid #eee;
+        border-radius: 10px;
+        max-height: 100%;
+        width: auto;
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
+        margin: 0 auto !important;
+        img {
+          height: 100%;
+          width: auto;
+          border-radius: 10px;
         }
       }
-    }
 
-    a:first-child {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      font-size: $mob-text-med + 2;
-      color: $orange-dark;
-      background: $noir;
-      padding: 10px 25px;
-      border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+      .cadreStoreDesc {
+        display: flex;
+        width: 50%;
+        overflow: hidden;
+        max-height: 110px;
+        height: 90px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
 
-      &:hover {
-        background: $orange-light;
-        color: $noir;
+        .labelyStore {
+          font-weight: bold;
+          font-size: 1.5em;
+          text-align: left;
+          max-height: 50px;
+          overflow: hidden;
+          background: transparent !important;
+        }
+
+        .sloganStore {
+          font-weight: 100;
+          max-height: 60px;
+          overflow: hidden;
+          flex: 2;
+          text-align: justify;
+          padding: 0 2px !important;
+        }
+
+        .toVisit {
+          position: absolute;
+          bottom: 28px;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+
+          a {
+            color: $orange;
+            cursor: pointer;
+          }
+
+          .mapVisit {
+            padding: 2px 10px !important;
+            border-radius: 0 10px 0 10px;
+            background: $noir;
+            position: absolute;
+            left: -16px;
+            bottom: -29px;
+
+            &:hover {
+              color: $noir;
+              background: $orange;
+              border: 1px solid #eee;
+            }
+          }
+
+          .storeVisit {
+            position: absolute;
+            border-radius: 10px 10px 0 0;
+            left: 30px;
+            bottom: -29px;
+            // border: 1px solid $blanc;
+            padding: 2px 10px;
+
+            label {
+              cursor: pointer;
+            }
+
+            &:hover {
+              color: $blanc;
+              background: $orange;
+              border: 1px solid #eee;
+            }
+          }
+        }
       }
-    }
-
-    a:last-child {
-      position: absolute;
-      bottom: 10px;
-      right: 8px;
-      border-radius: 50px;
-      border: 1.5px solid $blanc;
-      color: $blanc;
-      font-size: $mob-text-med + 2;
-      font-weight: lighter !important;
-      padding: 5px 30px;
-
-      &:hover {
-        background: $orange-light;
-        color: $noir;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .sectionMap {
-    z-index: 16;
-    background: transparent;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    height: 70%;
-    width: 52%;
-    right: 0;
-    overflow: hidden;
-    margin: 0 5px;
-    border-radius: 5px;
-
-    iframe {
-      height: 100%;
-      width: 100%;
     }
   }
 }
-
-/** TABLETTE **/
 
 @media #{$tablet-screen} {
-  .sectionStore {
-    z-index: 16;
-    position: absolute;
-    width: 50% !important;
-    height: 100vh !important;
-    top: 100px;
+  .monStoreBtn {
     display: flex;
-    left: 0;
-    background: transparent;
-
-    .monStoreBtn {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      bottom: 1%;
-      right: auto;
-      left: 10%;
-      z-index: 30;
-      cursor: pointer;
-
-      a {
-        position: relative;
-        background: $back-light;
-        width: 50px;
-        // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
-        border-radius: 30px 30px 10px 30px;
-        padding: 15px 20px;
-        border: none;
-        // color: $gray-dark;
-        font-size: $mob-text-max -1 !important;
-        animation: callToAction 2s infinite;
-        @keyframes callToAction {
-          0% {
-            background: rgba($orange-light, 1);
-            color: $blanc;
-          }
-          25% {
-            background: rgba($orange, 1);
-            color: $blanc;
-          }
-          50% {
-            background: rgba($orange-dark, 1);
-            color: $blanc;
-          }
-          75% {
-            background: rgba($orange, 1);
-            color: $blanc;
-          }
-          100% {
-            background: rgba($orange-light, 1);
-            color: $blanc;
-          }
-        }
-
-        &:hover {
-          background: $back-light !important;
-          border: none;
-          color: $orange-dark !important;
-        }
-      }
-    }
-
-    .listeStore {
-      position: absolute;
-      width: 100% !important;
-      padding: 5px 10px 100px !important;
-      // background: #000;
-
-      li {
-        margin: 20px 0px !important;
-        position: relative;
-        max-width: 500px;
-
-        &:nth-child(2n) .filtreStore {
-          background: rgba(#fff, 0.1) !important;
-        }
-
-        &:nth-child(2n) .descriptionStore .titreStore {
-          background: $orange-light;
-          color: $noir;
-        }
-      }
-    }
-
-    .fondStore {
-      background: url("/Assets/images/fondStore.png");
-      height: 220px;
-      max-height: 300px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: $mob-border * 3;
-      // box-shadow: $shadowbox;
-    }
-
-    .filtreStore {
-      height: 220px;
-      max-height: 300px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: $mob-border * 3;
-      // box-shadow: $shadowbox;
-      position: absolute;
-      top: 0 !important;
-      background: rgba(#fff, 0.3) !important;
-    }
-
-    .descriptionStore {
-      position: absolute;
-      top: 0;
-      padding: 0px 15px 10px;
-      color: $noir;
-
-      .titreStore {
-        font-family: "woodcutter carnage", "product sans", sans-serif;
-        font-size: $mob-text-max;
-        height: $mob-text-max + 12px;
-        margin-bottom: 5px !important;
-        overflow: hidden;
-        width: 80%;
-        padding: 2px 5px !important;
-        background: $noir;
-        border-radius: 0 0 10px 10px;
-      }
-
-      .descStore {
-        font-family: monospace !important;
-        font-size: $tab-text-med !important;
-        opacity: 0.8;
-        font-weight: bold;
-        letter-spacing: 2px;
-        line-height: 20px;
-        height: 100px;
-        padding: 0 30px !important;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        text-align: left;
-
-        &::-webkit-scrollbar {
-          display: none;
-        }
-      }
-    }
-
-    a:first-child {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      font-size: $mob-text-med + 2;
-      color: $orange-dark;
-      background: $noir;
-      padding: 10px 25px;
-      border-radius: 0 $mob-border * 3 0 $mob-border * 3;
-
-      &:hover {
-        background: $orange-light;
-        color: $noir;
-      }
-    }
-
-    a:last-child {
-      position: absolute;
-      bottom: 10px;
-      right: 8px;
-      border-radius: 50px;
-      border: 1.5px solid $blanc;
-      color: $blanc;
-      font-size: $mob-text-med + 2;
-      font-weight: lighter !important;
-      padding: 5px 30px;
-
-      &:hover {
-        background: $orange-light;
-        color: $noir;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .sectionMap {
-    background: transparent;
-    position: fixed;
-    width: 49%;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    right: 0;
-    overflow: hidden;
-    margin-left: 10px;
-    border-radius: 5px;
-    padding: 70px 0;
+    position: fixed;
+    bottom: 20px;
+    right: -60%;
+    // left: 10%;
+    z-index: 30;
+    cursor: pointer;
 
-    iframe {
-      height: 100%;
-      width: 100%;
+    a {
+      position: relative;
+      background: $back-light;
+      width: 50px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      border-radius: 30px 30px 10px 30px;
+      padding: 15px 20px;
+      border: none;
+      color: $gray-dark;
+      font-size: $mob-text-max -1 !important;
+      animation: callToAction 2s infinite;
+      @keyframes callToAction {
+        0% {
+          background: rgba($orange-light, 1);
+          color: $blanc;
+        }
+        25% {
+          background: rgba($orange, 1);
+          color: $blanc;
+        }
+        50% {
+          background: rgba($orange-dark, 1);
+          color: $blanc;
+        }
+        75% {
+          background: rgba($orange, 1);
+          color: $blanc;
+        }
+        100% {
+          background: rgba($orange-light, 1);
+          color: $blanc;
+        }
+      }
+
+      &:hover {
+        background: $orange-light !important;
+        border: none;
+        color: $blanc !important;
+      }
+    }
+  }
+
+  .listeStore {
+    padding: 70px 0 !important;
+    width: 100%;
+    height: 100%;
+    // background: rgba(#bbff,0.05);
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+    flex-wrap: wrap;
+
+    .entityStore {
+      position: relative;
+      display: flex;
+      align-items: center;
+      // background: #ffcc00;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      padding: 20px 10px 20px 15px !important;
+      width: 45%;
+      margin: 20px 0 !important;
+      height: 150px;
+      box-shadow: 0 0 5px #aaa;
+
+      .cadreStoreImage {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        // border: 1px solid #eee;
+        border-radius: 10px;
+        max-height: 100%;
+        width: auto;
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
+        margin: 0 auto !important;
+        img {
+          height: 100%;
+          width: auto;
+          border-radius: 10px;
+        }
+      }
+
+      .cadreStoreDesc {
+        display: flex;
+        width: 50%;
+        overflow: hidden;
+        max-height: 110px;
+        height: 90px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .labelyStore {
+          font-weight: bold;
+          max-height: 50px;
+          overflow: hidden;
+          background: transparent !important;
+        }
+
+        .sloganStore {
+          font-weight: 100;
+          max-height: 60px;
+          overflow: hidden;
+          flex: 2;
+        }
+
+        .toVisit {
+          position: absolute;
+          bottom: 28px;
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+
+          a {
+            color: $orange;
+            cursor: pointer;
+          }
+
+          .mapVisit {
+            padding: 2px 10px !important;
+            border-radius: 0 10px 0 10px;
+            background: $noir;
+            position: absolute;
+            left: -16px;
+            bottom: -29px;
+
+            &:hover {
+              color: $noir;
+              background: $orange;
+              border: 1px solid #eee;
+            }
+          }
+
+          .storeVisit {
+            position: absolute;
+            border-radius: 10px 10px 0 0;
+            left: 30px;
+            bottom: -29px;
+            // border: 1px solid $blanc;
+            padding: 2px 10px;
+
+            label {
+              cursor: pointer;
+            }
+
+            &:hover {
+              color: $blanc;
+              background: $orange;
+              border: 1px solid #eee;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-/** SMARTPHONE **/
-
 @media #{$smart-screen} {
-  .sectionStore {
-    z-index: 16;
-    position: absolute;
-    width: 100% !important;
-    height: 100vh !important;
-    top: 100px;
+  .monStoreBtn {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 65px;
+    // width: 50%;
+    right: 10px;
+    z-index: 5;
+    cursor: pointer;
 
-    .listeStore {
-      position: absolute;
-      width: 100% !important;
-      padding: 5px 10px 100px !important;
+    a {
+      position: relative;
+      background: rgba($blanc, 1) !important;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      border-radius: 30px 30px 10px 30px !important;
+      padding: 10px 20px;
+      border: 2px solid $blanc !important;
+      // right: 50px;
+      // color: $gray-dark;
+      font-size: $mob-text-med + 1 !important;
 
-      // background: #000;
-
-      li {
-        margin: 20px auto !important;
-        position: relative;
-        max-width: 500px;
-
-        &:nth-child(2n) .filtreStore {
-          background: rgba(#fff, 0.3) !important;
-        }
-
-        &:nth-child(2n) .descriptionStore .titreStore {
-          background: $orange-light;
-          color: $noir;
-        }
+      &:hover {
+        background: $gray-dark !important;
+        border: $gray-dark !important;
+        color: $blanc !important;
       }
     }
+  }
 
-    .fondStore {
-      background: url("/Assets/images/fondStore.png");
-      height: 250px;
-      max-height: 300px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: $mob-border * 3;
-      // box-shadow: $shadowbox;
-    }
+  .listeStore {
+    padding: 70px 0 !important;
+    width: 100%;
+    height: 100%;
+    // background: rgba(#bbff,0.05);
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 
-    .filtreStore {
-      height: 250px;
-      max-height: 300px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: $mob-border * 3;
-      // box-shadow: $shadowbox;
-      position: absolute;
-      top: 0 !important;
-      background: rgba(#fff, 0.1) !important;
-    }
+    flex-wrap: wrap;
 
-    .descriptionStore {
-      position: absolute;
-      top: 0px;
-      padding: 0px 15px 10px;
-      color: $noir;
+    .entityStore {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      // background: #ffcc00;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      padding: 0px !important;
+      width: 90%;
+      margin: 20px auto !important;
+      height: auto;
+      box-shadow: 0 0 5px #aaa;
 
-      .titreStore {
-        font-family: "woodcutter carnage", "product sans", sans-serif;
-        font-size: $mob-text-max -9px;
-        height: $mob-text-max + 12px;
-        margin-bottom: 5px !important;
-        overflow: hidden;
-        width: 80%;
-        padding: 2px 5px !important;
-        background: $noir;
-        border-radius: 0 0 10px 10px;
-      }
-
-      .descStore {
-        font-family: monospace !important;
-        font-size: $mob-text-med !important;
-        opacity: 0.8;
-        font-weight: bold;
-        letter-spacing: 2px;
-        line-height: 20px;
-        height: 100px;
-        padding: 0 30px !important;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        text-align: left;
-        margin-top: 20px !important;
+      .cadreStoreImage {
+        overflow: visible;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // border: 1px solid #eee;
+        border-radius: 0px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        border: none;
+        flex: 1;
+        padding-top: 15px;
+        height: 50%;
 
         &::-webkit-scrollbar {
           display: none;
         }
+
+        img {
+          height: auto;
+          max-height: 100% !important;
+          min-width: 100% !important;
+          border-radius: 0;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: 1s ease-in-out;
+            height: auto !important;
+            // min-width: 106% !important;
+            // width: 106%;
+          }
+        }
       }
-    }
 
-    a:first-child {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      font-size: $mob-text-med + 2;
-      color: $orange-dark;
-      background: $noir;
-      padding: 10px 25px;
-      border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+      .cadreStoreDesc {
+        width: 100%;
+        overflow: hidden;
+        max-height: 110px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 20px 0 40px !important;
+        padding: 0 15px;
 
-      &:hover {
-        background: $orange-light;
-        color: $noir;
-      }
-    }
+        .labelyStore {
+          font-weight: bold;
+          padding: 5px 0 !important;
+        }
 
-    a:last-child {
-      position: absolute;
-      bottom: 10px;
-      right: 8px;
-      border-radius: 50px;
-      border: 1.5px solid $blanc;
-      color: $blanc;
-      font-size: $mob-text-med + 2;
-      font-weight: lighter !important;
-      padding: 5px 30px;
+        .sloganStore {
+          font-weight: 100;
+          max-height: 50px !important;
+          overflow: scroll;
+          line-height: 22px;
 
-      &:hover {
-        background: $orange-light;
-        color: $noir;
-        cursor: pointer;
-      }
-    }
-
-    .monStoreBtn {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      position: fixed;
-      bottom: 65px;
-      // width: 50%;
-      right: 10px;
-      z-index: 5;
-      cursor: pointer;
-
-      a {
-        position: relative;
-        background: $green !important;
-        // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
-        border-radius: 30px 30px 10px 30px !important;
-        padding: 15px 20px;
-        border: 2px solid $blanc !important;
-        // right: 50px;
-        // color: $gray-dark;
-        box-shadow: 0 0 5px #000;
-        font-size: $mob-text-max -1 !important;
-        animation: callToAction 1s infinite;
-        @keyframes callToAction {
-          0% {
-            background: rgba($orange-light, 1);
-            color: $blanc;
-          }
-          25% {
-            background: rgba($orange, 1);
-            color: $blanc;
-          }
-          50% {
-            background: rgba($orange-dark, 1);
-            color: $blanc;
-          }
-          75% {
-            background: rgba($orange, 1);
-            color: $blanc;
-          }
-          100% {
-            background: rgba($orange-light, 1);
-            color: $blanc;
+          &::-webkit-scrollbar {
+            display: none;
           }
         }
 
-        &:hover {
-          background: $back-light !important;
-          border: none;
-          color: $orange-dark !important;
+        .toVisit {
+          position: absolute;
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+
+          a {
+            color: $orange;
+            cursor: pointer;
+          }
+
+          .mapVisit {
+            padding: 4px 20px !important;
+            border-radius: 0 10px 0 10px;
+            background: $noir;
+            position: absolute;
+            left: -16px;
+            bottom: -30px;
+            font-size: 1.3em;
+
+            &:hover {
+              color: $noir;
+              background: $orange;
+              border: 1px solid #eee;
+            }
+          }
+
+          .storeVisit {
+            position: absolute;
+            border-radius: 50px;
+            // border: 2px solid $blanc;
+            left: auto;
+            right: 30px !important;
+            bottom: -15px;
+            // top: 60%;
+            background: $blanc;
+            letter-spacing: 1px;
+            // color: #5a84a2;
+            color: $orange-light !important;
+            background: $blanc !important;
+            // width:
+            // border: 1px solid $blanc;
+            padding: 5px 20px;
+            cursor: pointer;
+
+            box-shadow: -2px -2px 8px rgba($blanc, 1),
+              -2px -2px 12px rgba($blanc, 0.5),
+              inset 2px 2px 4px rgba($blanc, 0.1), 2px 2px 8px rgba($noir, 0.15);
+
+            &:hover {
+              box-shadow: inset -2px -2px 8px rgba($blanc, 1),
+                inset -2px -2px 12px rgba($blanc, 0.5),
+                inset 2px 2px 4px rgba($blanc, 0.1),
+                inset 2px 2px 8px rgba($noir, 0.15);
+
+              label {
+                display: inline-block;
+                transform: scale(0.99);
+                cursor: pointer;
+              }
+            }
+
+            &:hover {
+              color: $orange !important;
+              background: rgba($gray-light, 0.3) !important;
+              border: 0px solid $orange !important;
+            }
+          }
         }
       }
     }
-  }
-
-  .secondaire {
-    display: none;
   }
 }
 
-//END
+// /** PC **/
+
+// @media #{$pc-screen} {
+//   .sectionStore {
+//     z-index: 16;
+//     position: absolute;
+//     width: 40%;
+//     height: 100vh !important;
+//     top: 100px;
+//     left: 100px;
+//     background: transparent;
+
+//     .monStoreBtn {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: center;
+//       align-items: center;
+//       position: fixed;
+//       bottom: 50px;
+//       left: 2%;
+//       z-index: 30;
+//       margin-left: 5px;
+//       cursor: pointer;
+
+//       a {
+//         display: flex;
+//         justify-content: center;
+//         position: relative;
+//         // width: 2px !important;
+//         background: $back-light;
+//         width: 50px;
+//         // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+//         border-radius: 30px 30px 10px 30px !important;
+//         padding: 15px 20px !important;
+//         // text-align: center;
+//         border: none !important;
+//         // color: $gray-dark;
+//         font-size: $mob-text-max -1 !important;
+//         background: rgba($orange-light, 1);
+//         color: $blanc;
+//         animation: callToAction 2s infinite;
+//         @keyframes callToAction {
+//           0% {
+//             background: rgba($orange-light, 1);
+//             color: $blanc;
+//           }
+//           25% {
+//             background: rgba($orange, 1);
+//             color: $blanc;
+//           }
+//           50% {
+//             background: rgba($orange-dark, 1);
+//             color: $blanc;
+//           }
+//           75% {
+//             background: rgba($orange, 1);
+//             color: $blanc;
+//           }
+//           100% {
+//             background: rgba($orange-light, 1);
+//             color: $blanc;
+//           }
+//         }
+
+//         &:hover {
+//           background: $back-light !important;
+//           border: none;
+//           color: $orange-dark !important;
+//         }
+//       }
+//     }
+
+//     .listeStore {
+//       position: absolute;
+//       width: 100% !important;
+//       padding: 5px 10px 100px !important;
+//       margin-bottom: 50px;
+//       color: $noir;
+
+//       & > .filtreStore:nth-child(2n) {
+//         background: rgba(#fff, 0.1);
+//       }
+
+//       li {
+//         margin: 20px 0px !important;
+//         position: relative;
+//         max-width: 500px;
+
+//         &:nth-child(2n) .filtreStore {
+//           background: rgba(#fff, 0.1) !important;
+//         }
+
+//         &:nth-child(2n) .descriptionStore .titreStore {
+//           background: $orange-light;
+//           color: $noir;
+//         }
+//       }
+//     }
+
+//     .fondStore {
+//       background: url("/Assets/images/fondStore.png");
+//       height: 250px;
+//       max-height: 400px;
+//       width: 100%;
+//       margin: 0 auto;
+//       border-radius: $mob-border * 3;
+//       // box-shadow: $shadowbox;
+//     }
+
+//     .filtreStore {
+//       height: 250px;
+//       max-height: 400px;
+//       width: 100%;
+//       margin: 0 auto;
+//       border-radius: $mob-border * 3;
+//       box-shadow: $shadowbox;
+//       position: absolute;
+//       top: 0 !important;
+//       background: rgba(#fff, 0.4);
+//     }
+
+//     .descriptionStore {
+//       position: absolute;
+//       top: 0;
+//       padding: 0px 15px 10px;
+//       color: $noir;
+
+//       .titreStore {
+//         font-family: "woodcutter carnage", "product sans", sans-serif;
+//         font-size: $mob-text-max;
+//         height: $mob-text-max + 12px;
+//         margin-bottom: 5px !important;
+//         overflow: hidden;
+//         width: 80%;
+//         padding: 2px 5px !important;
+//         background: $noir;
+//         border-radius: 0 0 10px 10px;
+//         color: $blanc;
+//       }
+
+//       .descStore {
+//         font-family: monospace !important;
+//         font-size: $pc-text-min !important;
+//         opacity: 0.6;
+//         font-weight: bold;
+//         letter-spacing: 2px;
+//         line-height: 20px;
+//         height: 110px;
+//         max-height: 200px;
+//         padding: 10px 30px !important;
+//         overflow-x: hidden;
+//         overflow-y: scroll;
+//         text-align: left;
+
+//         &::-webkit-scrollbar {
+//           display: none;
+//         }
+//       }
+//     }
+
+//     a:first-child {
+//       position: absolute;
+//       bottom: 0px;
+//       left: 0;
+//       font-size: $mob-text-med + 2;
+//       color: $orange-dark;
+//       background: $noir;
+//       padding: 10px 25px;
+//       border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+
+//       &:hover {
+//         background: $orange-light;
+//         color: $noir;
+//       }
+//     }
+
+//     a:last-child {
+//       position: absolute;
+//       bottom: 10px;
+//       right: 8px;
+//       border-radius: 50px;
+//       border: 1.5px solid $blanc;
+//       color: $blanc;
+//       font-size: $mob-text-med + 2;
+//       font-weight: lighter !important;
+//       padding: 5px 30px;
+
+//       &:hover {
+//         background: $orange-light;
+//         color: $noir;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+
+//   .sectionMap {
+//     z-index: 16;
+//     background: transparent;
+//     position: fixed;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex: 1;
+//     height: 70%;
+//     width: 52%;
+//     right: 0;
+//     overflow: hidden;
+//     margin: 0 5px;
+//     border-radius: 5px;
+
+//     iframe {
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
+// }
+
+// /** TABLETTE **/
+
+// @media #{$tablet-screen} {
+//   .sectionStore {
+//     z-index: 16;
+//     position: absolute;
+//     width: 50% !important;
+//     height: 100vh !important;
+//     top: 100px;
+//     display: flex;
+//     left: 0;
+//     background: transparent;
+
+//     .monStoreBtn {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: center;
+//       align-items: center;
+//       position: fixed;
+//       bottom: 1%;
+//       right: auto;
+//       left: 10%;
+//       z-index: 30;
+//       cursor: pointer;
+
+//       a {
+//         position: relative;
+//         background: $back-light;
+//         width: 50px;
+//         // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+//         border-radius: 30px 30px 10px 30px;
+//         padding: 15px 20px;
+//         border: none;
+//         // color: $gray-dark;
+//         font-size: $mob-text-max -1 !important;
+//         animation: callToAction 2s infinite;
+//         @keyframes callToAction {
+//           0% {
+//             background: rgba($orange-light, 1);
+//             color: $blanc;
+//           }
+//           25% {
+//             background: rgba($orange, 1);
+//             color: $blanc;
+//           }
+//           50% {
+//             background: rgba($orange-dark, 1);
+//             color: $blanc;
+//           }
+//           75% {
+//             background: rgba($orange, 1);
+//             color: $blanc;
+//           }
+//           100% {
+//             background: rgba($orange-light, 1);
+//             color: $blanc;
+//           }
+//         }
+
+//         &:hover {
+//           background: $back-light !important;
+//           border: none;
+//           color: $orange-dark !important;
+//         }
+//       }
+//     }
+
+//     .listeStore {
+//       position: absolute;
+//       width: 100% !important;
+//       padding: 5px 10px 100px !important;
+//       // background: #000;
+
+//       li {
+//         margin: 20px 0px !important;
+//         position: relative;
+//         max-width: 500px;
+
+//         &:nth-child(2n) .filtreStore {
+//           background: rgba(#fff, 0.1) !important;
+//         }
+
+//         &:nth-child(2n) .descriptionStore .titreStore {
+//           background: $orange-light;
+//           color: $noir;
+//         }
+//       }
+//     }
+
+//     .fondStore {
+//       background: url("/Assets/images/fondStore.png");
+//       height: 220px;
+//       max-height: 300px;
+//       width: 100%;
+//       margin: 0 auto;
+//       border-radius: $mob-border * 3;
+//       // box-shadow: $shadowbox;
+//     }
+
+//     .filtreStore {
+//       height: 220px;
+//       max-height: 300px;
+//       width: 100%;
+//       margin: 0 auto;
+//       border-radius: $mob-border * 3;
+//       // box-shadow: $shadowbox;
+//       position: absolute;
+//       top: 0 !important;
+//       background: rgba(#fff, 0.3) !important;
+//     }
+
+//     .descriptionStore {
+//       position: absolute;
+//       top: 0;
+//       padding: 0px 15px 10px;
+//       color: $noir;
+
+//       .titreStore {
+//         font-family: "woodcutter carnage", "product sans", sans-serif;
+//         font-size: $mob-text-max;
+//         height: $mob-text-max + 12px;
+//         margin-bottom: 5px !important;
+//         overflow: hidden;
+//         width: 80%;
+//         padding: 2px 5px !important;
+//         background: $noir;
+//         border-radius: 0 0 10px 10px;
+//       }
+
+//       .descStore {
+//         font-family: monospace !important;
+//         font-size: $tab-text-med !important;
+//         opacity: 0.8;
+//         font-weight: bold;
+//         letter-spacing: 2px;
+//         line-height: 20px;
+//         height: 100px;
+//         padding: 0 30px !important;
+//         overflow-x: hidden;
+//         overflow-y: hidden;
+//         text-align: left;
+
+//         &::-webkit-scrollbar {
+//           display: none;
+//         }
+//       }
+//     }
+
+//     a:first-child {
+//       position: absolute;
+//       bottom: 0px;
+//       left: 0;
+//       font-size: $mob-text-med + 2;
+//       color: $orange-dark;
+//       background: $noir;
+//       padding: 10px 25px;
+//       border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+
+//       &:hover {
+//         background: $orange-light;
+//         color: $noir;
+//       }
+//     }
+
+//     a:last-child {
+//       position: absolute;
+//       bottom: 10px;
+//       right: 8px;
+//       border-radius: 50px;
+//       border: 1.5px solid $blanc;
+//       color: $blanc;
+//       font-size: $mob-text-med + 2;
+//       font-weight: lighter !important;
+//       padding: 5px 30px;
+
+//       &:hover {
+//         background: $orange-light;
+//         color: $noir;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+
+//   .sectionMap {
+//     background: transparent;
+//     position: fixed;
+//     width: 49%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100%;
+//     right: 0;
+//     overflow: hidden;
+//     margin-left: 10px;
+//     border-radius: 5px;
+//     padding: 70px 0;
+
+//     iframe {
+//       height: 100%;
+//       width: 100%;
+//     }
+//   }
+// }
+
+// /** SMARTPHONE **/
+
+// @media #{$smart-screen} {
+//   .sectionStore {
+//     z-index: 16;
+//     position: absolute;
+//     width: 100% !important;
+//     height: 100vh !important;
+//     top: 100px;
+//     display: flex;
+
+//     .listeStore {
+//       position: absolute;
+//       width: 100% !important;
+//       padding: 5px 10px 100px !important;
+
+//       // background: #000;
+
+//       li {
+//         margin: 20px auto !important;
+//         position: relative;
+//         max-width: 500px;
+
+//         &:nth-child(2n) .filtreStore {
+//           background: rgba(#fff, 0.3) !important;
+//         }
+
+//         &:nth-child(2n) .descriptionStore .titreStore {
+//           background: $orange-light;
+//           color: $noir;
+//         }
+//       }
+//     }
+
+//     .fondStore {
+//       background: url("/Assets/images/fondStore.png");
+//       height: 250px;
+//       max-height: 300px;
+//       width: 100%;
+//       margin: 0 auto;
+//       border-radius: $mob-border * 3;
+//       // box-shadow: $shadowbox;
+//     }
+
+//     .filtreStore {
+//       height: 250px;
+//       max-height: 300px;
+//       width: 100%;
+//       margin: 0 auto;
+//       border-radius: $mob-border * 3;
+//       // box-shadow: $shadowbox;
+//       position: absolute;
+//       top: 0 !important;
+//       background: rgba(#fff, 0.1) !important;
+//     }
+
+//     .descriptionStore {
+//       position: absolute;
+//       top: 0px;
+//       padding: 0px 15px 10px;
+//       color: $noir;
+
+//       .titreStore {
+//         font-family: "woodcutter carnage", "product sans", sans-serif;
+//         font-size: $mob-text-max -9px;
+//         height: $mob-text-max + 12px;
+//         margin-bottom: 5px !important;
+//         overflow: hidden;
+//         width: 80%;
+//         padding: 2px 5px !important;
+//         background: $noir;
+//         border-radius: 0 0 10px 10px;
+//       }
+
+//       .descStore {
+//         font-family: monospace !important;
+//         font-size: $mob-text-med !important;
+//         opacity: 0.8;
+//         font-weight: bold;
+//         letter-spacing: 2px;
+//         line-height: 20px;
+//         height: 100px;
+//         padding: 0 30px !important;
+//         overflow-x: hidden;
+//         overflow-y: hidden;
+//         text-align: left;
+//         margin-top: 20px !important;
+
+//         &::-webkit-scrollbar {
+//           display: none;
+//         }
+//       }
+//     }
+
+//     a:first-child {
+//       position: absolute;
+//       bottom: 0px;
+//       left: 0;
+//       font-size: $mob-text-med + 2;
+//       color: $orange-dark;
+//       background: $noir;
+//       padding: 10px 25px;
+//       border-radius: 0 $mob-border * 3 0 $mob-border * 3;
+
+//       &:hover {
+//         background: $orange-light;
+//         color: $noir;
+//       }
+//     }
+
+//     a:last-child {
+//       position: absolute;
+//       bottom: 10px;
+//       right: 8px;
+//       border-radius: 50px;
+//       border: 1.5px solid $blanc;
+//       color: $blanc;
+//       font-size: $mob-text-med + 2;
+//       font-weight: lighter !important;
+//       padding: 5px 30px;
+
+//       &:hover {
+//         background: $orange-light;
+//         color: $noir;
+//         cursor: pointer;
+//       }
+//     }
+
+//     .monStoreBtn {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: flex-end;
+//       align-items: center;
+//       position: fixed;
+//       bottom: 65px;
+//       // width: 50%;
+//       right: 10px;
+//       z-index: 5;
+//       cursor: pointer;
+
+//       a {
+//         position: relative;
+//         background: $green !important;
+//         // box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+//         border-radius: 30px 30px 10px 30px !important;
+//         padding: 15px 20px;
+//         border: 2px solid $blanc !important;
+//         // right: 50px;
+//         // color: $gray-dark;
+//         box-shadow: 0 0 5px #000;
+//         font-size: $mob-text-max -1 !important;
+//         animation: callToAction 1s infinite;
+//         @keyframes callToAction {
+//           0% {
+//             background: rgba($orange-light, 1);
+//             color: $blanc;
+//           }
+//           25% {
+//             background: rgba($orange, 1);
+//             color: $blanc;
+//           }
+//           50% {
+//             background: rgba($orange-dark, 1);
+//             color: $blanc;
+//           }
+//           75% {
+//             background: rgba($orange, 1);
+//             color: $blanc;
+//           }
+//           100% {
+//             background: rgba($orange-light, 1);
+//             color: $blanc;
+//           }
+//         }
+
+//         &:hover {
+//           background: $back-light !important;
+//           border: none;
+//           color: $orange-dark !important;
+//         }
+//       }
+//     }
+//   }
+
+//   .secondaire {
+//     display: none;
+//   }
+// }
+
+// //END

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { EDITSTORE } from '../../constants/routes';
-
+import * as ROUTES from '../../constants/routes';
 import { withAuthorization } from '../../components/Session';
 
 import Store from './Store';
@@ -14,116 +13,7 @@ export class StorePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            stores: [
-                {
-                    nomStore: "AFSTYLE",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "FESTI - VOGT",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "MTN - Cameroun",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "CANAL OLYMPIA",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "KIROO GAMES",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "OFFRES D'EMPLOI",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "ENSP - Cameroun",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "COMISA - Cameroun",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "BARDGOGE",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "ALAMBA - Films",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Pacy Delice",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "ICT4D - Cameroon",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Whatsapp - News",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Kennedy en ligne",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Annonce !!!",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Chez Sandra",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Chez ANK",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "INFINIX - Cameroun",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Coalition Digitale",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "AMK Elevage",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "Jeune et Fort Production",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "ENSTP - Cameroun",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "JOBS - Cameroun",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "TCHOP N' YAMO",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "CI GUSTA",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "DR SHAWARMA",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-                {
-                    nomStore: "KAROKA BBO Service",
-                    descStore: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc",
-                },
-            ],
+            stores: [],
         }
     }
 
@@ -135,7 +25,7 @@ export class StorePage extends Component {
 
         return (
             <div>
-                <section className="principale sectionStore" id="principal">
+                {/* <section className="principale sectionStore" id="principal">
                     <div className="monStoreBtn">
                         <Link to={EDITSTORE}>
                             <i className="fas fa-person-booth"></i>
@@ -145,7 +35,92 @@ export class StorePage extends Component {
                         {Stores}
                     </ul>
 
-                </section>
+                </section> */}
+
+
+                <div className="monStoreBtn">
+                    <Link to={ROUTES.EDITSTORE}>
+                        <i className="fas fa-person-booth"></i>
+                    </Link>
+                </div>
+
+                <ol className="listeStore">
+                    <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Les petits chercheurs </h3>
+                            <label className="sloganStore"> Soyez vous-même, soyez chercheurs </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/LesPetitsChercheurslogo.png" alt="" />
+                        </div>
+
+                    </li>
+
+
+                    <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Pacy Delice </h3>
+                            <label className="sloganStore"> Votre resto étudiant à petits prix... </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/caipi-377960.png" alt="" />
+                        </div>
+
+                    </li>
+
+
+                    <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Garagisteurs </h3>
+                            <label className="sloganStore"> Nouvelle caisse, nouveau métier, nouvel état </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/jeep-2448619_1920.jpg" alt="" />
+                        </div>
+
+                    </li>
+                    <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Les petits chercheurs </h3>
+                            <label className="sloganStore"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/Icons Animation Inspiration.gif" alt="" />
+                        </div>
+
+                    </li>
+                    <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Les petits chercheurs </h3>
+                            <label className="sloganStore"> Soyez vous-même, soyez chercheurs </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/LesPetitsChercheurslogo.png" alt="" />
+                        </div>
+
+                    </li>
+                </ol>
+
             </div>
         )
     }

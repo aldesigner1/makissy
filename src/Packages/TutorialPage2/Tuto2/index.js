@@ -21,10 +21,10 @@ function index() {
 
                     </div>
                     {/* <ol className="enumerationTuto">
-                                <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i> <span>C’est plus simple à réaliser mais moins évident à comprendre;</span> </li>
-                                <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i>	<span>C’est bien plus libre et vaste en tant que domaine de vente, mais d’autant plus rude en termes de concurrence et d’individualisme;</span></li>
-                                <li className="elementEnumereTuto"><i className="fas fa-check symbol"></i> <span>Aussi, chez nous, c’est la forme de commerce la moins crédibilisée, mais la plus enviée…</span> </li>
-                            </ol>
+                            <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i> <span>C’est plus simple à réaliser mais moins évident à comprendre;</span> </li>
+                            <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i>	<span>C’est bien plus libre et vaste en tant que domaine de vente, mais d’autant plus rude en termes de concurrence et d’individualisme;</span></li>
+                            <li className="elementEnumereTuto"><i className="fas fa-check symbol"></i> <span>Aussi, chez nous, c’est la forme de commerce la moins crédibilisée, mais la plus enviée…</span> </li>
+                        </ol>
                             <p className="paragrapheTuto">Bref, la liste est longue… Alors essayez de peser le pour et le contre, car lancer un commerce peut se décider ensemble, mais il s’assume souvent seul.</p> */}
                 </li>
 
@@ -40,11 +40,11 @@ function index() {
 
                     </div>
                     {/* <ol className="enumerationTuto">
-                                <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i> <span>C’est plus simple à réaliser mais moins évident à comprendre;</span> </li>
-                                <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i>	<span>C’est bien plus libre et vaste en tant que domaine de vente, mais d’autant plus rude en termes de concurrence et d’individualisme;</span></li>
-                                <li className="elementEnumereTuto"><i className="fas fa-check symbol"></i> <span>Aussi, chez nous, c’est la forme de commerce la moins crédibilisée, mais la plus enviée…</span> </li>
-                            </ol>
-                            <p className="paragrapheTuto">Bref, la liste est longue… Alors essayez de peser le pour et le contre, car lancer un commerce peut se décider ensemble, mais il s’assume souvent seul.</p> */}
+                            <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i> <span>C’est plus simple à réaliser mais moins évident à comprendre;</span> </li>
+                            <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i>	<span>C’est bien plus libre et vaste en tant que domaine de vente, mais d’autant plus rude en termes de concurrence et d’individualisme;</span></li>
+                            <li className="elementEnumereTuto"> <i className="fas fa-check symbol"></i> <span>Aussi, chez nous, c’est la forme de commerce la moins crédibilisée, mais la plus enviée…</span> </li>
+                        </ol>
+                        <p className="paragrapheTuto">Bref, la liste est longue… Alors essayez de peser le pour et le contre, car lancer un commerce peut se décider ensemble, mais il s’assume souvent seul.</p> */}
                 </li>
 
                 <li>

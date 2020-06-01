@@ -4,7 +4,20 @@ import * as ROUTES from '../../constants/routes';
 
 import './EditStore.scss';
 
+const INITIAL_STATE_ARTICLE = {
+
+}
+
 export default class EditStore extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    handleForm = (evt) => {
+
+    }
+
     render() {
         return (
             <div id="bodyHome">
@@ -42,6 +55,10 @@ export default class EditStore extends Component {
                     <label htmlFor="demo" id="onglet" className="o1">
                         <span id="btn1"><i className="fas fa-stream"></i></span>
                         <form className="pageOnglet ong1">
+                            <div>
+                                <input type="file" />
+                                <img src="Assets/image/" alt="votre article" />
+                            </div>
                             <div>
                                 {/* <label htmlFor="Champ1">Nom</label> */}
                                 <input type="text" name="" id="Champ1" placeholder="titre" />
