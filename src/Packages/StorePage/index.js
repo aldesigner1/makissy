@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouterasSwitch } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import { withAuthorization } from '../../components/Session';
 
@@ -93,33 +93,37 @@ export class StorePage extends Component {
                     </li>
                     <li className="entityStore">
                         <div className="cadreStoreDesc">
-                            <h3 className="labelyStore"> Les petits chercheurs </h3>
-                            <label className="sloganStore"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </label>
+                            <h3 className="labelyStore"> Mokolo </h3>
+                            <label className="sloganStore"> Vous savez déjà ce qu'on fait à Mokolo, donc pas besoin d'en dire plus! </label>
                             <div className="toVisit">
                                 <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
                                 <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
                             </div>
                         </div>
                         <div className="cadreStoreImage">
-                            <img src="assets/images/Icons Animation Inspiration.gif" alt="" />
+                            <img src="assets/images/store/african-1129032_1920.jpg" alt="" />
                         </div>
 
                     </li>
                     <li className="entityStore">
                         <div className="cadreStoreDesc">
-                            <h3 className="labelyStore"> Les petits chercheurs </h3>
-                            <label className="sloganStore"> Soyez vous-même, soyez chercheurs </label>
+                            <h3 className="labelyStore"> Global Clim </h3>
+                            <label className="sloganStore"> Service d'entretien gratuit... </label>
                             <div className="toVisit">
                                 <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
                                 <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
                             </div>
                         </div>
                         <div className="cadreStoreImage">
-                            <img src="assets/images/LesPetitsChercheurslogo.png" alt="" />
+                            <img src="assets/images/test/électricien.jpg" alt="" />
                         </div>
 
                     </li>
+
+
                 </ol>
+                <div><br /><br /><br />
+                </div>
 
             </div>
         )
