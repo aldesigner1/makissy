@@ -312,16 +312,17 @@
 
         .labelyStore {
           font-weight: bold;
-          max-height: 50px;
+          max-height: 55px;
           overflow: hidden;
           background: transparent !important;
         }
 
         .sloganStore {
           font-weight: 100;
-          max-height: 60px;
+          max-height: 58px;
           overflow: hidden;
           flex: 2;
+          margin-right: 10px !important;
         }
 
         .toVisit {
@@ -453,15 +454,15 @@
         }
 
         img {
-          height: auto;
-          max-height: 100% !important;
-          min-width: 100% !important;
+          // height: auto;
+          // max-height: 100% !important;
+          width: 100% !important;
           border-radius: 0;
 
           &:hover {
             transform: scale(1.1);
             transition: 1s ease-in-out;
-            height: auto !important;
+            // height: auto !important;
             // min-width: 106% !important;
             // width: 106%;
           }
