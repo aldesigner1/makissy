@@ -5,7 +5,7 @@ import { authUserContext } from "../../components/Session";
 import './AddStore.scss';
 
 const INITIAL_STATE_STORE = {
-    id: "",
+    id: 0,
     mail: "",
     imageUpload: "assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
     titreStore: "",

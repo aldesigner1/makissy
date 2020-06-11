@@ -125,23 +125,23 @@ export default class HomePage extends Component {
                     desc: "Agence de production audiovisuelle - Dessin animé, Bande dessinée, Illustration 2D/3D, Son, Photo, Vidéo, Design Graphique, Consulting, Formations et Ateliers - Faisons briller l'Afrique ensemble !",
                     telephone: "+237 695 74 26 05"
                 },
-                {
-                    nomUtil: "First_Style",
-                    categorie: "Chaussures",
-                    titre: "Air Jordan",
-                    following: "Suivi...",
-                    prix: "25 000",
-                    devise: " XAF",
-                    srcImage: "/Assets/images/test/IMG-20200323-WA0007.jpg",
-                    profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
-                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
-                    delai: "hier",
-                    kiff: 57,
-                    like: true,
-                    ville: "Yaoundé ||",
-                    desc: "Amoureux de l'orignal, vous êtes servis! Les airs jordan de qualité à prix préférentiels, venez faire un tour à biyem-assi pour faire votre choix.",
-                    telephone: "+237 6 93 84 69 31"
-                },
+                // {
+                //     nomUtil: "First_Style",
+                //     categorie: "Chaussures",
+                //     titre: "Air Jordan",
+                //     following: "Suivi...",
+                //     prix: "25 000",
+                //     devise: " XAF",
+                //     srcImage: "/Assets/images/test/IMG-20200323-WA0007.jpg",
+                //     profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
+                //     srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                //     delai: "hier",
+                //     kiff: 57,
+                //     like: true,
+                //     ville: "Yaoundé ||",
+                //     desc: "Amoureux de l'orignal, vous êtes servis! Les airs jordan de qualité à prix préférentiels, venez faire un tour à biyem-assi pour faire votre choix.",
+                //     telephone: "+237 6 93 84 69 31"
+                // },
                 {
                     nomUtil: "Médiathèque_Du_Succès",
                     categorie: "Audio",
@@ -228,23 +228,23 @@ export default class HomePage extends Component {
                 //     desc: "Inscriptions disponibles jusqu'au 28 Mars à l'Ecole Nationale Supérieure Polytechnique.",
                 //     telephone: "+237 693 79 51 88"
                 // },
-                {
-                    nomUtil: "BARDGOGE",
-                    categorie: "vestimentaire",
-                    titre: "#Bardgoge Concept",
-                    following: "Suivre",
-                    prix: "--",
-                    devise: " XAF",
-                    srcImage: "/Assets/images/test/Screenshot_20200217-131153.png",
-                    profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
-                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
-                    delai: "il y a 03jours",
-                    kiff: 33,
-                    like: true,
-                    ville: "Yaoundé ||",
-                    desc: "Habillons-nous vivant!!!",
-                    telephone: "+237 697 058 905"
-                },
+                // {
+                //     nomUtil: "BARDGOGE",
+                //     categorie: "vestimentaire",
+                //     titre: "#Bardgoge Concept",
+                //     following: "Suivre",
+                //     prix: "--",
+                //     devise: " XAF",
+                //     srcImage: "/Assets/images/test/Screenshot_20200217-131153.png",
+                //     profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
+                //     srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                //     delai: "il y a 03jours",
+                //     kiff: 33,
+                //     like: true,
+                //     ville: "Yaoundé ||",
+                //     desc: "Habillons-nous vivant!!!",
+                //     telephone: "+237 697 058 905"
+                // },
                 {
                     nomUtil: "Bonyl_foods",
                     categorie: "alimentation",
@@ -552,23 +552,23 @@ export default class HomePage extends Component {
                 //     desc: "Conception Infographique: Faites votre choix à travers nos packages.",
                 //     telephone: "+237 695 54 85 33",
                 // },
-                {
-                    nomUtil: "Annonce !!!",
-                    categorie: "ecom",
-                    titre: "#AF'Style by Engy",
-                    following: "Suivi...",
-                    prix: "--",
-                    devise: " XAF",
-                    srcImage: "/Assets/images/test/BANIERE ANGE.jpg",
-                    profilePic: "Assets/icons/IMG_20200114_153834_752.jpg",
-                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
-                    delai: "il y a 02semaines",
-                    kiff: 17,
-                    like: true,
-                    ville: "Yaoundé ||",
-                    desc: "Mode africaine faite maison et apprentissage pratique, venez suivre la formation avec ENGY.",
-                    telephone: "+237 691 45 01 60",
-                },
+                // {
+                //     nomUtil: "Annonce !!!",
+                //     categorie: "ecom",
+                //     titre: "#AF'Style by Engy",
+                //     following: "Suivi...",
+                //     prix: "--",
+                //     devise: " XAF",
+                //     srcImage: "/Assets/images/test/BANIERE ANGE.jpg",
+                //     profilePic: "Assets/icons/IMG_20200114_153834_752.jpg",
+                //     srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                //     delai: "il y a 02semaines",
+                //     kiff: 17,
+                //     like: true,
+                //     ville: "Yaoundé ||",
+                //     desc: "Mode africaine faite maison et apprentissage pratique, venez suivre la formation avec ENGY.",
+                //     telephone: "+237 691 45 01 60",
+                // },
                 {
                     nomUtil: "MiCam",
                     categorie: "plastique",
@@ -690,7 +690,7 @@ export default class HomePage extends Component {
                 //     telephone: "+237 674 67 20 40",
                 // },
                 {
-                    nomUtil: "Bloomy_Edition_House",
+                    nomUtil: "Bichy_Edition_House",
                     categorie: "",
                     titre: "YOU !",
                     following: "Suivre",
@@ -743,12 +743,13 @@ export default class HomePage extends Component {
 
 
             ],
+            stores:[],
             loading: true,
         }
     }
 
     componentWillMount() {
-        const ref = firebase.database().ref('stores');
+        const ref = firebase.database().ref('articles');
 
         ref.on('value', (snap) => {
             console.log(snap.val());
@@ -757,7 +758,7 @@ export default class HomePage extends Component {
                 stores: snap.val(),
                 loading: false
             })
-        })
+        });
     }
 
     render() {
@@ -811,7 +812,7 @@ export default class HomePage extends Component {
             //         telephone={element.PhoneStore}
             //     />
             // ))
-            // const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
+            const stores = this.state.stores.map((store) => <h2>{store.nom}</h2>)
 
             return (
                 <div>
