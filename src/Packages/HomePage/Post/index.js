@@ -8,7 +8,7 @@ export default class Post extends React.Component {
 
     render() {
         return (
-            <li id={this.props.id}>
+            <li id={this.props.nomUtil}>
                 <div className="enteteurActualite">
 
                     <div id="p1">
