@@ -89,7 +89,7 @@ body {
   }
 
   #submitBtnStore {
-    position: absolute;
+    position: absolute !important;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);

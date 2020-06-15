@@ -793,6 +793,7 @@ export default class HomePage extends Component {
             return (<div><Loader /></div>);
         }
         else {
+            //AIDE = Action Interprétation Diction Emotion (Apprendre à lire #JW)
             // const Storing = this.state.stores.map((element, index) => (
             //     <Post key={index}
             //         id={element.NomStore}
