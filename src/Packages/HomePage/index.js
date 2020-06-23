@@ -28,7 +28,7 @@ export default class HomePage extends Component {
                         following: "Suivi...",
                         prix: "--",
                         devise: " XAF",
-                        srcImage: "/Assets/images/test/icorp2.gif",
+                        srcImage: "/Assets/images/test/icorp.gif",
                         profilePic: "Assets/icons/IMG_20200114_153834_752.jpg",
                         srcBlur: "assets/images/Icons Animation Inspiration.gif",
                         delai: "Aujourd'hui",
