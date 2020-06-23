@@ -16,18 +16,20 @@
   }
 
   .sectionMap {
-    z-index: 16;
+    z-index: 15;
     background: transparent;
     position: fixed;
     display: flex;
     flex-direction: row;
+    flex: 1;
     padding: 0 !important;
     justify-content: center !important;
     align-items: center;
     height: 70vh !important;
     width: 50%;
-    max-width: 49%;
+    max-width: 50%;
     top: 50%;
+    right: 20px;
     transform: translateY(-50%);
     overflow: hidden;
     border-radius: 2px;
