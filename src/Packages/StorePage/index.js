@@ -45,6 +45,23 @@ export class StorePage extends Component {
                 </div>
 
                 <ol className="listeStore">
+
+                <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Global Clim </h3>
+                            <label className="sloganStore"> Service d'entretien gratuit... </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/test/électricien.jpg" alt="" />
+                        </div>
+
+                    </li>
+
+
                     <li className="entityStore">
                         <div className="cadreStoreDesc">
                             <h3 className="labelyStore"> Les petits chercheurs </h3>
@@ -59,12 +76,26 @@ export class StorePage extends Component {
                         </div>
 
                     </li>
+                    <li className="entityStore">
+                        <div className="cadreStoreDesc">
+                            <h3 className="labelyStore"> Intelligentsia Corporation </h3>
+                            <label className="sloganStore"> Formations professionelles - Préparation aux concours du Cameroun; situé au cradat, immeuble icorp 3eme étage </label>
+                            <div className="toVisit">
+                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
+                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
+                            </div>
+                        </div>
+                        <div className="cadreStoreImage">
+                            <img src="assets/images/test/75237466_1157321041139773_1623068196992974848_o.jpg" alt="" />
+                        </div>
+
+                    </li>
 
 
                     <li className="entityStore">
                         <div className="cadreStoreDesc">
                             <h3 className="labelyStore"> Pacy Delice </h3>
-                            <label className="sloganStore"> Votre resto étudiant à petits prix... </label>
+                            <label className="sloganStore"> Votre resto étudiant à petits prix... Situé à la Cité-U </label>
                             <div className="toVisit">
                                 <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
                                 <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
@@ -79,8 +110,8 @@ export class StorePage extends Component {
 
                     <li className="entityStore">
                         <div className="cadreStoreDesc">
-                            <h3 className="labelyStore"> Garagisteurs </h3>
-                            <label className="sloganStore"> Nouvelle caisse, nouveau métier, nouvel état </label>
+                            <h3 className="labelyStore"> Garderie auto&Moto </h3>
+                            <label className="sloganStore"> Nouvelle caisse, nouvel état?  A la carrière nous prenons soin de votre véhicule </label>
                             <div className="toVisit">
                                 <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
                                 <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
@@ -105,25 +136,16 @@ export class StorePage extends Component {
                         </div>
 
                     </li>
-                    <li className="entityStore">
-                        <div className="cadreStoreDesc">
-                            <h3 className="labelyStore"> Global Clim </h3>
-                            <label className="sloganStore"> Service d'entretien gratuit... </label>
-                            <div className="toVisit">
-                                <Link to={ROUTES.VIEWSTORE} className="mapVisit"><i className="fas fa-map-marked-alt favImageur favicon"></i></Link>
-                                <Link to={ROUTES.VIEWSTORE} className="storeVisit"><label for="">Visiter</label> </Link>
-                            </div>
-                        </div>
-                        <div className="cadreStoreImage">
-                            <img src="assets/images/test/électricien.jpg" alt="" />
-                        </div>
-
-                    </li>
-
+                    
+                   <li>
+                       <br/>
+                       <br/>
+                       <br/>
+                   </li>
+                   
 
                 </ol>
-                <div><br /><br /><br />
-                </div>
+                
 
             </div>
         )

@@ -25,7 +25,7 @@ export default class EditStore extends Component {
                     <div className="picStore">
                         <img id="profileImage" src="Assets/images/Trace_5.png" alt="PIC" />
                         <span> <label htmlFor="imageUpload"><i className="fab fa-instagram"></i></label></span>
-                        <Link to={ROUTES.VIEWSTORE} id="MaPage">@ Mon Store</Link>
+                        <Link to={ROUTES.VIEWSTORE} id="MaPage">@ Visualiser</Link>
                         <input id="imageUpload" type="file" accept="image/png, image/jpeg" />
                     </div>
                     <div className="descStore">
@@ -57,25 +57,29 @@ export default class EditStore extends Component {
                         <form className="pageOnglet ong1">
                             <div>
                                 <input id="imageUpload" type="file" accept="image/png, image/jpeg, image/gif" />
-                                <label for="imageUpload"> <img src="Assets/images/store/" alt="votre article" /></label>
+                                <label for="imageUpload"> <img src="Assets/images/Trace_4.png" alt="Aperçu de l'article" /></label>
                             </div>
-                            <br/>
+                            {/* <br/> */}
                             <div>
                                 {/* <label htmlFor="Champ1">Nom</label> */}
                                 <input type="text" name="" id="Champ1" placeholder="titre" />
                             </div>
-                            <br />
+                            {/* <br /> */}
                             <div>
                                 {/* <label htmlFor="Champ2">Description</label> */}
                                 <textarea name="" id="Champ2" cols="25" rows="3" placeholder="Description" ></textarea>
                             </div>
-                            <br />
+                            {/* <br /> */}
                             <div>
                                 {/* <label htmlFor="Champ3">Pass</label> */}
                                 <input type="number" name="" id="Champ3" placeholder="prix" />
                             </div>
-
-                            <button type="submit">Mettre en ligne</button>
+                            
+                                <button type="submit">Mettre en ligne</button>
+                            
+                            
+                            
+                            
                         </form>
                     </label>
 
@@ -86,7 +90,7 @@ export default class EditStore extends Component {
                         <div className="pageOnglet ong2">
 
                             <ul>
-                                <li> Aucun element pour le moment </li>
+                                <li style={{"color":"#bbb"}}> Aucun article pour le moment </li>
                             </ul>
 
                             {/* <ul>
