@@ -23,42 +23,43 @@ export default class EditStore extends Component {
             <div id="bodyHome">
                 <div className="storeEntete">
                     <div className="picStore">
-                        <img id="profileImage" src="Assets/icons/favicon.png" alt="PIC" />
+                        <img id="profileImage" src="Assets/images/Trace_5.png" alt="PIC" />
                         <span> <label htmlFor="imageUpload"><i className="fab fa-instagram"></i></label></span>
-                        <Link to={ROUTES.VIEWSTORE} id="MaPage">@ Makissy</Link>
+                        <Link to={ROUTES.VIEWSTORE} id="MaPage">@ Mon Store</Link>
                         <input id="imageUpload" type="file" accept="image/png, image/jpeg" />
                     </div>
                     <div className="descStore">
                         <div className="infoStore">
                             <div>
-                                <Link to="#">479</Link>
+                                <Link to="#">0</Link>
                                 <p>Articles</p>
                             </div>
-                            <div>
-                                <Link to="#">568</Link>
+                            {/* <div>
+                                <Link to="#">0</Link>
                                 <p>Abonnés</p>
-                            </div>
+                            </div> */}
                             <div>
-                                <Link to="#">123</Link>
-                                <p>en cours</p>
+                                <Link to="#">0</Link>
+                                <p>appels</p>
                             </div>
                         </div>
                         <div className="optionStore">
-                            <Link to={ROUTES.ADDSTORE}> <i className="fas fa-fingerprint favicon"></i> <span>Mon Store</span>  </Link>
+                            <Link to={ROUTES.ADDSTORE}> <i className="fas fa-fingerprint favicon"></i> <span> Revisiter mon store </span>  </Link>
                         </div>
                     </div>
                 </div>
 
                 <div className="cont">
 
-                    <input type="radio" name="ong" value="Onglet1" id="demo" />
+                    <input checked type="radio" name="ong" value="Onglet1" id="demo" />
                     <label htmlFor="demo" id="onglet" className="o1">
                         <span id="btn1"><i className="fas fa-stream"></i></span>
                         <form className="pageOnglet ong1">
                             <div>
-                                <input type="file" />
-                                <img src="Assets/image/" alt="votre article" />
+                                <input id="imageUpload" type="file" accept="image/png, image/jpeg, image/gif" />
+                                <label for="imageUpload"> <img src="Assets/images/store/" alt="votre article" /></label>
                             </div>
+                            <br/>
                             <div>
                                 {/* <label htmlFor="Champ1">Nom</label> */}
                                 <input type="text" name="" id="Champ1" placeholder="titre" />
@@ -79,12 +80,16 @@ export default class EditStore extends Component {
                     </label>
 
 
-                    <input checked type="radio" name="ong" value="Onglet2" id="demo2" />
+                    <input type="radio" name="ong" value="Onglet2" id="demo2" />
                     <label htmlFor="demo2" id="onglet" className="o2">
                         <span id="btn2" ><i className="fas fa-person-booth"></i></span>
                         <div className="pageOnglet ong2">
 
                             <ul>
+                                <li> Aucun element pour le moment </li>
+                            </ul>
+
+                            {/* <ul>
 
                                 <li>
                                     <img src="assets/images/Free-Shipping-Trend-white-Men-s-2015-Fashion-teenage-Shoes-High-Casual-Sneakers-Male-Size-39.jpg" width="100%" height="auto" alt="" />
@@ -103,7 +108,7 @@ export default class EditStore extends Component {
                                 <li>
                                     <img src="assets/images/cake-1971552.png" width="100%" height="auto" alt="" />
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </label>
 

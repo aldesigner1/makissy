@@ -31,7 +31,7 @@ body {
 
 marquee {
   width: 70px;
-  margin: 0px auto;
+  margin: 10px auto;
   text-align: center;
   height: 1.5em;
   color: $gray-dark;
@@ -44,7 +44,7 @@ marquee {
 
 .containerViewer {
   position: absolute;
-  margin: 100vh auto 0;
+  margin: 140vh auto 0;
   background: $blanc;
   padding: 30px;
   width: 100%;

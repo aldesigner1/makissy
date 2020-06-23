@@ -90,11 +90,11 @@ export default class AddStore extends Component {
                 {authUser =>
                     <form className="addStore" onSubmit={this.onSubmit}>
 
-                        <div className="picSt">
+                        {/* <div className="picSt">
                             <img id="profileImage" src={imageUpload} alt="icone de store" />
                             <label for="imageUpload"> <i className="fab fa-instagram"></i></label>
                             <input id="imageUpload" name="imageUpload" type="file" onChange={this.onChange} accept="image/png, image/jpeg, image/gif" />
-                        </div>
+                        </div> */}
 
                         <div id="formNomStore">
                             <label for="Champ1">Titre du Store</label>

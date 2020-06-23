@@ -36,27 +36,29 @@ input[type="file"]:focus {
     .storeEntete {
       position: absolute;
       top: 80px !important;
-      height: 25%;
+      height: 20vh;
       left: 10%;
-      /*    background: #fff;*/
+      //  background: #000;
       flex: 1;
       width: 100%;
-      max-width: 700px;
+      max-width: 800px;
       // padding-bottom: 50px;
       z-index: 1;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      left: 50%;
+      transform: translateX(-50%);
       overflow-y: none;
     }
 
     .cont {
       width: 100vw;
       max-width: 90%;
-      height: 60vh;
+      height: 70vh;
       padding-left: 250px;
       left: 0;
-      background: #fff !important;
+      background: #fff!important;
       /*  overflow: hidden;*/
       display: flex;
       justify-content: center;
@@ -82,7 +84,7 @@ input[type="file"]:focus {
 
     #demo:checked + label {
       display: flex;
-      /*  background: #F1F4F8;*/
+      // background: #F1F4F8;
       color: #444749;
       z-index: 20;
       opacity: 1;
@@ -91,6 +93,7 @@ input[type="file"]:focus {
       background: rgba(254, 134, 1, 0.05);
       color: darkorange;
       border-bottom: 3px solid orange;
+      z-index: 20;
     }
 
     #demo2:checked + label {
@@ -104,6 +107,7 @@ input[type="file"]:focus {
       background: rgba(254, 134, 1, 0.05);
       color: darkorange;
       border-bottom: 3px solid orange;
+      z-index: 20;
     }
 
     #demo3:checked + label {
@@ -118,6 +122,7 @@ input[type="file"]:focus {
       background: rgba(254, 134, 1, 0.05);
       color: darkorange;
       border-bottom: 3px solid orange;
+      z-index: 20;
     }
 
     input[type="radio"] {
@@ -163,6 +168,7 @@ input[type="file"]:focus {
       padding: 10px;
       color: #ccc;
       font-size: 1.5em !important;
+      z-index: 20;
       cursor: pointer;
     }
 
@@ -562,7 +568,8 @@ input[type="file"]:focus {
       position: absolute;
       top: 0;
       height: 30%;
-      left: 0px;
+      left: 50%;
+      transform: translateX(-50%);
       /*    background: #ccc;*/
       flex: 1;
       width: 100%;
@@ -577,7 +584,7 @@ input[type="file"]:focus {
     .cont {
       width: 100vw;
       max-width: 100%;
-      height: 65vh;
+      height: 70vh;
       left: 0px;
       padding-left: 0;
       background: #fff !important;
@@ -684,6 +691,7 @@ input[type="file"]:focus {
       color: #ccc;
       font-size: 1.5em !important;
       cursor: pointer;
+      z-index: 20;
     }
 
     #btn1 {
@@ -1071,8 +1079,9 @@ input[type="file"]:focus {
     .storeEntete {
       position: absolute;
       top: 0;
-      height: 30%;
+      height: 20%;
       left: 0px;
+      transform: translateX(0);
       /*    background: #ccc;*/
       flex: 1;
       width: 100%;
@@ -1086,7 +1095,7 @@ input[type="file"]:focus {
 
     .cont {
       width: 100vw;
-      height: 60vh;
+      height: 66vh;
       left: 0;
       padding-left: 0;
       background: #fff !important;
@@ -1112,36 +1121,36 @@ input[type="file"]:focus {
       display: flex;
       /*  background: #F1F4F8;*/
       color: #444749;
-      z-index: 2 !important;
+      z-index: 20 !important;
       opacity: 1;
-      // overflow: scroll;
+      // overflow-y: scroll;
     }
     #demo:checked + label > span {
       background: rgba(254, 134, 1, 0.05);
       color: darkorange;
       border-bottom: 3px solid orange;
-      z-index: 4 !important;
+      z-index: 20 !important;
     }
 
     #demo2:checked + .o2 {
       display: flex;
       /*  background: black;*/
       color: #444749;
-      z-index: 2 !important;
+      z-index: 20 !important;
       opacity: 1;
     }
     #demo2:checked + label > span {
       background: rgba(254, 134, 1, 0.05);
       color: darkorange;
       border-bottom: 3px solid orange;
-      z-index: 4 !important;
+      z-index: 20 !important;
     }
 
     #demo3:checked + .o3 {
       display: flex;
       /*  background: white;*/
       color: #444749;
-      z-index: 2 !important;
+      z-index: 20 !important;
       opacity: 1;
     }
     #demo3:checked + label > span {
@@ -1149,7 +1158,7 @@ input[type="file"]:focus {
       background: rgba(254, 134, 1, 0.05);
       color: darkorange;
       border-bottom: 3px solid orange;
-      z-index: 4 !important;
+      z-index: 20 !important;
     }
 
     input[type="radio"] {
@@ -1170,7 +1179,7 @@ input[type="file"]:focus {
       justify-content: flex-start;
       align-items: flex-start;
       text-align: left;
-      z-index: 1 !important;
+      z-index: 10 !important;
       /*    padding: 0px 0;*/
     }
 
@@ -1190,13 +1199,14 @@ input[type="file"]:focus {
 
     .cont span {
       width: 100%;
-      position: absolute;
-      top: -40px;
+      position: fixed;
+      top: 256px;
       height: 40px;
       padding: 10px;
       color: #ccc;
       font-size: 1.5em !important;
       cursor: pointer;
+      z-index: 2;
     }
 
     #btn1 {
@@ -1558,7 +1568,7 @@ input[type="file"]:focus {
       background: white;
       width: 70%;
       max-width: 300px;
-      margin: 10px auto;
+      margin: 25px auto 0 !important;
       border-radius: 50px;
       border: 2px solid #08d9b6;
       font-size: 13px;
