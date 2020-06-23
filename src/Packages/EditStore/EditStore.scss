@@ -527,7 +527,7 @@ input[type="file"]:focus {
 
     .optionStore {
       background: white;
-      width: 70%;
+      width: 80%;
       max-width: 300px;
       margin: 10px auto;
       border-radius: 50px;
@@ -1199,8 +1199,8 @@ input[type="file"]:focus {
 
     .cont span {
       width: 100%;
-      position: fixed;
-      top: 256px;
+      position: absolute;
+      top: -40px;
       height: 40px;
       padding: 10px;
       color: #ccc;
@@ -1566,7 +1566,7 @@ input[type="file"]:focus {
 
     .optionStore {
       background: white;
-      width: 70%;
+      width: 80%;
       max-width: 300px;
       margin: 25px auto 0 !important;
       border-radius: 50px;

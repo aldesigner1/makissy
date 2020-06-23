@@ -44,14 +44,14 @@ export default class EditStore extends Component {
                             </div>
                         </div>
                         <div className="optionStore">
-                            <Link to={ROUTES.ADDSTORE}> <i className="fas fa-fingerprint favicon"></i> <span> Revisiter mon store </span>  </Link>
+                            <Link to={ROUTES.ADDSTORE}> <i className="fas fa-fingerprint favicon"></i> <span> Revisiter </span>  </Link>
                         </div>
                     </div>
                 </div>
 
                 <div className="cont">
 
-                    <input checked type="radio" name="ong" value="Onglet1" id="demo" />
+                    <input type="radio" name="ong" value="Onglet1" id="demo" />
                     <label htmlFor="demo" id="onglet" className="o1">
                         <span id="btn1"><i className="fas fa-stream"></i></span>
                         <form className="pageOnglet ong1">
@@ -80,7 +80,7 @@ export default class EditStore extends Component {
                     </label>
 
 
-                    <input type="radio" name="ong" value="Onglet2" id="demo2" />
+                    <input checked type="radio" name="ong" value="Onglet2" id="demo2" />
                     <label htmlFor="demo2" id="onglet" className="o2">
                         <span id="btn2" ><i className="fas fa-person-booth"></i></span>
                         <div className="pageOnglet ong2">

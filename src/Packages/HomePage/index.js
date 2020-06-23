@@ -792,28 +792,28 @@ export default class HomePage extends Component {
                     desc: "Inscrivez-vous dès maintenant. A l'école des Travaux publics, salle B12; pour apprendre avec nous, l'art de la conception d'un plan cadastral.",
                     telephone: "+237 696 12 32 55",
                 },
-                {
-                    nomUtil: "MTN-Cameroon",
-                    categorie: "INFO",
-                    titre: "MTN - promo",
-                    following: "Suivre",
-                    prix: "--",
-                    devise: " XAF",
-                    srcImage: "/Assets/images/test/Screenshot_20200131-211022.png",
-                    profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
-                    srcBlur: "assets/images/Icons Animation Inspiration.gif",
-                    delai: "Depuis 01 mois",
-                    kiff: 91,
-                    like: true,
-                    ville: "",
-                    desc: "MTN everywhere you go !",
-                    telephone: "*123#"
-                },
+                // {
+                //     nomUtil: "MTN-Cameroon",
+                //     categorie: "INFO",
+                //     titre: "MTN - promo",
+                //     following: "Suivre",
+                //     prix: "--",
+                //     devise: " XAF",
+                //     srcImage: "/Assets/images/test/Screenshot_20200131-211022.png",
+                //     profilePic: "Assets/icons/e69d1c64-89f7-40f7-bde0-537b7b6fc8ee@2x.png",
+                //     srcBlur: "assets/images/Icons Animation Inspiration.gif",
+                //     delai: "Depuis 01 mois",
+                //     kiff: 91,
+                //     like: true,
+                //     ville: "",
+                //     desc: "MTN everywhere you go !",
+                //     telephone: "*123#"
+                // },
 
 
             ],
             stores:[],
-            loading: false,
+            loading: true,
         }
     }
 
